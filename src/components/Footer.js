@@ -9,10 +9,8 @@ function Footer() {
         <div className="company-info">
           <h2>UnlockDiscounts</h2>
           <ul>
-            <li><Link to="#"><i className="fab fa-facebook"></i></Link></li>
-            <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
-            <li><Link to="#"><i className="fab fa-instagram"></i></Link></li>
-            <li><Link to="#"><i className="fab fa-linkedin"></i></Link></li>
+            <li><Link to="https://www.facebook.com/profile.php?id=61560425212006" target='_blank'><i className="fab fa-facebook"></i></Link></li>
+            <li><Link to="https://www.instagram.com/unlock_discounts/" target='_blank'><i className="fab fa-instagram"></i></Link></li>
           </ul>
         </div>
         <div className="footer-list">

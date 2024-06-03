@@ -24,6 +24,9 @@
   display: flex; /* Make the blog card flex */
   margin-bottom: 20px;
   height: 200px;
+  border: rgb(218, 216, 216) 1px solid;
+  border-radius: 8px;
+  padding:10px;
 }
 
 .read-more-button {
@@ -63,7 +66,7 @@
     }
 
     .blog-card {
-      height:  150px;
+      height:  auto;
     }
 
     .blog-title{

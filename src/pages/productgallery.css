@@ -1,0 +1,144 @@
+.productpage-container {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.maincategory-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-top: 30px;
+}
+
+.subdesc {
+  color: grey;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 2px;
+}
+
+.common-banner {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.common-banner-image {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.category-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  color: rgb(13, 12, 12);
+  text-align: left;
+}
+
+.product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card {
+  width: calc(31% - 10px);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: left;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  border: solid #ccc 1px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px 8px 0 0;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+.product-details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: grey;
+  margin-top: 0;
+  flex-grow: 1; /* Ensure this section takes up remaining space */
+}
+
+.buy-now-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: rgb(50, 50, 50);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: auto; /* Push button to the bottom */
+  align-self: flex-start; /* Align button to the bottom left */
+  font-size: 13px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .product-card {
+    width: calc(48% - 10px);
+  }
+
+  .maincategory-title {
+    font-size: 20px;
+  }
+
+  .category-title {
+    font-size: 18px;
+  }
+
+  .product-title {
+    font-size: 16px;
+  }
+
+  .product-description {
+    font-size: 12px;
+  }
+
+  .buy-now-button {
+    font-size: 12px;
+    padding: 7px 7px;
+  }
+
+  .product-card {
+    width: calc(50% - 10px); /* Increase the width to take up the full container width, minus some margin */
+    margin-bottom: 10px; /* Reduce the margin-bottom to make cards closer */
+  }
+
+  .common-banner-image {
+    height: 200px;
+  }
+}

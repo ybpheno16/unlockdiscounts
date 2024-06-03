@@ -7,9 +7,12 @@ function Carousel() {
 
   // Array of slide image URLs
   const slides = [
-    "/homebanner_img1.jpg",
-    "/homebanner_img1.jpg",
-    "/homebanner_img1.jpg"
+    "/slide 1.png",
+    "/slide 2.png",
+    "/slide 3.png",
+    "/slide 4.png",
+    "/slide 5.png"
+    
   ];
 
   // Function to handle moving to the next slide
@@ -19,7 +22,7 @@ function Carousel() {
 
   // Use useEffect to automatically transition to the next slide every 3 seconds
   useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
+    const interval = setInterval(nextSlide, 2000);
     return () => clearInterval(interval);
   }, []);
 

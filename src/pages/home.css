@@ -110,23 +110,21 @@
 /* Responsive styles */
 @media only screen and (max-width: 768px) {
   .heading {
-    font-size: 14px;
+    font-size: 20px;
   }
   .category-item .description,
   .e-description {
-    font-size: 12px;
+    font-size: 13px;
+    padding-bottom: 0px;
   }
 
   .electronics-container{
     padding-bottom: 5px;
   }
 
-  .category-item{
-    padding-bottom: 20px;
-  }
-
   .category-item p{
-    font-size:11px;
+    font-size:12px;
+    padding-bottom: 20px;
   }
 
   .category-item img{
@@ -134,10 +132,11 @@
   }
 
   .e-category-item p{
-    font-size:11px;
+    font-size:12px;
   }
 
-  .left-side{
+  .left-side,.right-side{
     padding-top: 0;
+    padding-bottom:20px;
   }
 }

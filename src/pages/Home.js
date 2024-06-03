@@ -72,14 +72,14 @@ function Home() {
             <div className="category">
                 <div className="category-item">
                     <Link to="/banking">
-                        <img src="/cc.jpg" alt="Credit Card" />
+                        <img src="/cc.png" alt="Credit Card" />
                         <div className="description">Credit Cards</div>
                     </Link>
                     <p>Explore a wide range of credit cards tailored to suit your lifestyle and financial needs.</p>
                 </div>
                 <div className="category-item">
                     <Link to="/banking">
-                        <img src="/ac.jpg" alt="Account Saving" />
+                        <img src="/ac.png" alt="Account Saving" />
                         <div className="description">Zero Savings Account</div>
                     </Link>
                     <p>Discover the benefits of a zero balance savings account with high interest rates and no minimum deposit requirements.</p>

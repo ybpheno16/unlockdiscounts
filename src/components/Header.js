@@ -42,7 +42,7 @@ function Header() {
             <div className="search-bar">
               <form onSubmit={handleSearch}>
                   <input type="text" name="searchInput" placeholder="Looking for something..." />
-                  <button type="button">Search</button>
+                  <button type="submit">Search</button>
                 </form>
             </div>
           </div>
