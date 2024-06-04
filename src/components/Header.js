@@ -19,7 +19,7 @@ function Header() {
       {screenWidth > 768 ? (
         // Desktop view
         <div className="top-bar">
-          <div className="unlockdiscounts">UnlockDiscounts</div>
+          <div className="unlockdiscounts"><Link to="/">UnlockDiscounts</Link></div>
           <div className="search-bar">
             <form onSubmit={handleSearch}>
                 <input type="text" name="searchInput" placeholder="Looking for something..." />

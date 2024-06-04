@@ -19,9 +19,16 @@
     width: 100%;
   }
   
-  .unlockdiscounts {
+  .unlockdiscounts{
     font-size: 20px;
     font-weight: bold;
+  }
+  
+  .unlockdiscounts a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+    font-size: inherit; /* Inherit the font size from the parent element */
+    font-weight: inherit; /* Inherit the font weight from the parent element */
   }
   
   .search-bar {
