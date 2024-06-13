@@ -3,7 +3,7 @@ import FashionLayout from './FashionLayout';
 
 function KidsWear() {
   const category = "Kid's Wear";
-  const bannerImage = "/kidswearbanner2.png"; // Replace with your banner image path
+  const bannerImage = "/fashion/kidswearbanner2.jpg"; // Replace with your banner image path
 
   return <FashionLayout category={category} bannerImage={bannerImage} />;
 }
