@@ -12,7 +12,7 @@ function About() {
         <p>You can also connect with us on social media for the latest updates and exclusive offers. We're here to help you unlock savings and convenience, so don't hesitate to get in touch! </p>
       </div>
       <div className="contact-right-side">
-        <img src="/logo.jpg" alt="Contact Us" />
+        <img src="/logo/logo.jpg" alt="Contact Us" />
       </div>
     </div>
   );
