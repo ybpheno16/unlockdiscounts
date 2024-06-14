@@ -7,11 +7,11 @@ function Carousel() {
 
   // Array of slide image URLs
   const slides = [
-    "/slide 1.png",
-    "/slide 2.png",
-    "/slide 3.png",
-    "/slide 4.png",
-    "/slide 5.png"
+    "/banners/slide 1.jpg",
+    "/banners/slide 2.jpg",
+    "/banners/slide 3.jpg",
+    "/banners/slide 4.jpg",
+    "/banners/slide 5.jpg"
     
   ];
 
