@@ -19,7 +19,7 @@ function BankingCategoryLayout({ categories }) {
       <h1 className="maincategory-title">Banking Page</h1>
       <p className="subdesc">Unlock Financial Freedom: Discover Smart Banking Solutions with Us!</p>
       <div className="common-banner">
-        <img src="/bankingbanner.png" alt="Common Banner" className="common-banner-image" />
+        <img src="/banking/bankingbanner.jpg" alt="Common Banner" className="common-banner-image" />
       </div>
       {categories.map((category, index) => (
         <div key={index} className="category-section">
