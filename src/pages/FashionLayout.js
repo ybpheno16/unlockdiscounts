@@ -1,15 +1,27 @@
-// FashionLayout.js
-import React, { useContext } from 'react';
+// // FashionLayout.js
+
+import React, { useContext, useEffect } from 'react';
 import { ProductContext } from '../contexts/ProductContext';
 import './productgallery.css';
 
-function FashionLayout({ category, bannerImage }) {
-  const { state } = useContext(ProductContext);
+const FashionLayout = ({ category, bannerImage }) => {
+  const { state, setPage, hasMore } = useContext(ProductContext);
   const { products, loading, error } = state;
 
   const filteredProducts = products.filter(product => product.category === category);
 
-  if (loading) {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 && hasMore) {
+        setPage(prevPage => prevPage + 1);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [hasMore, setPage]);
+
+  if (loading && filteredProducts.length === 0) {
     return <div>Loading...</div>;
   }
 
@@ -39,8 +51,9 @@ function FashionLayout({ category, bannerImage }) {
           </div>
         ))}
       </div>
+      {loading && <div>Loading more products...</div>}
     </div>
   );
-}
+};
 
 export default FashionLayout;

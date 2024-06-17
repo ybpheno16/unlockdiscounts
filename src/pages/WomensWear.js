@@ -1,9 +1,17 @@
-import React from 'react';
-import FashionLayout from './FashionLayout';
+import React, { Suspense, lazy } from 'react';
+
+const lazyLoad = (Component) => (props) => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <Component {...props} />
+  </Suspense>
+);
+
+const FashionLayout = lazyLoad(lazy(() => import('./FashionLayout')));
+
 
 function WomensWear() {
   const category = "Women's Wear";
-  const bannerImage = "/slide 2.png"; // Replace with your banner image path
+  const bannerImage = "/banners/slide 2.jpg"; 
 
   return <FashionLayout category={category} bannerImage={bannerImage} />;
 }
