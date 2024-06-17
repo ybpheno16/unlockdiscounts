@@ -1,4 +1,5 @@
-import React, { createContext, useReducer, useEffect } from 'react';
+
+import React, { createContext, useReducer, useEffect, useState } from 'react';
 import axios from 'axios';
 import productReducer from '../reducers/productReducer';
 
@@ -12,22 +13,34 @@ const ProductProvider = ({ children }) => {
   };
 
   const [state, dispatch] = useReducer(productReducer, initialState);
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('https://products2-tt3o.onrender.com/api/products');
-        dispatch({ type: 'FETCH_SUCCESS', payload: response.data });
+        const response = await axios.get(`https://products2-tt3o.onrender.com/api/products?page=${page}&limit=20`);
+        if (response.data.length === 0) {
+          setHasMore(false);
+        }
+        dispatch({ type: 'FETCH_SUCCESS', payload: [...state.products, ...response.data] });
       } catch (error) {
         dispatch({ type: 'FETCH_ERROR', payload: error.message });
       }
     };
 
-    fetchProducts();
+    if (hasMore) {
+      fetchProducts();
+    }
+  }, [page]);
+
+  useEffect(() => {
+    // Fetch first page of products on initial render
+    setPage(1);
   }, []);
 
   return (
-    <ProductContext.Provider value={{ state, dispatch }}>
+    <ProductContext.Provider value={{ state, dispatch, setPage, hasMore }}>
       {children}
     </ProductContext.Provider>
   );
