@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+
+import React, { useContext, useMemo } from 'react';
 import { ProductContext } from '../contexts/ProductContext';
 import './productgallery.css';
 
@@ -6,10 +7,11 @@ function ElectronicsCategoryLayout({ category, bannerImage }) {
   const { state } = useContext(ProductContext);
   const { products, loading, error } = state;
 
-  // Ensure that products is defined and is an array before filtering
-  const filteredProducts = Array.isArray(products)
-    ? products.filter(product => product.category === category)
-    : [];
+  // Memoize filtered products to avoid unnecessary recalculations
+  const filteredProducts = useMemo(() => {
+    return Array.isArray(products) ? products.filter(product => product.category === category) : [];
+  }, [products, category]);
+
 
   if (loading) {
     return <div>Loading...</div>;
@@ -32,7 +34,7 @@ function ElectronicsCategoryLayout({ category, bannerImage }) {
           <div key={index} className="product-card">
             <div className="product-details">
               <div className="product-image">
-                <img src={product.image} alt={product.title} />
+                <img src={product.image} alt={product.title} loading="lazy" />
               </div>
               <h3 className="product-title">{product.title}</h3>
               <p className="product-description">{product.description}</p>

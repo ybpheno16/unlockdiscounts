@@ -1,10 +1,18 @@
-import React, { useContext } from 'react';
+
+import React, { useContext, useMemo } from 'react';
 import { ProductContext } from '../contexts/ProductContext';
 import './productgallery.css';
 
 function BankingCategoryLayout({ categories }) {
   const { state } = useContext(ProductContext);
   const { products, loading, error } = state;
+
+  const memoizedCategoryProducts = useMemo(() => {
+    return categories.reduce((acc, category) => {
+      acc[category.title] = products.filter(product => product.category === category.title);
+      return acc;
+    }, {});
+  }, [products, categories]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -25,7 +33,7 @@ function BankingCategoryLayout({ categories }) {
         <div key={index} className="category-section">
           <h2 className="category-title">{category.title}</h2>
           <div className="product-cards">
-            {products.filter(product => product.category === category.title).map((product, index) => (
+            {memoizedCategoryProducts[category.title].map((product, index) => (
               <div key={index} className="product-card">
                 <div className="product-details">
                   <div className="product-image">
