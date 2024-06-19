@@ -1,14 +1,15 @@
-// Blogs.js
-import React, { useContext } from 'react';
-import { ProductContext } from '../contexts/ProductContext';
-import './blog.css'; // Import CSS file for the Blogs page
 
-function Blogs() {
+import React, { useContext, useMemo } from 'react';
+import { ProductContext } from '../contexts/ProductContext';
+import './blog.css'; 
+const Blogs = () => {
   const { state } = useContext(ProductContext);
   const { products, loading, error } = state;
 
-  // Filter products by category "blog"
-  const blogs = products.filter(product => product.category === 'blog');
+  // Memoize the filtered blog products
+  const blogs = useMemo(() => {
+    return products.filter(product => product.category === 'blog');
+  }, [products]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -35,7 +36,12 @@ function Blogs() {
           </div>
           {blog.image && (
             <div className="blog-image">
-              <img src={blog.image} alt={blog.title} />
+              <img
+                src={blog.image}
+                alt={blog.title}
+                loading="lazy"
+                className="lazy-load"
+              />
             </div>
           )}
         </div>
@@ -45,3 +51,4 @@ function Blogs() {
 }
 
 export default Blogs;
+
