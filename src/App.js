@@ -1,19 +1,16 @@
-import React, { Suspense, lazy } from 'react';
+// App.js
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
-const AppRoutes = lazy(() => import('./routes')); 
+import AppRoutes from './routes';
 
 const App = () => (
   <Router>
     <Header />
-    <Suspense fallback={<div>Loading...</div>}>
-      <AppRoutes />
-    </Suspense>
+    <AppRoutes />
     <Footer />
   </Router>
 );
 
-export default React.memo(App); 
-
+export default App;

@@ -1,35 +1,15 @@
 // index.js
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import { ProductProvider } from './contexts/ProductContext';
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <ProductProvider>
-//         <App />
-//     </ProductProvider>
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-
-
-
 import React from 'react';
-import { createRoot } from 'react-dom/client'; 
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { ProductProvider } from './contexts/ProductContext';
 
-const container = document.getElementById('root');
-const root = createRoot(container);
-
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <ProductProvider>
-      <App />
+        <App />
     </ProductProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );

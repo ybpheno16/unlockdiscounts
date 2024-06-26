@@ -1,3 +1,5 @@
+
+
 import React, { Suspense, lazy } from 'react';
 
 const lazyLoad = (Component) => (props) => (
@@ -10,11 +12,10 @@ const FashionLayout = lazyLoad(lazy(() => import('./FashionLayout')));
 
 function KidsWear() {
   const category = "Kid's Wear";
-  const bannerImage = "/fashion/kidswearbanner2.avif"; 
+  const bannerImage = "/fashion/kidswearbanner2.jpg"; 
   return <FashionLayout category={category} bannerImage={bannerImage} />;
 }
 
 export default KidsWear;
-
 
 

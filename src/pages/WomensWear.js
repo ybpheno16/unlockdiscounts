@@ -11,7 +11,7 @@ const FashionLayout = lazyLoad(lazy(() => import('./FashionLayout')));
 
 function WomensWear() {
   const category = "Women's Wear";
-  const bannerImage = "/banners/slide 2.avif"; 
+  const bannerImage = "/banners/slide 2.jpg"; 
 
   return <FashionLayout category={category} bannerImage={bannerImage} />;
 }
