@@ -4,7 +4,7 @@ const ElectronicsCategoryLayout = lazy(() => import('./ElectronicsCategoryLayout
 
 function Appliances() {
   const category = "Appliances"; // Match this with the category in your products
-  const bannerImage = "/fashion/electronincsbanner.avif";
+  const bannerImage = "/fashion/electronincsbanner.jpg";
 
   return (
     <Suspense fallback={<div>Loading...</div>}>

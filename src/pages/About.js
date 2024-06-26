@@ -13,7 +13,7 @@ function About() {
         <p>Join us today and unlock a world of discounts and convenience!</p>
       </div>
       <div className="about-right-side">
-        <img src="/appliances/about.avif" alt="About Us" />
+        <img src="/appliances/about.jpg" alt="About Us" />
       </div>
     </div>
   );

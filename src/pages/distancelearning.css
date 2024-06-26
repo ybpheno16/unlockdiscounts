@@ -1,67 +1,409 @@
-.dls-container{
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+/* General styles */
+.dls-container {
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color: #f4f4f9;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .dls-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding-top: 30px;
+    font-size: 24px;
+    text-align: center;
+    color: black;
 }
 
 .dls-description {
-  font-size: 16px;
-  margin-bottom: 20px;
-  padding-bottom: 50px;
-  color: grey;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.dl-card {
-  display: flex; /* Make the dl card flex */
-  margin-bottom: 20px;
-  height: 200px;
+.dls-header {
+    text-align: center;
+    background-color: #004d4d;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.dl-details {
-  flex: 1; /* Make the dl details section flexible */
-  padding-right: 20px; /* Add padding to separate details from image */
-  text-align: left;
+.dls-header h1 {
+    font-size: 22px;
+    margin: 0;
 }
 
-.dl-text{
-    color: grey;
+.dls-header h2 {
+    font-size: 20px;
+    margin: 10px 0 0;
 }
 
-.dl-image {
-  flex: 1; /* Make the dl image section flexible */
+.dls-courses {
+    display: flex;
+    flex-wrap: wrap; /* Allow courses to wrap on smaller screens */
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: #007d7d;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.dl-image img {
-  width: 100%; /* Ensure image fills its container */
-  height: 100%; /* Maintain aspect ratio */
-  border-radius: 8px;
+.dls-course {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px; /* Add margin between courses */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {      
-    .dls-description {
-        font-size: 14px;
+.dls-course:hover {
+    transform: scale(1.05);
+}
+
+.dls-course img {
+    width: 50px;
+    height: 50px;
+}
+
+.dls-course h3 {
+    color: #004d4d;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.dls-course p {
+    color: #666666;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.dls-course button {
+    background-color: #004d4d;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dls-course button:hover {
+    background-color: #003333;
+}
+
+.dls-fee-calculator {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 100%; /* Ensure calculator fits within screen */
+    overflow: hidden; /* Hide overflow on small screens */
+}
+
+.dls-fee-calculator h2 {
+    font-size: 22px;
+    color: #004d4d;
+    margin-bottom: 20px;
+}
+
+.dls-form {
+    max-width: 100%; /* Ensure form fits within screen */
+    margin: 0 auto;
+}
+
+.dls-form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    box-sizing: border-box;
+    width: 100%; /* Take full width on smaller screens */
+}
+
+.dls-form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.dls-form-group select,
+.dls-form-group input,
+.dls-form-group button {
+    width: 100%; /* Make elements full width */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+    display: block; /* Display elements as block */
+    margin-bottom: 10px; /* Add spacing between elements */
+}
+
+.dls-form-group select:focus,
+.dls-form-group input:focus,
+.dls-form-group button:focus {
+    border-color: #007d7d;
+}
+
+.dls-form-group button {
+    background-color: #004d4d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.dls-form-group button:hover {
+    background-color: #003333;
+}
+
+.dls-result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #004d4d;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.dls-result.show {
+    opacity: 1;
+}
+
+.dls-more-courses {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.dls-more-courses h3 {
+    font-size: 22px;
+    color: #004d4d;
+    margin-bottom: 20px;
+}
+
+.dls-logos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+}
+
+.dls-logos img {
+    width: 100px;
+    height: 100px;
+    margin: 10px; /* Add margin between logos */
+}
+
+.student-type-radio {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .student-type-radio label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }  
+
+.dls-popup-content h2 {
+    margin-top: 0;
+}
+
+.dls-popup-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dls-popup-content .dls-form-group {
+    margin-bottom: 15px;
+}
+
+.dls-popup-content .dls-form-group label {
+    margin-bottom: 5px;
+}
+
+.dls-popup-content .dls-form-group input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+.dls-popup-content .dls-form-group button {
+    background-color: #004d4d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.dls-popup-content .dls-form-group button:hover {
+    background-color: #003333;
+}
+
+.dls-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark translucent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure popup is on top */
+}
+
+.dls-popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 80%; /* Adjust to fit content */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 20; /* Ensure popup content is above overlay */
+    pointer-events: auto; /* Allow interactions with popup content */
+}
+
+.dls-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark translucent overlay */
+    z-index: 5; /* Below popup content */
+    pointer-events: none; /* Prevent interactions with overlay */
+}
+
+
+
+  /* Media Queries */
+@media screen and (max-width: 768px) {
+    .dls-courses {
+        display: flex;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        padding: 10px 0; /* Reduced padding */
+        margin: 10px 0; /* Reduced margin */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
-
-    .dl-card {
-      height:  150px;
+    
+    .dls-course {
+        flex: 0 0 auto; /* Prevent items from growing */
+        margin-right: 15px; /* Reduced margin between items */
+        padding: 10px; /* Reduced padding */
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        min-width: 200px; /* Reduced minimum width */
     }
-
-    .dl-title{
+    
+    .dls-course:last-child {
+        margin-right: 0; /* Remove right margin from last item */
+    }
+    
+    .dls-course img {
+        width: 40px; /* Reduced image size */
+        height: 40px; /* Reduced image size */
+        margin: 5px; /* Reduced margin */
+        border-radius: 50%;
+    }
+    
+    .dls-course h3 {
+        font-size: 16px; /* Reduced font size */
+        margin-bottom: 5px; /* Reduced margin */
+    }
+    
+    .dls-course p {
+        font-size: 12px; /* Reduced font size */
+        margin-bottom: 10px; /* Reduced margin */
+    }
+    
+    .dls-course button {
+        background-color: #004d4d;
+        color: #fff;
+        border: none;
+        padding: 8px 15px; /* Reduced padding */
+        font-size: 14px; /* Reduced font size */
+        cursor: pointer;
+    }
+    
+    .dls-course button:hover {
+        background-color: #004d4d;
+    }
+    
+    .dls-fee-calculator {
+        flex-basis: 60%;
+        margin: 20px;
+    }
+    
+    .dls-form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .dls-form-group {
+        flex-basis: 100%;
+        margin: 20px;
+    }
+    
+    .dls-form-group label {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .dls-form-group select {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+    }
+    
+    .dls-form-group button[type="button"] {
+        background-color: #004d4d;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .dls-form-group button[type="button"]:hover {
+        background-color: #004d4d;
+    }
+    
+    .dls-result {
         font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .dl-text{
-        font-size: 14px;
+    .dls-logos {
+        display: flex;
+        justify-content: center; /* Center align logos */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        padding: 10px 0; /* Adjust padding */
     }
-
+    
+    .dls-logos img {
+        width: 80px; /* Reduced width */
+        height: 80px; /* Reduced height */
+        margin: 0 5px; /* Reduced margin */
+    }
 }
