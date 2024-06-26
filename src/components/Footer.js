@@ -14,7 +14,7 @@ function Footer() {
           </ul>
         </div>
         <div className="footer-list">
-          <h2>Online Learning</h2>
+          <h2>Distance Learning</h2>
           <ul>
             <li><Link to="/distancelearning">Courses</Link></li>
             <li><Link to="/distancelearning">Colleges</Link></li>
