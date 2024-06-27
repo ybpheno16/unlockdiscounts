@@ -141,7 +141,7 @@ const DistanceLearning = () => {
       const specializationFee = formData.studentType === 'international'
         ? feeStructure[selectedCollege][selectedCourse].specializations[selectedSpecialization].internationalFee
         : feeStructure[selectedCollege][selectedCourse].specializations[selectedSpecialization].domesticFee;
-      const totalFee = specializationFee;
+      const totalFee = 2.5*specializationFee;
       setFee(totalFee);
     }
   };
@@ -154,11 +154,19 @@ const DistanceLearning = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const whatsappMessage = `Name: ${formData.name}\nContact: ${formData.contact}\nInterested Course: ${formData.interestedCourse}`;
-    const whatsappUrl = `https://wa.me/9620342989?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/+91-9620342989?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     setNotification('Please give us some time and we will revert back to you soon.');
     setShowPopup(false);
   };
+
+  function handleScroll(event) {
+    event.preventDefault(); // Prevent default link behavior
+    const feeCalculatorSection = document.getElementById('feeCalculatorSection');
+    if (feeCalculatorSection) {
+      feeCalculatorSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   return (
     <div className="dls-container">
@@ -168,20 +176,28 @@ const DistanceLearning = () => {
     </p>
     <div className="fee-calculator-container">
       <header className="dls-header">
-        <h1>Online batch admission of 2024 is going on!</h1>
-        <h2>Fee calculator - Check It Now!</h2>
+        <a href="#feeCalculatorSection" onClick={handleScroll}>
+          <h1>Online batch admission of 2024 is going on!</h1>
+          <h2>Fee calculator - Check It Now!</h2>
+        </a>
       </header>
       <section className="dls-courses">
-          {['MBA', 'MCA', 'BCA', 'BCOM', 'MA'].map(course => (
-            <div className="dls-course" key={course}>
-              <i className="fas fa-book-open-reader"></i>
-              <h3>{course}</h3>
-              <p>is simply dummy text of the printing and typesetting industry.</p>
-              <button onClick={() => { setShowPopup(true); setFormData({ ...formData, interestedCourse: course }); }}>Inquire</button>
-            </div>
-          ))}
-        </section>
-      <section className="dls-fee-calculator">
+        {[
+          { name: 'MBA', description: 'A graduate program focusing on business management, leadership, and strategic decision-making.' },
+          { name: 'MCA', description: 'A postgraduate course emphasizing advanced computer science, software development, and IT management.' },
+          { name: 'BCA', description: 'An undergraduate degree focusing on computer science fundamentals, software development, and applications.' },
+          { name: 'BCOM', description: 'An undergraduate program covering various aspects of commerce, finance, accounting, and business studies.' },
+          { name: 'MA', description: 'A postgraduate degree in humanities or social sciences, focusing on advanced studies in a specific discipline like literature, history, or sociology.' }
+        ].map(course => (
+          <div className="dls-course" key={course.name}>
+            <i className="fas fa-book-open-reader"></i>
+            <h3>{course.name}</h3>
+            <p>{course.description}</p>
+            <button onClick={() => { setShowPopup(true); setFormData({ ...formData, interestedCourse: course.name }); }}>Inquire</button>
+          </div>
+        ))}
+      </section>
+      <section className="dls-fee-calculator" id="feeCalculatorSection">
         <h2>Calculate Your Fees</h2>
         <form id="feeCalculatorForm" className="dls-form">
           <div className="dls-form-group">
@@ -212,33 +228,22 @@ const DistanceLearning = () => {
             </select>
           </div>
           <div className="dls-form-group">
-              <label>Are you a domestic or international student?</label>
-              <div className="student-type-radio">
-                <label>
-                  <input
-                    type="radio"
-                    name="studentType"
-                    value="domestic"
-                    checked={formData.studentType === 'domestic'}
-                    onChange={handleStudentTypeChange}
-                  />
-                  Domestic (Indian)
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="studentType"
-                    value="international"
-                    checked={formData.studentType === 'international'}
-                    onChange={handleStudentTypeChange}
-                  />
-                  International
-                </label>
-              </div>
+            <label>Are you a domestic or international student?</label>
+            <div className="student-type-dropdown">
+              <select
+                name="studentType"
+                value={formData.studentType}
+                onChange={handleStudentTypeChange}
+              >
+                <option value="" disabled>Select one</option>
+                <option value="domestic">Domestic (Indian)</option>
+                <option value="international">International</option>
+              </select>
             </div>
-            <div className="dls-form-group">
-              <button type="button" onClick={calculateFee}>Calculate Fee</button>
-            </div>
+          </div>
+          <div className="dls-form-group">
+            <button type="button" onClick={calculateFee}>Calculate Fee</button>
+          </div>
           </form>
           <div id="result" className={`dls-result ${fee !== null ? 'show highlight' : ''}`}>
             {fee !== null ? (
@@ -257,6 +262,8 @@ const DistanceLearning = () => {
                     </>
                   )}
                 </p>
+                <p className="blinking-alert">For more information and available discounts, please contact us.</p>
+
               </div>
             ) : (
               'Please select a college, a course, and a specialization.'

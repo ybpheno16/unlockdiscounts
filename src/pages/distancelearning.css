@@ -29,6 +29,11 @@
     margin-bottom: 20px;
 }
 
+.dls-header a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .dls-header h1 {
     font-size: 22px;
     margin: 0;
@@ -92,6 +97,21 @@
 
 .dls-course button:hover {
     background-color: #003333;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.blinking-alert {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffcc00;
+  color: #333;
+  border-radius: 50%;
+  animation: blink 1s infinite;
 }
 
 .dls-fee-calculator {
