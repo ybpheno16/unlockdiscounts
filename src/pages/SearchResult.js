@@ -17,11 +17,11 @@ function SearchResults() {
       setLoading(true);
       setError(null);
       try {
-        const result = await fetch(`https://products2-tt3o.onrender.com/api/products?q=${query}`);
-        if (!result.ok) {
-          throw new Error('Network result was not ok');
+        const response = await fetch(`http://localhost:5000/api/products?q=${query}`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
-        const data = await result.json();
+        const data = await response.json();
         setFilteredProducts(data);
       } catch (error) {
         setError(error);
