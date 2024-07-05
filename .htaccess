@@ -1,3 +1,4 @@
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -8,5 +9,21 @@
   RewriteRule ^ - [L]
 
   # Redirect all other requests to index.html
-  RewriteRule ^ index.html [L]
+  RewriteRule ^ /public/index.html [L]
 </IfModule>
+
+
+
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteBase /
+
+#   # Allow direct access to existing files and directories
+#   RewriteCond %{REQUEST_FILENAME} -f [OR]
+#   RewriteCond %{REQUEST_FILENAME} -d
+#   RewriteRule ^ - [L]
+
+#   # Redirect all other requests to index.html
+#   RewriteRule ^ index.html [L]
+# </IfModule>
+
