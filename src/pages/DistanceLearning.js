@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import './distancelearning.css'; // Import CSS file for the Distance Learning page
 
 const feeStructure = {
+
+  // Jain university::
+
   "Jain University": {
     "B.Com": {
-      baseFee: 42500,
       specializations: {
         "International Finance and Accounting  (ACCA, UK)": { internationalFee: 2200, domesticFee: 120000 },
         "Accounting & Finance": { internationalFee: 800, domesticFee: 42500 },
@@ -12,7 +14,6 @@ const feeStructure = {
       }
     },
     "BBA": {
-      baseFee: 55000,
       specializations: {
         "Marketing": { internationalFee: 1000, domesticFee: 55000 },
         "Human Resource Management": { internationalFee: 1000, domesticFee: 55000 },
@@ -20,14 +21,12 @@ const feeStructure = {
       }
     },
     "M.Com": {
-      baseFee: 52500,
       specializations: {
         "International Finance (ACCA, UK)": { internationalFee: 2000, domesticFee: 110000 },
         "Accounting & Finance": { internationalFee: 950, domesticFee: 52500 }
       }
     },
     "MBA": {
-      baseFee: 80000,
       specializations: {
         "Human Resource Management": { internationalFee: 1450, domesticFee: 80000 },
         "Finance": { internationalFee: 1450, domesticFee: 80000 },
@@ -49,7 +48,6 @@ const feeStructure = {
       }
     },
     "MCA": {
-      baseFee: 130000,
       specializations: {
         "Computer Science & IT": { internationalFee: 1300, domesticFee: 75000 },
         "Cyber Security": { internationalFee: 1300, domesticFee: 75000 },
@@ -57,15 +55,186 @@ const feeStructure = {
       }
     },
     "M.A": {
-      baseFee: 75000,
       specializations: {
         "English": { internationalFee: 900, domesticFee: 45000 },
         "Public Policy": { internationalFee: 900, domesticFee: 45000 },
         "Economics": { internationalFee: 900, domesticFee: 45000 }
       }
     }
+  },
+  
+
+  //symbiosis university::
+
+  "Symbiosis University": {
+    "Diploma": {
+      specializations: {
+        "Creative Writing in English": {internationalFee: null, domesticFee: 14000},
+        "English Language Teaching": {internationalFee: null, domesticFee: 16500}
+      }
+    },
+    "PG Diploma": {
+      specializations: {
+        "PGDBA": { internationalFee: null, domesticFee: 20000 },
+        "PGDIB": { internationalFee: null, domesticFee: 22000 },
+        "PGDDS": { internationalFee: null, domesticFee: 24000 },
+        "PGDRM": { internationalFee: null, domesticFee: 19000 },
+        "PGDPM": { internationalFee: null, domesticFee: 25000 }
+      }
+    },
+    "PG Certificate": {
+      specializations: {
+        "Business Analytics": { internationalFee: null, domesticFee: 17500 },
+        "FinTech": { internationalFee: null, domesticFee: 18000 },
+        "Healthcare Mgmt": { internationalFee: null, domesticFee: 19000 },
+        "Cyber Laws": { internationalFee: null, domesticFee: 20000 },
+        "Digital Marketing": { internationalFee: null, domesticFee: 18000 }
+      }
+    },
+    "SCDL DDE Management": {
+      specializations: {
+        "PGDBA": { internationalFee: null, domesticFee: 20000 },
+        "PGDHRM": { internationalFee: null, domesticFee: 24000 },
+        "PGDIB": { internationalFee: null, domesticFee: 22000 },
+        "PGDPM": { internationalFee: null, domesticFee: 25000 }
+      }
+    },
+    "SCDL DDE IT and Computer Courses": {
+      specializations: {
+        "PGDIT": { internationalFee: null, domesticFee: 22000 },
+        "Certificate in AWS Solutions Architect": { internationalFee: null, domesticFee: 30000 },
+        "Certificate in Blockchain Technology": { internationalFee: null, domesticFee: 25000 }
+      }
+    },
+    "SCDL Distance UG Diploma": {
+      specializations: {
+        "Diploma in Creative Writing in English": { internationalFee: null, domesticFee: 14000 },
+        "Diploma in English Language Teaching": { internationalFee: null, domesticFee: 16500 }
+      }
+    },
+    "SCDL Distance PG Diploma": {
+      specializations: {
+        "PGDBA": { internationalFee: null, domesticFee: 20000 },
+        "PGDIB": { internationalFee: null, domesticFee: 22000 },
+        "PGDDS": { internationalFee: null, domesticFee: 24000 },
+        "PGDRM": { internationalFee: null, domesticFee: 19000 },
+        "PGDPM": { internationalFee: null, domesticFee: 25000 }
+      }
+    },
+    "SCDL Diploma & PG Certificate Courses": {
+      specializations: {
+        "PG Certificate in Business Analytics": { internationalFee: null, domesticFee: 17500 },
+        "PG Certificate in FinTech": { internationalFee: null, domesticFee: 18000 },
+        "PG Certificate in Healthcare Mgmt": { internationalFee: null, domesticFee: 19000 },
+        "PG Certificate in Cyber Laws": { internationalFee: null, domesticFee: 20000 },
+        "PG Certificate in Digital Marketing": { internationalFee: null, domesticFee: 18000 }
+      }
+    }
+  },
+
+
+// sharda university::
+
+  "Sharda University": {
+    "BBA": {
+      specializations: {
+        "International Finance (Accredited by ACCA, UK)": { domesticFee: 85000, internationalFee: 1500 },
+        "General": { domesticFee: 35000, internationalFee: 600 }
+      }
+    },
+    "BA (Hons.)": {
+      specializations: {
+        "Political Science": { domesticFee: 35000, internationalFee: 600 }
+      }
+    },
+    "BCA": {
+      specializations: {
+        "General": { domesticFee: 35000, internationalFee: 600 },
+        "Finance": { domesticFee: 50000, internationalFee: 900 },
+        "Marketing": { domesticFee: 50000, internationalFee: 900 }
+      }
+    },
+    "MBA": {
+      specializations: {
+        "Human Resource Management": { domesticFee: 50000, internationalFee: 900 },
+        "Data Science and Analytics": { domesticFee: 50000, internationalFee: 900 },
+        "Operations Management": { domesticFee: 50000, internationalFee: 900 },
+        "International Business": { domesticFee: 50000, internationalFee: 900 },
+        "Project Management": { domesticFee: 50000, internationalFee: 900 },
+        "Logistics and Supply Chain Management": { domesticFee: 50000, internationalFee: 900 },
+        "Digital Marketing and E-commerce": { domesticFee: 50000, internationalFee: 900 },
+        "International Finance (Accredited by ACCA, UK)": { domesticFee: 85000, internationalFee: 1500 },
+        "Healthcare and hospital administration": { domesticFee: 50000, internationalFee: 900 }
+      }
+    },
+    "MCA": {
+      specializations: {
+        "Computer Science and Information Technology": { domesticFee: 50000, internationalFee: 900 },
+        "Data Science": { domesticFee: 50000, internationalFee: 900 },
+        "Artificial Intelligence": { domesticFee: 50000, internationalFee: 900 },
+        "Cyber Security": { domesticFee: 50000, internationalFee: 900 },
+        "Cloud Computing": { domesticFee: 50000, internationalFee: 900 }
+      }
+    },
+    "M.Com": {
+      specializations: {
+        "Accounting and Finance": { domesticFee: 35000, internationalFee: 600 },
+        "International Finance (Accredited by ACCA, UK)": { domesticFee: 100000, internationalFee: 2300 }
+      }
+    }
+  },
+
+  // amity university::
+
+  "Amity University": {
+    "BBA": {
+      specializations: {
+        "General": { domesticFee: 55000, internationalFee: null }
+      }
+    },
+    "BA (Hons.)": {
+      specializations: {
+        "General": { domesticFee: 56000, internationalFee: null }
+      }
+    },
+    "BCA": {
+      specializations: {
+        "General": { domesticFee: 55000, internationalFee: null }
+      }
+    },
+    "BA-MC": {
+      specializations: {
+        "General": { domesticFee: 53000, internationalFee: null }
+      }
+    },
+    "B.Com (Vernacular)": {
+      specializations: {
+        "General": { domesticFee: 33000, internationalFee: null }
+      }
+    },
+    "MBA": {
+      specializations: {
+        "General": { domesticFee: 85000, internationalFee: null }
+      }
+    },
+    "MA-MC": {
+      specializations: {
+        "General": { domesticFee: 85000, internationalFee: null }
+      }
+    },
+    "MA-PG": {
+      specializations: {
+        "General": { domesticFee: 85000, internationalFee: null }
+      }
+    },
+    "M.Com-FM": {
+      specializations: {
+        "General": { domesticFee: 85000, internationalFee: null }
+      }
+    }
   }
-};
+ };
+
 
 const DistanceLearning = () => {
   const [selectedCollege, setSelectedCollege] = useState('');
