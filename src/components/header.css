@@ -128,3 +128,159 @@
   }
   
   
+
+
+
+/* Added css:: for search bar and live suggestion list */
+
+  .search-result {
+    padding: 10px 20px;
+    z-index: 1000;
+
+  }
+  
+  .search-result:hover {
+    background-color: #efefef;
+  }
+
+  .results-list {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px #ddd;
+    border-radius: 10px;
+    /* margin-top: 1rem; */
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+
+  .search-container {
+    margin-left: 14vw;
+    position: absolute;
+    top: 60px; /* Adjust this value based on your header height */
+    left: 0;
+    width: 35%;
+    background-color: white;
+    z-index: 1000;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  .search-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  .header {
+    position: relative;
+    z-index: 999; /* Ensure header stays below search container */
+  }
+
+
+@media only screen and (max-width: 768px){
+  .search-container {
+    margin-left: 2vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+ 
