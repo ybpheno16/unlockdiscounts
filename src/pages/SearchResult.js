@@ -1,53 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
-import './productgallery.css'; // Ensure you have a corresponding CSS file
+import './productgallery.css';
 
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
-
-function SearchResults() {
-  const query = useQuery().get('q');
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchResults = async () => {
-      setLoading(true);
-      setError(null);
-      try {
-        const response = await fetch(`http://localhost:5000/api/products?q=${query}`);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setFilteredProducts(data);
-      } catch (error) {
-        setError(error);
-      }
-      setLoading(false);
-    };
-
-    fetchResults();
-  }, [query]);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+const SearchResult = () => {
+  const location = useLocation();
+  const { results } = location.state || { results: [] };
 
   return (
-    <div className='container'>
-      <h1>Search Results for "{query}"</h1>
-      {filteredProducts.length === 0 ? (
-        <p>No results found.</p>
-      ) : (
+    <div className="container">
+      <h1>Search Results</h1>
+      {results.length > 0 ? (
         <div className="product-cards">
-          {filteredProducts.map((product, index) => (
+          {results.map((product, index) => (
             <div key={index} className="product-card">
               <div className="product-image">
                 <img src={product.image} alt={product.name} />
@@ -60,9 +24,11 @@ function SearchResults() {
             </div>
           ))}
         </div>
+      ) : (
+        <p>No results found.</p>
       )}
     </div>
   );
-}
+};
 
-export default SearchResults;
+export default SearchResult;

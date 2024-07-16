@@ -1,20 +1,22 @@
+// src/components/Header.js
 import React, { useState, useEffect, useRef } from 'react';
-import './header.css'; // Import CSS file for the header
-import { Link, useNavigate } from 'react-router-dom'; // Import Link component from react-router-dom
+import './header.css';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Fuse from 'fuse.js'; // Import fuse.js for fuzzy search
+import Fuse from 'fuse.js';
 
 function Header() {
   const [query, setQuery] = useState('');
   const [products, setProducts] = useState([]);
-  const [error, setError] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [showSuggestions, setShowSuggestions] = useState(true);
+  const [error, setError] = useState(null);
 
-  const searchContainerRef = useRef(null); // Create a ref for the search container
+  const searchContainerRef = useRef(null);
+  const navigate = useNavigate();
 
-
-  const navigate = useNavigate(); // Initialize useNavigate
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const fetchData = async () => {
     try {
@@ -22,66 +24,37 @@ function Header() {
       setProducts(response.data);
       setError(null);
     } catch (err) {
-      setError('Failed to fetch');
+      setError('Failed to fetch products');
       console.error(err);
     }
   };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
   const handleChange = (value) => {
     setQuery(value);
-    setShowSuggestions(true);
-
-    const fuse = new Fuse(products, {
-      keys: ['title', 'description'],
-      includeScore: true,
-      threshold: 0.4, // Adjust threshold as needed
-    });
-
-    const results = fuse.search(value);
-    const matches = results.map(result => result.item);
-    setFilteredProducts(matches);
-
-    if (value === '') {
+    if (value.trim() === '') {
       setFilteredProducts([]);
+    } else {
+      const fuse = new Fuse(products, {
+        keys: ['title', 'description'],
+        includeScore: true,
+        threshold: 0.4,
+      });
+      const results = fuse.search(value);
+      const matches = results.map(result => result.item);
+      setFilteredProducts(matches);
     }
   };
 
-  const handleSearch = async (event) => {
-    event.preventDefault(); // Prevent default form submission
-    setShowSuggestions(false);
-
+  const handleSearch = (event) => {
+    event.preventDefault();
     const fuse = new Fuse(products, {
       keys: ['title', 'description'],
       includeScore: true,
-      threshold: 0.4, // Adjust threshold as needed
+      threshold: 0.4,
     });
-
     const results = fuse.search(query);
     const matches = results.map(result => result.item);
-    setFilteredProducts(matches);
-
-    if (query === '') {
-      setFilteredProducts([]);
-    }
-  };
-
-  const handleSuggestionClick = (value) => {
-    setQuery(value);
-    setShowSuggestions(false);
-
-    const fuse = new Fuse(products, {
-      keys: ['title', 'description'],
-      includeScore: true,
-      threshold: 0.4, // Adjust threshold as needed
-    });
-
-    const results = fuse.search(value);
-    const matches = results.map(result => result.item);
-    setFilteredProducts(matches);
+    navigate('/search-results', { state: { results: matches } });
   };
 
   const handleKeyPress = (event) => {
@@ -90,49 +63,10 @@ function Header() {
     }
   };
 
-  // Determine screen width
-  const screenWidth = window.innerWidth;
-
-  const SearchResult = ({ result }) => {
-    return (
-      <div
-        className="search-result"
-        onClick={() => handleSuggestionClick(result.title)}
-      >
-        {result.title}
-      </div>
-    );
-  };
-
-  const SearchResultsList = ({ results }) => {
-    return (
-      <div className="results-list">
-        {results.map((result, id) => {
-          return <SearchResult result={result} key={id} />;
-        })}
-      </div>
-    );
-  };
-
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-        if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
-            setShowSuggestions(false); // Only hide suggestions
-            setFilteredProducts([]); // Clear product results
-        }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
-    };
-}, [searchContainerRef]);
-
-
+   // Determine screen width
+   const screenWidth = window.innerWidth;
 
   return (
-    <>
       <header className="header">
         {screenWidth > 768 ? (
           // Desktop view
@@ -155,7 +89,7 @@ function Header() {
             <div className="nav-links">
               <Link to="/">Home</Link>
               <Link to="/blog">Blog</Link>
-              <Link to="/distancelearning">Distance Learning</Link>
+              <Link to="/distancelearning">Online Learning</Link>
               <Link to="/about">About</Link>
               <Link to="/contact">Contact Us</Link>
             </div>
@@ -192,44 +126,8 @@ function Header() {
           </div>
         )}
       </header>
-
-      {error && <p>{error}</p>}
-        {showSuggestions && query.length > 0 && filteredProducts.length > 0 && (
-          <div className='search-container' ref={searchContainerRef}>
-              <SearchResultsList results={filteredProducts} />
-          </div>
-        )}
-
-      {query.length > 1 && filteredProducts.length > 0 && !showSuggestions && (
-        <div className="product-cards">
-          {filteredProducts.map((product, index) => (
-            <div key={index} className="product-card">
-              <div className="product-image">
-                <img src={product.image} alt={product.title} />
-              </div>
-              <div className="product-details">
-                <h3 className="product-title">{product.title}</h3>
-                <p className="product-description">{product.description}</p>
-                <a href={product.affiliateLink} target="_blank" rel="noopener noreferrer" className="buy-now-button">BUY NOW</a>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      <footer className="footer">
-        {/* Footer content */}
-      </footer>
-    </>
   );
 }
 
 export default Header;
-
-
-
-
-
-
-
-
+ 
