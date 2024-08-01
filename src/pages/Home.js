@@ -35,7 +35,7 @@ function Home() {
         <div className="container">
             <h1 className="heading">Electronics</h1>
             <div className="electronics-container">
-            <div class="left-side">
+            <div className="left-side">
                 <div className="category">
                     <div className="e-category-item">
                         <Link to="/electronics/phones-accessories">
