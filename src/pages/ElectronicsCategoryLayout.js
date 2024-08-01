@@ -26,7 +26,7 @@ function ElectronicsCategoryLayout({ category, bannerImage }) {
       <h1 className="maincategory-title">Electronics</h1>
       <p className="subdes">Unlock Innovation: Explore Cutting-Edge Electronics at Unbeatable Prices!</p>
       <div className="common-banner">
-        <img src={bannerImage} alt={`${category} Banner`} className="common-banner-image" />
+        <img loading='lazy' src={bannerImage} alt={`${category} Banner`} className="common-banner-image" />
       </div>
       <h2 className="category-title">{category}</h2>
       <div className="product-cards">

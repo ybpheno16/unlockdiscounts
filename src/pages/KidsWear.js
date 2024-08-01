@@ -10,7 +10,7 @@ const FashionLayout = lazyLoad(lazy(() => import('./FashionLayout')));
 
 function KidsWear() {
   const category = "Kid's Wear";
-  const bannerImage = "/fashion/kidswearbanner2.avif"; 
+  const bannerImage = "https://res.cloudinary.com/dcmtxvsav/image/upload/v1722328190/kidswearbanner2_jypdsh.png"; 
   return <FashionLayout category={category} bannerImage={bannerImage} />;
 }
 
