@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Fuse from "fuse.js";
 import Box from "@mui/material/Box";
+import logo from "../images/logo.png";
 function Header() {
   const [query, setQuery] = useState("");
   const [products, setProducts] = useState([]);
@@ -69,34 +70,59 @@ function Header() {
   const screenWidth = window.innerWidth;
 
   return (
-    <header className="header">
-      <div className="top-bar">
-        <Box>
-          <img src="" />
+    <Box sx={{ height: { xs: "256px", sm: "136px" }, width: "100vw" }}>
+      <header className="header">
+        <Box
+          sx={{
+            backgroundColor: "black",
+            height: "38px",
+            width: "100%",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: {
+              xs: "10px",
+              sm: "14px",
+            },
+          }}
+        >
+          <p className="sign-up-text">
+            Sign up and get 20% off to your first order.
+          </p>{" "}
+          <button className="sign-up">Sign Up Now</button>
         </Box>
-        <div className="search-bar">
-          <form onSubmit={handleSearch}>
-            <input
-              type="text"
-              name="searchInput"
-              placeholder="Looking for something..."
-              value={query}
-              onChange={(e) => handleChange(e.target.value)}
-              onKeyPress={handleKeyPress} // Handle Enter key press
-              autoComplete="off"
-            />
-            <button type="submit">Search</button>
-          </form>
+        <div className="nav-bar-container">
+          <Box display={{ xs: "none", sm: "block" }}>
+            <img className="logo" src={logo} alt="unlock discounts logo" />
+          </Box>
+          <Box display={{ xs: "block", sm: "none" }}>
+            <h2>UnlockDiscounts</h2>
+          </Box>
+          <div className="search-bar">
+            <form onSubmit={handleSearch}>
+              <input
+                type="text"
+                name="searchInput"
+                placeholder="Looking for something..."
+                value={query}
+                onChange={(e) => handleChange(e.target.value)}
+                onKeyPress={handleKeyPress} // Handle Enter key press
+                autoComplete="off"
+              />
+              <button type="submit">Search</button>
+            </form>
+          </div>
+          <div className="nav-links">
+            <Link to="/">Home</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/distancelearning">Online Learning</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact Us</Link>
+          </div>
         </div>
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/distancelearning">Online Learning</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact Us</Link>
-        </div>
-      </div>
-    </header>
+      </header>{" "}
+    </Box>
   );
 }
 
