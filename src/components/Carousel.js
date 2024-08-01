@@ -1,6 +1,5 @@
-
-import React, { useState, useEffect } from 'react';
-import './carousel.css';
+import React, { useState, useEffect } from "react";
+import "./carousel.css";
 
 function Carousel() {
   // State to keep track of the active slide index
@@ -12,7 +11,7 @@ function Carousel() {
     "/banners/slide 2.avif",
     "/banners/slide 3.avif",
     "/banners/slide 4.avif",
-    "/banners/slide 5.avif"
+    "/banners/slide 5.avif",
   ];
 
   // Function to handle moving to the next slide
@@ -23,10 +22,10 @@ function Carousel() {
   // Preload images
   useEffect(() => {
     slides.forEach((slide) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
+      const link = document.createElement("link");
+      link.rel = "preload";
       link.href = slide;
-      link.as = 'image';
+      link.as = "image";
       document.head.appendChild(link);
     });
   }, [slides]);
@@ -40,7 +39,12 @@ function Carousel() {
   return (
     <div className="carousel">
       {slides.map((slide, index) => (
-        <div key={index} className={index === activeIndex ? "carousel-item active" : "carousel-item"}>
+        <div
+          key={index}
+          className={
+            index === activeIndex ? "carousel-item active" : "carousel-item"
+          }
+        >
           <img src={slide} alt={`Slide ${index + 1}`} />
         </div>
       ))}
@@ -49,4 +53,3 @@ function Carousel() {
 }
 
 export default Carousel;
-
