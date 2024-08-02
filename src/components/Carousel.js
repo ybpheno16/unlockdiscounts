@@ -17,10 +17,10 @@ function Carousel() {
   
   const brandList = [
     '/banners/amazon.png',
-    '/banners/myntra.png',
+    '/banners/myntra.webp',
     '/banners/meesho.png',
     '/banners/flipkart.png',
-    '/banners/ajio.png',
+    '/banners/ajio.jpg',
   ];
 
   // Function to handle moving to the next slide

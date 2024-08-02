@@ -167,8 +167,9 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* .brand-logo{
-
-    } */
+    .brand-logo{
+      height: 100px;
+      width: 100px;
+    } 
   }
 }
