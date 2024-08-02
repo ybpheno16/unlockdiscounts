@@ -14,6 +14,7 @@ function Carousel() {
     "/banners/slide 4.avif",
     "/banners/slide 5.avif"
   ];
+  
   const brandList = [
     '/banners/amazon.png',
     '/banners/myntra.png',
