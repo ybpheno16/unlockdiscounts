@@ -56,3 +56,120 @@
     height: 150px;
   }
 }
+.bannerContainer{
+  position: relative;
+  .bannerImage{
+    height: 40.978vw;
+    width: 100%;
+    object-fit: fill;
+
+    /* @media (max-width: 595px) {
+      height: 166.387vw;
+      width: 100%;
+    } */
+  }
+  .contentContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 3.398vw 0 0.555vw 7.49vw;
+    max-width: 40.222vw;
+    max-height: 17.892vw;
+    h1{
+      font-family: 'Notable';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 4.438vw;
+      line-height: 4.438vw;
+      color: #000000;
+      white-space: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    p{
+      font-family: 'Satoshi'; 
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.11vw;
+      line-height: 1.526vw;
+      color: rgba(0, 0, 0, 0.6);
+      margin: 0 0 2.011vw 0;
+      padding: 0;
+    }
+
+    .shopNowCTA{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.11vw 3.745vw;
+      margin-bottom: 3.051vw;
+      width: 14.563vw;
+      height: 3.606vw;
+      background-color: #000000;  
+      border-radius: 4.3vw;
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 1.31vw;
+      line-height: 1.526vw;
+      color: #FFFFFF;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+
+    }
+    .shopNowCTA:hover {
+      color: #000;
+      background-color: #fff;
+      border: 2px solid black; 
+      transform: scale(1.05); 
+    }
+    
+
+
+
+    .info-container{
+      display: flex;
+      max-width: 41.331vw;
+      height: 5.132vw;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8.044vw;
+      h2{
+        margin: 0;
+        padding: 0;
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.774vw;
+        line-height: 3.745vw;
+        color: #000000;
+      }
+      p{
+        margin: 0;
+        padding: 0;
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.11vw;
+        line-height: 1.526vw;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  .brand-banner{
+    /* height: 8.46vw; */
+    background: #E6C744;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .brand-logo{
+      height: 100px;
+      width: 100px;
+    } 
+  }
+}

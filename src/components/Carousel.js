@@ -8,12 +8,20 @@ function Carousel() {
 
   // Array of slide image URLs
   const slides = [
-    "https://res.cloudinary.com/dcmtxvsav/image/upload/v1722328894/slide-1_w5npro.jpg",
-    "https://res.cloudinary.com/dcmtxvsav/image/upload/v1722328933/slide-2_ibse0k.jpg",
-    "https://res.cloudinary.com/dcmtxvsav/image/upload/v1722328226/slide_3_peumsu.png",
-    "https://res.cloudinary.com/dcmtxvsav/image/upload/v1722328226/slide_4_shabup.png",
-    "https://res.cloudinary.com/dcmtxvsav/image/upload/v1722328226/slide_5_egri89.png"
-  ];  //Used Cloudinary for creating a virtual link for those images
+    "/banners/slide 1.avif",
+    "/banners/slide 2.avif",
+    "/banners/slide 3.avif",
+    "/banners/slide 4.avif",
+    "/banners/slide 5.avif"
+  ];
+  
+  const brandList = [
+    '/banners/amazon.png',
+    '/banners/myntra.webp',
+    '/banners/meesho.png',
+    '/banners/flipkart.png',
+    '/banners/ajio.jpg',
+  ];
 
   // Function to handle moving to the next slide
   const nextSlide = () => {
@@ -38,13 +46,42 @@ function Carousel() {
   }, []);
 
   return (
-    <div className="carousel">
-      {slides.map((slide, index) => (
-        <div key={index} className={index === activeIndex ? "carousel-item active" : "carousel-item"}>
-          <img loading='lazy' src={slide} alt={`Slide ${index + 1}`} />  {/* Added Loading Lazy */ }
+    // <div className="carousel">
+    //   {slides.map((slide, index) => (
+    //     <div key={index} className={index === activeIndex ? "carousel-item active" : "carousel-item"}>
+    //       <img src={slide} alt={`Slide ${index + 1}`} />
+    //     </div>
+    //   ))}
+    // </div>
+    <div className='bannerContainer'>
+    <img className='bannerImage' src='/banners/staticBanner.png'/>
+    <div className='contentContainer'>
+      <h1>FIND DEALS THAT FITS IN YOUR BUDGET </h1>
+      <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+
+      <button className='shopNowCTA'>Shop Now</button>
+
+      <div className='info-container'>
+        <div>
+          <h2>200+</h2>
+          <p>International Brands</p>
         </div>
-      ))}
+        <div>
+          <h2>2,000+</h2>
+          <p>High-Quality Products</p>
+        </div>
+        <div>
+          <h2>30,000+</h2>
+          <p>Happy Customers</p>
+        </div>
+      </div>
     </div>
+    <div className='brand-banner'>
+      {brandList?.map(brands => {
+        return <img className='brand-logo' src={brands} />
+      })}
+    </div>
+  </div>
   );
 }
 
