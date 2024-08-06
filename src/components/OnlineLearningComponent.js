@@ -2,13 +2,14 @@ import React from "react";
 import "./onlinelearningcomponent.css";
 import { Link } from "react-router-dom";
 
-
 // LearningCard component
 const LearningCard = ({ img, title, description }) => {
   return (
     <div className="learning-card">
       <Link to="/banking" className="no-underline">
-        <img loading="lazy" src={img} alt="Credit Card Image" />
+        <div className="card-image">
+          <img loading="lazy" src={img} alt="online_learning" />
+        </div>
         <div className="card-title">{title}</div>
       </Link>
       <p className="card-description">{description}</p>
@@ -18,7 +19,6 @@ const LearningCard = ({ img, title, description }) => {
 
 // OnlineLearningComponent component
 const OnlineLearningComponent = () => {
-
   // Data for learningCards
   const learningCardDetails = [
     {

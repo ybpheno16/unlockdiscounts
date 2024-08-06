@@ -7,7 +7,7 @@ import OnlineLearningComponent from "../components/OnlineLearningComponent";
 function Home() {
   return (
     <div>
-      {/* <Carousel />
+      <Carousel />
       <div className="container">
         <h1 className="heading">Fashion</h1>
         <div className="category">
@@ -112,7 +112,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Going to create online learning component */}
       <OnlineLearningComponent />

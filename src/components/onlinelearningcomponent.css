@@ -42,7 +42,9 @@
   justify-content: center;
   align-items: center;
   gap: 0px;
+  width: 100%;
 }
+
 .learning-card .card-title {
   font-family: "inter";
   font-size: 19px;
@@ -61,7 +63,9 @@
 
 .learning-card img {
   width: 100%;
+  height: auto;
   border-radius: 10px;
+  display: block;
 }
 
 .no-underline {
@@ -71,6 +75,15 @@
   justify-content: start;
   align-items: center;
   color: black;
+  width: 100%;
+}
+
+.no-underline .card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
 }
 
 /* Media Queries for responsiveness */
