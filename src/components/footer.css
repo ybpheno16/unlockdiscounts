@@ -163,6 +163,7 @@
 .footer .white-banner .right {
   display: flex;
   justify-content: space-around;
+  gap: 10px;
   flex: 2.5;
 }
 
@@ -179,7 +180,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 /* css for white banner > right section > col > nav > li ( individual page link ) */
