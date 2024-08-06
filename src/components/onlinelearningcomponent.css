@@ -1,5 +1,6 @@
+/* online learning component css*/
+
 .online-learning-component-container {
-  /* linear background */
   background: linear-gradient(to top, #fff4cf 0%, #ffffff 100%);
   padding: 15px 5%;
   position: relative;
@@ -72,6 +73,7 @@
   color: black;
 }
 
+/* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
   .online-learning-component-container h1 {
     font-size: 20px;
