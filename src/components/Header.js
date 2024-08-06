@@ -13,7 +13,6 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import offerBanner from "../images/50-off.png";
-import MobileNavLink from "./MobileNavLink";
 function Header() {
   const [query, setQuery] = useState("");
   const [products, setProducts] = useState([]);
