@@ -1,0 +1,47 @@
+.carousel-container {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .carousel-slide {
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .carousel-brand {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .carousel-promo {
+    font-size: 14px;
+    color: #ff0000;
+    margin-top: 10px;
+  }
+
+  .custom-dots {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  .custom-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .custom-dot.slick-active {
+    background-color: #000;
+  }
