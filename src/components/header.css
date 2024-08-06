@@ -1,4 +1,5 @@
 /* header.css */
+
 *,
 *::after,
 *::before {
@@ -17,11 +18,11 @@
   outline: none;
   border: none;
   font-weight: 500;
-  font-family: "Satoshi", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: inherit;
 }
 .sign-up-text {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 .logo {
@@ -29,18 +30,59 @@
   height: 89px;
   object-fit: cover;
 }
+
 a {
   text-decoration: none;
   color: black;
+  user-select: none;
 }
-a:hover {
-  text-decoration: underline;
-}
-.men-fashion-container {
+.link-container {
   position: relative;
 }
+.link-underline {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #0026ff;
+  top: 50px;
+  left: 0px;
+}
+.dorpDown-container a:hover {
+  text-decoration: underline;
+}
+.black-horizantal-line {
+  height: 1px;
+  width: 180px;
+  background-color: #a8a29e;
+  margin-top: 10px;
+}
+
 .red-heading {
   color: #dc2626;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.pink-heading {
+  color: #d946ef;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.orange-heading {
+  color: #f97316;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.yellow-heading {
+  color: #ffae00;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.green-heading {
+  color: #14b8a6;
   margin-bottom: 10px;
   margin-top: 10px;
   font-weight: 600;
@@ -60,6 +102,54 @@ a:hover {
   border-radius: 50px;
   font-size: 16px;
 }
+/* mobile input box styles */
+@media (max-width: 750px) {
+  .form {
+    display: flex;
+    padding: 0 5px;
+    align-items: center;
+    gap: 5px;
+  }
+  .input-box {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 30px;
+    border-radius: 50px;
+    font-size: 11px;
+  }
+}
+.mobile-dropdown-logo-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+  opacity: 0.6;
+}
+.mobile-logo {
+  font-size: 16px;
+  margin-right: 8px;
+}
+.mobile-offer-banner {
+  width: 100%;
+}
+.hamburger-closing-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  opacity: 0.6;
+}
+.mobile-main-link {
+  font-size: 16px;
+  font-weight: 500;
+}
+.mobile-sub-link {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
 /* Added css:: for search bar and live suggestion list */
 
 .search-result {
