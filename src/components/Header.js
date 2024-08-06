@@ -233,14 +233,30 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-tshirts" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Casual Shirts" link="/" />
-                          <MobileNavLink title="Formal Shirts" link="/" />
-                          <MobileNavLink title="Sweatshirts" link="/" />
-                          <MobileNavLink title="Sweaters" link="/" />
-                          <MobileNavLink title="Jackets" link="/" />
-                          <MobileNavLink title="Blazers & Coats" link="/" />
-                          <MobileNavLink title="Suits" link="/" />
-                          <MobileNavLink title="Rain Jackets" link="/" />
+                          <Link className="mobile-sub-link-child " to="/">
+                            Casual Shirts
+                          </Link>
+                          <Link className="mobile-sub-link-child " to="/">
+                            Formal Shirts
+                          </Link>
+                          <Link className="mobile-sub-link-child " to="/">
+                            Sweatshirts
+                          </Link>
+                          <Link className="mobile-sub-link-child " to="/">
+                            Sweaters
+                          </Link>
+                          <Link className="mobile-sub-link-child " to="/">
+                            Jackets
+                          </Link>
+                          <Link className="mobile-sub-link-child " to="/">
+                            Blazers & Coats
+                          </Link>
+                          <Link className="mobile-sub-link-child " to="/">
+                            Suits
+                          </Link>
+                          <Link className="mobile-sub-link-child " to="/">
+                            Rain Jackets
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -271,10 +287,16 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-indian-festival" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Kurtas & Kurta Sets" link="/" />
-                          <MobileNavLink title="Sherwanis" link="/" />
-                          <MobileNavLink title="Nehru Jackets" link="/" />
-                          <MobileNavLink title="Dhotis" link="/" />
+                          <Link className="mobile-sub-link-child ">
+                            Kurtas & Kurta Sets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sherwanis
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Nehru Jackets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Dhotis</Link>
                         </Box>
                       )}
                     </Box>
@@ -305,14 +327,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-bottomwear" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Jeans" link="/" />
-                          <MobileNavLink title="Casual Trousers" link="/" />
-                          <MobileNavLink title="Formal Trousers" link="/" />
-                          <MobileNavLink title="Shorts" link="/" />
-                          <MobileNavLink
-                            title="Track Pants & Joggers"
-                            link="/"
-                          />
+                          <Link className="mobile-sub-link-child ">Jeans</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Casual Trousers
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Formal Trousers
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Shorts</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Track Pants & Joggers
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -343,14 +368,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-innerwear" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Briefs & Trunks" link="/" />
-                          <MobileNavLink title="Boxers" link="/" />
-                          <MobileNavLink title="Vests" link="/" />
-                          <MobileNavLink
-                            title="leepwear & Loungewear"
-                            link="/"
-                          />
-                          <MobileNavLink title="Thermals" link="/" />
+                          <Link className="mobile-sub-link-child ">
+                            Briefs & Trunks
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Boxers</Link>
+                          <Link className="mobile-sub-link-child ">Vests</Link>
+                          <Link className="mobile-sub-link-child ">
+                            leepwear & Loungewear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Thermals
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -389,12 +417,22 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-Footwear" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Casual Shoes" link="/" />
-                          <MobileNavLink title="Sports Shoes" link="/" />
-                          <MobileNavLink title="Sneakers" link="/" />
-                          <MobileNavLink title="Sandals & Floaters" link="/" />
-                          <MobileNavLink title="Flip Flops" link="/" />
-                          <MobileNavLink title="Socks" link="/" />
+                          <Link className="mobile-sub-link-child ">
+                            Casual Shoes
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sports Shoes
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sneakers
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sandals & Floaters
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Flip Flops
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Socks</Link>
                         </Box>
                       )}
                     </Box>
@@ -447,20 +485,30 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-sports" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Sports Shoes" link="/" />
-                          <MobileNavLink title="Sports Sandals" link="/" />
-                          <MobileNavLink title="Active T-Shirts" link="/" />
-                          <MobileNavLink
-                            title="Track Pants & Shorts"
-                            link="/"
-                          />
-                          <MobileNavLink title="Tracksuits" link="/" />
-                          <MobileNavLink
-                            title="Jackets & Sweatshirts"
-                            link="/"
-                          />
-                          <MobileNavLink title="Sports Accessories" link="/" />
-                          <MobileNavLink title="Swimwear" link="/" />
+                          <Link className="mobile-sub-link-child ">
+                            Sports Shoes
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sports Sandals
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Active T-Shirts
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Track Pants & Shorts
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Tracksuits
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Jackets & Sweatshirts
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sports Accessories
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Swimwear
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -491,11 +539,18 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-Gadgets" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Smart Wearables" link="/" />
-                          <MobileNavLink title="Fitness Gadgets" link="/" />
-                          <MobileNavLink title="Headphones" link="/" />
-
-                          <MobileNavLink title="Speakers" link="/" />
+                          <Link className="mobile-sub-link-child ">
+                            Smart Wearables
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Fitness Gadgets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Headphones
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Speakers
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -526,29 +581,41 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-Fashion-Accessories" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Wallets" link="/" />
-                          <MobileNavLink title="Belts" link="/" />
-                          <MobileNavLink
-                            title="Perfumes & Body Mists"
-                            link="/"
-                          />
-                          <MobileNavLink title="Trimmers" link="/" />
-
-                          <MobileNavLink title="Deodorants" link="/" />
-                          <MobileNavLink title="Ties" link="/" />
-                          <MobileNavLink
-                            title="Cufflinks & Pocket Squares"
-                            link="/"
-                          />
-                          <MobileNavLink title="Accessory Gift Sets" link="/" />
-                          <MobileNavLink title="Caps & Hats" link="/" />
-                          <MobileNavLink
-                            title="Mufflers, Scarves & Gloves"
-                            link="/"
-                          />
-                          <MobileNavLink title="Phone Cases" link="/" />
-                          <MobileNavLink title="Rings & Wristwear" link="/" />
-                          <MobileNavLink title="Helmets" link="/" />
+                          <Link className="mobile-sub-link-child ">
+                            Wallets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Belts</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Perfumes & Body Mists
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Trimmers
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Deodorants
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Ties</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Cufflinks & Pocket Squares
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Accessory Gift Sets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Caps & Hats
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Mufflers, Scarves & Gloves
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Phone Cases
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Rings & Wristwear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Helmets
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -623,22 +690,34 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-indian-fusion-wear" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Kurtas & Suits" link="/" />
-                          <MobileNavLink
-                            title="Kurtis, Tunics & Tops"
-                            link="/"
-                          />
-                          <MobileNavLink title="Sarees" link="/" />
-                          <MobileNavLink title="Ethnic Wear" link="/" />
-                          <MobileNavLink
-                            title="Leggings, Salwars & Churidars"
-                            link="/"
-                          />
-                          <MobileNavLink title="Skirts & Palazzos" link="/" />
-                          <MobileNavLink title="Dress Materials" link="/" />
-                          <MobileNavLink title="Lehenga Cholis" link="/" />
-                          <MobileNavLink title="Dupattas & Shawls" link="/" />
-                          <MobileNavLink title="Jackets" link="/" />
+                          <Link className="mobile-sub-link-child ">
+                            Kurtas & Suits
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Kurtis, Tunics & Tops
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Sarees</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Ethnic Wear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Leggings, Salwars & Churidars
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Skirts & Palazzos
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Dress Materials
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Lehenga Cholis
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Dupattas & Shawls
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Jackets
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -685,25 +764,39 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-Western Wear" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Dresses" link="/" />
-                          <MobileNavLink title="Tops" link="/" />
-                          <MobileNavLink title="Tshirts" link="/" />
-                          <MobileNavLink title="Jeans" link="/" />
-                          <MobileNavLink title="Trousers & Capris" link="/" />
-                          <MobileNavLink title="Shorts & Skirts" link="/" />
-                          <MobileNavLink title="Co-ords" link="/" />
-                          <MobileNavLink title="Playsuits" link="/" />
-                          <MobileNavLink title="Jumpsuits" link="/" />
-                          <MobileNavLink title="Shrugs" link="/" />
-                          <MobileNavLink
-                            title="Sweaters & Sweatshirts"
-                            link="/"
-                          />
-                          <MobileNavLink title="Jackets & Coats" link="/" />
-                          <MobileNavLink
-                            title="Blazers & Waistcoats"
-                            link="/"
-                          />
+                          <Link className="mobile-sub-link-child ">
+                            Dresses
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Tops</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Tshirts
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Jeans</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Trousers & Capris
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Shorts & Skirts
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Co-ords
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Playsuits
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Jumpsuits
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Shrugs</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sweaters & Sweatshirts
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Jackets & Coats
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Blazers & Waistcoats
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -758,14 +851,15 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-footwear" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Flats" link="/" />
-                          <MobileNavLink title="Casual Shoes" link="/" />
-                          <MobileNavLink title="Heels" link="/" />
-                          <MobileNavLink title="Boots" link="/" />
-                          <MobileNavLink
-                            title="Sports Shoes & Floaters"
-                            link="/"
-                          />
+                          <Link className="mobile-sub-link-child ">Flats</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Casual Shoes
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Heels</Link>
+                          <Link className="mobile-sub-link-child ">Boots</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sports Shoes & Floaters
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -796,10 +890,18 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-sports-wear" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Clothing" link="/" />
-                          <MobileNavLink title="Footwear" link="/" />
-                          <MobileNavLink title="Sports Accessories" link="/" />
-                          <MobileNavLink title="Sports Equipment" link="/" />
+                          <Link className="mobile-sub-link-child ">
+                            Clothing
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Footwear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sports Accessories
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sports Equipment
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -830,19 +932,20 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-lingerie-sleepwear" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Bra" link="/" />
-                          <MobileNavLink title="Briefs" link="/" />
-                          <MobileNavLink title="Shapewear" link="/" />
-                          <MobileNavLink
-                            title="Sleepwear & Loungewear"
-                            link="/"
-                          />
-                          <MobileNavLink title="Swimwear" link="/" />
-
-                          <MobileNavLink
-                            title="Camisoles & Thermals"
-                            link="/"
-                          />
+                          <Link className="mobile-sub-link-child ">Bra</Link>
+                          <Link className="mobile-sub-link-child ">Briefs</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Shapewear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sleepwear & Loungewear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Swimwear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Camisoles & Thermals
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -873,10 +976,16 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-gadgets" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Makeup" link="/" />
-                          <MobileNavLink title="Skincare" link="/" />
-                          <MobileNavLink title="Lipsticks" link="/" />
-                          <MobileNavLink title="Fragrances" link="/" />
+                          <Link className="mobile-sub-link-child ">Makeup</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Skincare
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Lipsticks
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Fragrances
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -907,10 +1016,18 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-Gadgets" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Smart Wearables" link="/" />
-                          <MobileNavLink title="Fitness Gadgets" link="/" />
-                          <MobileNavLink title="Headphones" link="/" />
-                          <MobileNavLink title="Speakers" link="/" />
+                          <Link className="mobile-sub-link-child ">
+                            Smart Wearables
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Fitness Gadgets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Headphones
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Speakers
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -941,9 +1058,15 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-Jewellery" && (
                         <Box onClick={handleCloseButton}>
-                          <MobileNavLink title="Fashion Jewellery" link="/" />
-                          <MobileNavLink title="Fine Jewellery" link="/" />
-                          <MobileNavLink title="Earrings" link="/" />
+                          <Link className="mobile-sub-link-child ">
+                            Fashion Jewellery
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Fine Jewellery
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Earrings
+                          </Link>
                         </Box>
                       )}
                     </Box>
@@ -992,6 +1115,422 @@ function Header() {
                     )}
                   </span>
                 </Box>
+                {mainFashionDropdown === "kids" && (
+                  <>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Boys Clothing
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("kids-boys-clothing")
+                          }
+                        >
+                          {subFashionDropdown === "kids-boys-clothing" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "kids-boys-clothing" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Boys Clothing
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            T-Shirts
+                          </Link>
+                          <Link className="mobile-sub-link-child "></Link>
+                          <Link className="mobile-sub-link-child ">Shirts</Link>
+                          <Link className="mobile-sub-link-child ">Shorts</Link>
+                          <Link className="mobile-sub-link-child ">Jeans</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Trousers
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Clothing Sets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Ethnic Wear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Track Pants & Pyjamas
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Jacket, Sweater & Sweatshirts
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Party Wear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Innerwear & Thermals
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Nightwear & Loungewear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Value Packs
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Girls Clothing
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("kids-girls-clothing")
+                          }
+                        >
+                          {subFashionDropdown === "kids-girls-clothing" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "kids-girls-clothing" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Dresses
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Tops</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Tshirts
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Clothing Sets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Lehenga choli
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Kurta Sets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Party wear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Dungarees & Jumpsuits
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Skirts & shorts
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Tights & Leggings
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Jeans, Trousers & Capris
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Jacket, Sweater & Sweatshirts
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Innerwear & Thermals
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Nightwear & Loungewear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Value Packs
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Footwear
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Footwear
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("kids-footwear")
+                          }
+                        >
+                          {subFashionDropdown === "kids-footwear" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "kids-footwear" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Casual Shoes
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Flipflops
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sports Shoes
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Flats</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sandals
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Heels</Link>
+                          <Link className="mobile-sub-link-child ">
+                            School Shoes
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Socks</Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Toys & Games
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() => handleSubFashionDropdown("kids-toys")}
+                        >
+                          {subFashionDropdown === "kids-toys" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "kids-toys" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Learning & Development
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Activity Toys
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Soft Toys
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Action Figure / Play set
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Infants
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("kids-Infants")
+                          }
+                        >
+                          {subFashionDropdown === "kids-Infants" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "kids-Infants" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Bodysuits
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Rompers & Sleepsuits
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Clothing Sets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Tshirts & Tops
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Dresses
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Bottom wear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Winter Wear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Innerwear & Sleepwear
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Infant Care
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Link
+                        className="mobile-sub-link"
+                        onClick={handleCloseButton}
+                      >
+                        Home & Bath
+                      </Link>
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Link
+                        className="mobile-sub-link"
+                        onClick={handleCloseButton}
+                      >
+                        Personal Care
+                      </Link>
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Kids Accessories
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("kids-accessories")
+                          }
+                        >
+                          {subFashionDropdown === "kids-accessories" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "kids-accessories" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Bodysuits
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Rompers & Sleepsuits
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Bags & Backpacks
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Watches
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Jewellery & Hair accessory
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sunglasses
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Masks & Protective Gears
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Caps & Hats
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Brands
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("kids-brands")
+                          }
+                        >
+                          {subFashionDropdown === "kids-brands" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "kids-brands" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Bodysuits
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Rompers & Sleepsuits
+                          </Link>
+                          <Link className="mobile-sub-link-child ">H&M</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Max Kids
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Pantaloons
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            United Colors Of Benetton Kids
+                          </Link>
+                          <Link className="mobile-sub-link-child ">YK</Link>
+                          <Link className="mobile-sub-link-child ">
+                            U.S. Polo Assn. Kids
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Mothercare
+                          </Link>
+                          <Link className="mobile-sub-link-child ">HRX</Link>
+                        </Box>
+                      )}
+                    </Box>
+                  </>
+                )}
               </Box>
               <Box sx={{ marginLeft: "10px" }}>
                 <Box
@@ -1011,6 +1550,455 @@ function Header() {
                     )}
                   </span>
                 </Box>
+                {mainFashionDropdown === "home" && (
+                  <>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Bed Linen & Furnishing
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("home-bed-furnishing")
+                          }
+                        >
+                          {subFashionDropdown === "home-bed-furnishing" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "home-bed-furnishing" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Bed Runners
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Mattress Protectors
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Bedsheets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Bedding Sets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Blankets, Quilts & Dohars
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Pillows & Pillow Covers
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Bed Covers
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Diwan Sets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Chair Pads & Covers
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sofa Covers
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Flooring
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("home-Flooring")
+                          }
+                        >
+                          {subFashionDropdown === "home-Flooring" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "home-Flooring" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Floor Runners
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Carpets
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Floor Mats & Dhurries
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Door Mats
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Bath
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() => handleSubFashionDropdown("home-Bath")}
+                        >
+                          {subFashionDropdown === "home-Bath" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "home-Bath" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Bath Towels
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hand & Face Towels
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Beach Towels
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Towels Set
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Bath Rugs
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Bath Robes
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Bathroom Accessories
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Shower Curtains
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Lamps & Lighting
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("home-lamps-lighting")
+                          }
+                        >
+                          {subFashionDropdown === "home-lamps-lighting" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "home-lamps-lighting" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Floor Lamps
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Ceiling Lamps
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Table Lamps
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Wall Lamps
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Outdoor Lamps
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            String Lights
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Home Décor
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() => handleSubFashionDropdown("home-Décor")}
+                        >
+                          {subFashionDropdown === "home-Décor" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "home-Décor" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Plants & Planters
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Aromas & Candles
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Clocks</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Mirrors
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Wall Décor
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Festive Decor
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Pooja Essentials
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Wall Shelves
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Fountains
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Showpieces & Vases
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Ottoman
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Link
+                        className="mobile-sub-link"
+                        onClick={handleCloseButton}
+                      >
+                        Cushions & Cushion Covers
+                      </Link>
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Link
+                        className="mobile-sub-link"
+                        onClick={handleCloseButton}
+                      >
+                        Curtains
+                      </Link>
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Link
+                        className="mobile-sub-link"
+                        onClick={handleCloseButton}
+                      >
+                        Home Gift Sets
+                      </Link>
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Kitchen & Table
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("home-kitchen-table")
+                          }
+                        >
+                          {subFashionDropdown === "home-kitchen-table" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "home-kitchen-table" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Table Runners
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Dinnerware & Serveware
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Cups and Mugs
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Bakeware & Cookware
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Kitchen Storage & Tools
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Bar & Drinkware
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Table Covers & Furnishings
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Storage
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("home-Storage")
+                          }
+                        >
+                          {subFashionDropdown === "home-Storage" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "home-Storage" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">Bins</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hangers
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Organisers
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hooks & Holders
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Laundry Bags
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Brands
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("home-Brands")
+                          }
+                        >
+                          {subFashionDropdown === "home-Brands" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "home-Brands" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">H&M</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Marks & Spencer
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Home Centre
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Spaces</Link>
+                          <Link className="mobile-sub-link-child ">
+                            D'Decor
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Story@Home
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Pure Home & Living
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Swayam</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Raymond Home
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Maspar</Link>
+                          <Link className="mobile-sub-link-child ">
+                            My Trident
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Cortina
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Random</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Ellementry
+                          </Link>
+                          <Link className="mobile-sub-link-child ">ROMEE</Link>
+                          <Link className="mobile-sub-link-child ">
+                            SEJ by Nisha Gupta
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                  </>
+                )}
               </Box>
               <Box sx={{ marginLeft: "10px" }}>
                 <Box
@@ -1030,6 +2018,429 @@ function Header() {
                     )}
                   </span>
                 </Box>
+                {mainFashionDropdown === "beauty" && (
+                  <>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Makeup
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("beauty-Makeup")
+                          }
+                        >
+                          {subFashionDropdown === "beauty-Makeup" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "beauty-Makeup" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Lipstick
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Lip Gloss
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Lip Liner
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Mascara
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Eyeliner
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Kajal</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Eyeshadow
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Foundation
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Primer</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Concealer
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Compact
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Nail Polish
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Skincare, Bath & Body
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown(
+                              "beauty-skincare-bath-body"
+                            )
+                          }
+                        >
+                          {subFashionDropdown ===
+                          "beauty-skincare-bath-body" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "beauty-skincare-bath-body" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Face Moisturiser
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Cleanser
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Masks & Peel
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Sunscreen
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Serum</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Face Wash
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Eye Cream
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Lip Balm
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Body Lotion
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Body Wash
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Body Scrub
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hand Cream
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Link
+                        className="mobile-sub-link"
+                        onClick={handleCloseButton}
+                      >
+                        Baby Care
+                      </Link>
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Link
+                        className="mobile-sub-link"
+                        onClick={handleCloseButton}
+                      >
+                        Masks
+                      </Link>
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Haircare
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("beauty-Haircare")
+                          }
+                        >
+                          {subFashionDropdown === "beauty-Haircare" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "beauty-Haircare" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Shampoo
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Conditioner
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hair Cream
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hair Oil
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hair Gel
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hair Color
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hair Serum
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hair Accessory
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Fragrances
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("beauty-Fragrances")
+                          }
+                        >
+                          {subFashionDropdown === "beauty-Fragrances" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "beauty-Fragrances" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Perfume
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Deodorant
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Body Mist
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Appliances
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("beauty-Appliances")
+                          }
+                        >
+                          {subFashionDropdown === "beauty-Appliances" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "beauty-Appliances" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Hair Straightener
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hair Dryer
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Epilator
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Men's Grooming
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("beauty-Men's-Grooming")
+                          }
+                        >
+                          {subFashionDropdown === "beauty-Men's-Grooming" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "beauty-Men's-Grooming" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Trimmers
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Beard Oil
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Hair Wax
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Beauty Gift & Makeup Set
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("beauty-gifts-makeup-set")
+                          }
+                        >
+                          {subFashionDropdown === "beauty-gifts-makeup-set" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "beauty-gifts-makeup-set" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">
+                            Beauty Gift
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Makeup Kit
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                    <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
+                      <Box
+                        sx={{
+                          display: "flex",
+                        }}
+                      >
+                        <Link
+                          className="mobile-sub-link"
+                          onClick={handleCloseButton}
+                        >
+                          Top Brands
+                        </Link>
+                        <span
+                          className="mobile-dropdown-logo-container"
+                          onClick={() =>
+                            handleSubFashionDropdown("beauty-Top-Brands")
+                          }
+                        >
+                          {subFashionDropdown === "beauty-Top-Brands" ? (
+                            <KeyboardArrowDownIcon />
+                          ) : (
+                            <KeyboardArrowRightIcon />
+                          )}
+                        </span>
+                      </Box>
+                      {subFashionDropdown === "beauty-Top-Brands" && (
+                        <Box onClick={handleCloseButton}>
+                          <Link className="mobile-sub-link-child ">Lakme</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Maybelline
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Loreal</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Philips
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Bath & Body Works
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            The Body Shop
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Biotique
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Mamaearth
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            MCaffeine
+                          </Link>
+                          <Link className="mobile-sub-link-child ">Nivea</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Lotus Herbals
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            Loreal Professionnel{" "}
+                          </Link>
+                          <Link className="mobile-sub-link-child ">
+                            KAMA AYURVEDA
+                          </Link>
+                          <Link className="mobile-sub-link-child ">M.A.C</Link>
+                          <Link className="mobile-sub-link-child ">
+                            Forest Essentials
+                          </Link>
+                        </Box>
+                      )}
+                    </Box>
+                  </>
+                )}
               </Box>
               <Box sx={{ marginLeft: "10px" }}>
                 <Link className="mobile-main-link">ONLINE LEARNING</Link>
@@ -1743,8 +3154,8 @@ function Header() {
                   <Link>Beauty Gift</Link>
                   <Link>Makeup Kit</Link>
                   <span className="black-horizantal-line"></span>
-                  <Link>Beauty Gift</Link>
-                  <Link>Makeup Kit</Link>
+                  <Link className="green-heading">Premium Beauty</Link>
+                  <Link className="green-heading">Wellness & Hygiene</Link>
                 </Box>
                 <Box
                   sx={{
@@ -1754,21 +3165,20 @@ function Header() {
                     height: "inherit",
                   }}
                 >
-                  <Link className="green-heading">Premium Beauty</Link>
-                  <Link>Wellness & Hygiene</Link>
-                  <Link>Top Brands</Link>
+                  <Link className="green-heading">Top Brands</Link>
+
                   <Link>Lakme</Link>
                   <Link>Maybelline</Link>
-                  <Link>LOreal</Link>
+                  <Link>Loreal</Link>
                   <Link>Philips</Link>
                   <Link>Bath & Body Works</Link>
-                  <Link>THE BODY SHOP</Link>
+                  <Link>The Body Shop</Link>
                   <Link>Biotique</Link>
                   <Link>Mamaearth</Link>
-                  <Link>MCaffeine</Link>
+                  <Link>Mcaffeine</Link>
                   <Link>Nivea</Link>
                   <Link>Lotus Herbals</Link>
-                  <Link>LOreal Professionnel</Link>
+                  <Link>Loreal Professionnel</Link>
                   <Link>KAMA AYURVEDA</Link>
                   <Link>M.A.C</Link>
                   <Link>Forest Essentials</Link>
