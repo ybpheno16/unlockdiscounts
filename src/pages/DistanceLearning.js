@@ -245,19 +245,16 @@ const DistanceLearning = () => {
   const [formData, setFormData] = useState({
     name: '',
     contact: '',
-    interestedCourse: ''
+    interestedCourse: '',
+    studentType: ''
   });
   const [notification, setNotification] = useState('');
 
-  // Function to get list of colleges from feeStructure object
-  const getCollegeOptions = () => {
-    return Object.keys(feeStructure).map(college => ({
-      label: college,
-      value: college
-    }));
-  };
+  const getCollegeOptions = () => Object.keys(feeStructure).map(college => ({
+    label: college,
+    value: college
+  }));
 
-  // Function to get list of courses based on selected college
   const getCourseOptions = () => {
     if (selectedCollege && feeStructure[selectedCollege]) {
       return Object.keys(feeStructure[selectedCollege]).map(course => ({
@@ -268,7 +265,6 @@ const DistanceLearning = () => {
     return [];
   };
 
-  // Function to get list of specializations based on selected course
   const getSpecializationOptions = () => {
     if (selectedCollege && selectedCourse && feeStructure[selectedCollege] && feeStructure[selectedCollege][selectedCourse]) {
       return Object.keys(feeStructure[selectedCollege][selectedCourse].specializations).map(spec => ({
@@ -280,45 +276,32 @@ const DistanceLearning = () => {
   };
 
   const handleCollegeChange = (event) => {
-    const college = event.target.value;
-    setSelectedCollege(college);
+    setSelectedCollege(event.target.value);
     setSelectedCourse('');
     setSelectedSpecialization('');
     setFee(null);
   };
 
   const handleCourseChange = (event) => {
-    const course = event.target.value;
-    setSelectedCourse(course);
+    setSelectedCourse(event.target.value);
     setSelectedSpecialization('');
     setFee(null);
   };
 
-  const handleSpecializationChange = (event) => {
-    const specialization = event.target.value;
-    setSelectedSpecialization(specialization);
-  };
+  const handleSpecializationChange = (event) => setSelectedSpecialization(event.target.value);
 
-  const handleStudentTypeChange = (event) => {
-    const studentType = event.target.value;
-    setFormData({ ...formData, studentType });
-  };
+  const handleStudentTypeChange = (event) => setFormData({ ...formData, studentType: event.target.value });
 
   const calculateFee = () => {
     if (selectedCollege && selectedCourse && selectedSpecialization) {
-      const baseFee = feeStructure[selectedCollege][selectedCourse].baseFee;
       const specializationFee = formData.studentType === 'international'
         ? feeStructure[selectedCollege][selectedCourse].specializations[selectedSpecialization].internationalFee
         : feeStructure[selectedCollege][selectedCourse].specializations[selectedSpecialization].domesticFee;
-      const totalFee = 2.5*specializationFee;
-      setFee(totalFee);
+      setFee(2.5 * specializationFee);
     }
   };
 
-  const handleFormChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  const handleFormChange = (event) => setFormData({ ...formData, [event.target.name]: event.target.value });
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -329,90 +312,90 @@ const DistanceLearning = () => {
     setShowPopup(false);
   };
 
-  function handleScroll(event) {
-    event.preventDefault(); // Prevent default link behavior
+  const handleScroll = (event) => {
+    event.preventDefault();
     const feeCalculatorSection = document.getElementById('feeCalculatorSection');
     if (feeCalculatorSection) {
       feeCalculatorSection.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  };
 
   return (
     <div className="dls-container">
-    <h1 className="dls-title">Distance Learning</h1>
-    <p className="dls-description">
-      Discover our distance learning courses and enhance your knowledge from anywhere.
-    </p>
-    <div className="fee-calculator-container">
-      <header className="dls-header">
-        <a href="#feeCalculatorSection" onClick={handleScroll}>
-          <h1>Online batch admission of 2024 is going on!</h1>
-          <h2>Fee calculator - Check It Now!</h2>
-        </a>
-      </header>
-      <section className="dls-courses">
-        {[
-          { name: 'MBA', description: 'A graduate program focusing on business management, leadership, and strategic decision-making.' },
-          { name: 'MCA', description: 'A postgraduate course emphasizing advanced computer science, software development, and IT management.' },
-          { name: 'BCA', description: 'An undergraduate degree focusing on computer science fundamentals, software development, and applications.' },
-          { name: 'BCOM', description: 'An undergraduate program covering various aspects of commerce, finance, accounting, and business studies.' },
-          { name: 'MA', description: 'A postgraduate degree in humanities or social sciences, focusing on advanced studies in a specific discipline like literature, history, or sociology.' }
-        ].map(course => (
-          <div className="dls-course" key={course.name}>
-            <i className="fas fa-book-open-reader"></i>
-            <h3>{course.name}</h3>
-            <p>{course.description}</p>
-            <button onClick={() => { setShowPopup(true); setFormData({ ...formData, interestedCourse: course.name }); }}>Inquire</button>
-          </div>
-        ))}
-      </section>
-      <section className="dls-fee-calculator" id="feeCalculatorSection">
-        <h2>Calculate Your Fees</h2>
-        <form id="feeCalculatorForm" className="dls-form">
-          <div className="dls-form-group">
-            <label htmlFor="college">Select College:</label>
-            <select id="college" value={selectedCollege} onChange={handleCollegeChange}>
-              <option value="">Select a College</option>
-              {getCollegeOptions().map(college => (
-                <option key={college.value} value={college.value}>{college.label}</option>
-              ))}
-            </select>
-          </div>
-          <div className="dls-form-group">
-            <label htmlFor="course">Select Course:</label>
-            <select id="course" value={selectedCourse} onChange={handleCourseChange} disabled={!selectedCollege}>
-              <option value="">Select a Course</option>
-              {getCourseOptions().map(course => (
-                <option key={course.value} value={course.value}>{course.label}</option>
-              ))}
-            </select>
-          </div>
-          <div className="dls-form-group">
-            <label htmlFor="specialization">Select Specialization:</label>
-            <select id="specialization" value={selectedSpecialization} onChange={handleSpecializationChange} disabled={!selectedCourse}>
-              <option value="">Select a Specialization</option>
-              {getSpecializationOptions().map(spec => (
-                <option key={spec.value} value={spec.value}>{spec.label}</option>
-              ))}
-            </select>
-          </div>
-          <div className="dls-form-group">
-            <label>Are you a domestic or international student?</label>
-            <div className="student-type-dropdown">
-              <select
-                name="studentType"
-                value={formData.studentType}
-                onChange={handleStudentTypeChange}
-              >
-                <option value="" disabled>Select one</option>
-                <option value="domestic">Domestic (Indian)</option>
-                <option value="international">International</option>
+      <h1 className="dls-title">Distance Learning</h1>
+      <p className="dls-description">
+        Discover our distance learning courses and enhance your knowledge from anywhere.
+      </p>
+      <div className="fee-calculator-container">
+        <header className="dls-header">
+          <a href="#feeCalculatorSection" onClick={handleScroll}>
+            <h1>Online batch admission of 2024 is going on!</h1>
+            <h2>Fee calculator - Check It Now!</h2>
+          </a>
+        </header>
+        <section className="dls-courses">
+          {[
+            { name: 'MBA', description: 'A graduate program focusing on business management, leadership, and strategic decision-making.' },
+            { name: 'MCA', description: 'A postgraduate course emphasizing advanced computer science, software development, and IT management.' },
+            { name: 'BCA', description: 'An undergraduate degree focusing on computer science fundamentals, software development, and applications.' },
+            { name: 'BCOM', description: 'An undergraduate program covering various aspects of commerce, finance, accounting, and business studies.' },
+            { name: 'MA', description: 'A postgraduate degree in humanities or social sciences, focusing on advanced studies in a specific discipline like literature, history, or sociology.' }
+          ].map(course => (
+            <div className="dls-course" key={course.name}>
+              <i className="fas fa-book-open-reader"></i>
+              <h3>{course.name}</h3>
+              <p>{course.description}</p>
+              <button onClick={() => { setShowPopup(true); setFormData({ ...formData, interestedCourse: course.name }); }}>Inquire</button>
+            </div>
+          ))}
+        </section>
+        <section className="dls-fee-calculator" id="feeCalculatorSection">
+          <h2>Calculate Your Fees</h2>
+          <form id="feeCalculatorForm" className="dls-form">
+            <div className="dls-form-group">
+              <label htmlFor="college">Select College:</label>
+              <select id="college" value={selectedCollege} onChange={handleCollegeChange}>
+                <option value="">Select a College</option>
+                {getCollegeOptions().map(college => (
+                  <option key={college.value} value={college.value}>{college.label}</option>
+                ))}
               </select>
             </div>
-          </div>
-          <div className="dls-form-group">
-            <button type="button" onClick={calculateFee}>Calculate Fee</button>
-          </div>
+            <div className="dls-form-group">
+              <label htmlFor="course">Select Course:</label>
+              <select id="course" value={selectedCourse} onChange={handleCourseChange} disabled={!selectedCollege}>
+                <option value="">Select a Course</option>
+                {getCourseOptions().map(course => (
+                  <option key={course.value} value={course.value}>{course.label}</option>
+                ))}
+              </select>
+            </div>
+            <div className="dls-form-group">
+              <label htmlFor="specialization">Select Specialization:</label>
+              <select id="specialization" value={selectedSpecialization} onChange={handleSpecializationChange} disabled={!selectedCourse}>
+                <option value="">Select a Specialization</option>
+                {getSpecializationOptions().map(spec => (
+                  <option key={spec.value} value={spec.value}>{spec.label}</option>
+                ))}
+              </select>
+            </div>
+            <div className="dls-form-group">
+              <label>Are you a domestic or international student?</label>
+              <div className="student-type-dropdown">
+                <select
+                  name="studentType"
+                  value={formData.studentType}
+                  onChange={handleStudentTypeChange}
+                >
+                  <option value="" disabled>Select one</option>
+                  <option value="domestic">Domestic (Indian)</option>
+                  <option value="international">International</option>
+                </select>
+              </div>
+            </div>
+            <div className="dls-form-group">
+              <button type="button" onClick={calculateFee}>Calculate Fee</button>
+            </div>
           </form>
           <div id="result" className={`dls-result ${fee !== null ? 'show highlight' : ''}`}>
             {fee !== null ? (
@@ -422,60 +405,62 @@ const DistanceLearning = () => {
                 </p>
                 <p>
                   {formData.studentType === 'international' ? (
-                    <>
-                      <span>USD ${fee}</span>
-                    </>
+                    <span><strong>International:</strong> ${fee}</span>
                   ) : (
-                    <>
-                      <span>₹ {fee.toLocaleString()}</span>
-                    </>
+                    <span><strong>Domestic:</strong> Rs.{fee}</span>
                   )}
                 </p>
-                <p className="blinking-alert">For more information and available discounts, please contact us.</p>
-
               </div>
             ) : (
-              'Please select a college, a course, and a specialization.'
+              <p>Please select a college, course, and specialization to calculate the fee.</p>
             )}
-          </div>
-        </section>
-        <section className="dls-more-courses">
-          <h3>Many more courses with a variety of specializations available! Ping us the inquiry on whatsapp</h3>
-          <div className="dls-logos">
-            <img src="/distancelearning/Amity.png" alt="Amity University"   />
-            <img src="/distancelearning/jain.jpg" alt="JGI" />
-            <img src="/distancelearning/Symbiosis.jpg" alt="Symbiosis" />
           </div>
         </section>
       </div>
       {showPopup && (
         <div className="dls-popup">
           <div className="dls-popup-content">
-            <h2>Inquire About a Course</h2>
+            <button className="dls-close-button" onClick={() => setShowPopup(false)}>×</button>
+            <h2>Inquire About {formData.interestedCourse}</h2>
             <form onSubmit={handleSubmit}>
               <div className="dls-form-group">
                 <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleFormChange} required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  required
+                />
               </div>
               <div className="dls-form-group">
-                <label htmlFor="contact">Contact:</label>
-                <input type="text" id="contact" name="contact" value={formData.contact} onChange={handleFormChange} required />
-              </div>
-              <div className="dls-form-group">
-                <label htmlFor="interestedCourse">Course Interested In:</label>
-                <input type="text" id="interestedCourse" name="interestedCourse" value={formData.interestedCourse} readOnly />
+                <label htmlFor="contact">Contact Number:</label>
+                <input
+                  type="tel"
+                  id="contact"
+                  name="contact"
+                  value={formData.contact}
+                  onChange={handleFormChange}
+                  required
+                />
               </div>
               <div className="dls-form-group">
                 <button type="submit">Submit</button>
               </div>
             </form>
-            {notification && <div className="dls-notification">{notification}</div>}
           </div>
-          <div className="dls-popup-overlay" onClick={() => setShowPopup(false)}></div>
+        </div>
+      )}
+      {notification && (
+        <div className="dls-notification">
+          <p>{notification}</p>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default DistanceLearning;
+
+
