@@ -1,0 +1,117 @@
+/* online learning component css*/
+
+.online-learning-component-container {
+  background: linear-gradient(to top, #fff4cf 0%, #ffffff 100%);
+  padding: 15px 5%;
+  position: relative;
+}
+
+.online-learning-component-container h1 {
+  font-family: "inter";
+  font-size: 35px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+.online-learning-component-container .explore-button {
+  position: absolute;
+  background-color: #ce4343;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  top: 20px;
+  right: 10px;
+}
+
+.online-learning-component-container .explore-button a{
+  text-decoration: none;
+  color: white;
+}
+
+.online-learning-component-container .right-arrow {
+  display: none;
+}
+
+.online-learning-component-container .cards {
+  display: flex;
+  gap: 80px;
+  justify-content: space-between;
+}
+.learning-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  width: 100%;
+}
+
+.learning-card .card-title {
+  font-family: "inter";
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  padding: 0;
+}
+.learning-card .card-description {
+  font-family: "inter";
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.learning-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.no-underline {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: black;
+  width: 100%;
+}
+
+.no-underline .card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .online-learning-component-container h1 {
+    font-size: 20px;
+  }
+  .online-learning-component-container .cards {
+    gap: 20px;
+  }
+  .online-learning-component-container .cards .learning-card .card-title {
+    font-size: 13px;
+    width: 100%;
+  }
+  .online-learning-component-container .cards .learning-card .card-description {
+    font-size: 12px;
+    width: 100%;
+  }
+  .online-learning-component-container .explore-button {
+    display: none;
+  }
+  .online-learning-component-container .right-arrow {
+    display: inline-block;
+    cursor: pointer;
+  }
+}

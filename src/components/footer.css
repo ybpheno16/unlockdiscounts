@@ -18,21 +18,22 @@
 .footer .black-banner {
   background-color: #000;
   color: #fff;
-  padding: 10px 0;
+  /* padding: 5px 0; */
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 36px 64px 36px 64px;
+  padding: 20px 64px 20px 64px;
   margin: 0 5% -10px 5%;
   border-radius: 20px;
+  /* width: 80%; */
   z-index: 2; /* z-index added to make it appear on top of white banner */
 }
 
 /* css for black banner >  left section */
 .footer .black-banner .left {
   font-family: integral-cf, sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 40px;
   line-height: 45px;
   text-align: left;
@@ -109,7 +110,7 @@
   align-items: start;
   gap: 20px;
 
-  padding: 36px 5% 36px 5%;
+  padding: 64px 5% 64px 5%;
   z-index: 1;
   border-radius: 20px;
   font-family: Inter;
@@ -120,18 +121,18 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .footer .white-banner .left .summary {
   margin: 0;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 /* css UNLOCKDISCOUNTS name on white banner */
 .footer .white-banner .branding {
   font-family: Notable;
-  font-size: 20px;
+  font-size: 30px;
   padding: 0;
   margin: 0;
   display: flex;
@@ -141,7 +142,7 @@
 
 /* css for white banner > left section > small info about unlock discounts */
 .footer .white-banner .sub-heading {
-  font-size: 14px;
+  font-size: 20px;
   display: flex;
   margin: 0;
 
@@ -161,14 +162,15 @@
 .footer .white-banner .right {
   display: flex;
   justify-content: space-around;
+  gap: 10px;
   flex: 2.5;
 }
 
 /* css for white banner > right section > col ( columns with pages link ) */
 .footer .white-banner .right .col {
-  font-size: 12px;
+  font-size: 14px;
   display: flex;
-  gap: 7px;
+  gap: 20px;
   flex-direction: column;
 }
 
@@ -177,7 +179,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 15px;
 }
 
 /* css for white banner > right section > col > nav > li ( individual page link ) */
@@ -186,42 +188,54 @@
   color: gray;
 }
 
-/* Tablet view*/
-@media screen and (max-width: 860px) {
-  .footer .black-banner {
-    flex-direction: column;
+/* Responsive view specially or white section of the footer */
+@media screen and (max-width: 960px) {
+  .footer .black-banner .left {
+    font-size: 25px;
   }
-
-  .footer .black-banner .right {
-    margin-top: 20px;
-    width: 100%;
-  }
-
   .footer .white-banner {
     padding: 36px 5% 36px 5%;
     flex-direction: column;
   }
 
+  .footer .white-banner .right {
+    width: 100%;
+  }
+  .footer .white-banner .sub-heading {
+    font-size: 14px;
+  }
+}
+
+/* Responsive view specially for black section of the footer */
+@media screen and (max-width: 760px) {
+  .footer .black-banner {
+    flex-direction: column;
+  }
+
+  .footer .black-banner .right {
+    width: 100%;
+  }
+
   .footer .black-banner .left {
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 25px;
+    line-height: 30px;
     padding-right: 0;
   }
 
-  .footer .white-banner .right {
-    width: 100%;
+  .newsletter-break {
+    display: none;
   }
 }
 
 /* Mobile view */
 @media screen and (max-width: 600px) {
   .footer .black-banner {
-    padding: 36px;
+    padding: 36px 28px;
     margin: 0 5% -20px 5%;
     z-index: 2;
   }
   .footer .black-banner .left {
-    font-size: 30px;
+    font-size: 18px;
   }
   .footer .black-banner .right {
     min-width: 200px;
@@ -231,9 +245,37 @@
     align-items: center;
   }
 
+  .footer .white-banner .left {
+    margin: 10px;
+    gap:10px;
+  }
+
+  .footer .white-banner .left .summary {
+    font-size: 12px;
+  }
+  .footer .white-banner .left .branding {
+    font-size: 24px;
+  }
+
   .footer .white-banner .right {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+
+  .footer .white-banner .right .col {
+    font-size: 12px;
+    gap: 5px;
+  }
+
+  .footer .white-banner .right .col nav {
+    gap: 10px;
+  }
+}
+
+/* specially for the branding at white section */
+@media screen and (max-width: 400px) {
+  .footer .white-banner .left .branding {
+    font-size: 15px;
   }
 }
