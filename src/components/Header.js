@@ -44,6 +44,7 @@ function Header() {
     setMainFashionDropdown(null);
     setSubFashionDropdown(null);
   }
+  // styles for the drop down container
   const dropDownContainerStyles = {
     position: "absolute",
     top: "90px",
@@ -60,6 +61,7 @@ function Header() {
     justifyContent: "space-between",
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
   };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -121,6 +123,7 @@ function Header() {
           width: "100vw",
         }}
       >
+        {/* over the top black nav bar with 20%off signUP button  */}
         <Box
           sx={{
             backgroundColor: "black",
@@ -170,16 +173,20 @@ function Header() {
               }}
             >
               <Box sx={{ display: "flex", position: "relative" }}>
+                {/* mobile 50% offer logo */}
+
                 <img
                   className="mobile-offer-banner"
                   src={offerBanner}
                   alt="offer banner"
                 />
+                {/* mobile nav close button */}
                 <CloseIcon
                   onClick={handleCloseButton}
                   className="hamburger-closing-button"
                 />
               </Box>
+              {/* mobile men fashion */}
               <Box sx={{ marginLeft: "10px" }}>
                 <Box
                   sx={{
@@ -203,6 +210,7 @@ function Header() {
                     )}
                   </span>
                 </Box>
+                {/* mobile men section drop down */}
                 {mainFashionDropdown === "men" && (
                   <>
                     <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
@@ -637,6 +645,7 @@ function Header() {
                   </>
                 )}
               </Box>
+              {/* mobile women fashion section */}
               <Box sx={{ marginLeft: "10px" }}>
                 <Box
                   sx={{
@@ -660,6 +669,7 @@ function Header() {
                     )}
                   </span>
                 </Box>
+                {/* mobile women fashion drop down section */}
                 {mainFashionDropdown === "women" && (
                   <>
                     <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
@@ -1096,6 +1106,7 @@ function Header() {
                   </>
                 )}
               </Box>
+              {/* mobile kids fashion section  */}
               <Box sx={{ marginLeft: "10px" }}>
                 <Box
                   sx={{
@@ -1114,6 +1125,7 @@ function Header() {
                     )}
                   </span>
                 </Box>
+                {/* kids mobile  drop down fashion section  */}
                 {mainFashionDropdown === "kids" && (
                   <>
                     <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
@@ -1531,6 +1543,7 @@ function Header() {
                   </>
                 )}
               </Box>
+              {/* home & living mobile nav section  */}
               <Box sx={{ marginLeft: "10px" }}>
                 <Box
                   sx={{
@@ -1549,6 +1562,7 @@ function Header() {
                     )}
                   </span>
                 </Box>
+                {/* home & living mobile drop down section  */}
                 {mainFashionDropdown === "home" && (
                   <>
                     <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
@@ -1999,6 +2013,7 @@ function Header() {
                   </>
                 )}
               </Box>
+              {/* beauty mobile section  */}
               <Box sx={{ marginLeft: "10px" }}>
                 <Box
                   sx={{
@@ -2017,6 +2032,7 @@ function Header() {
                     )}
                   </span>
                 </Box>
+                {/* beauty mobile drop down section  */}
                 {mainFashionDropdown === "beauty" && (
                   <>
                     <Box sx={{ marginLeft: "10px", marginTop: "10px" }}>
@@ -2441,11 +2457,14 @@ function Header() {
                   </>
                 )}
               </Box>
+              {/* online learning mobile section  */}
               <Box sx={{ marginLeft: "10px" }}>
                 <Link className="mobile-main-link">ONLINE LEARNING</Link>
               </Box>
             </Box>
           )}
+
+          {/* desktop main logo  */}
           <Box display={{ xs: "none", sm: "block" }}>
             <Link
               onClick={() => handleDropDown(null)}
@@ -2455,6 +2474,8 @@ function Header() {
               <img className="logo" src={logo} alt="unlock discounts logo" />
             </Link>
           </Box>
+
+          {/* mobile main logo  */}
           <Box
             display={{ xs: "flex", sm: "none" }}
             sx={{ justifyContent: "center", fontSize: "10px", gap: "10px" }}
@@ -2464,6 +2485,8 @@ function Header() {
               <h1 className="mobile-logo">UnlockDiscounts</h1>
             </Link>
           </Box>
+
+          {/* desktop nav section  */}
           <Box
             display={{ xs: "none", sm: "flex" }}
             sx={{
@@ -2473,13 +2496,14 @@ function Header() {
               justifyContent: "center",
             }}
           >
+            {/* men desktop nav  */}
             <span className="link-container">
               <Link onMouseEnter={() => handleDropDown("men")}>MEN </Link>
               <span
                 className={navSelection === "men" ? "link-underline" : ""}
               ></span>
             </span>
-
+            {/* men desktop dropdown */}
             {navSelection === "men" && (
               <Box
                 className="dorpDown-container"
@@ -2613,6 +2637,7 @@ function Header() {
                 </Box>
               </Box>
             )}
+            {/* women desktop nav  */}
             <span className="link-container">
               <Link onMouseEnter={() => handleDropDown("women")}>WOMEN</Link>
 
@@ -2620,6 +2645,7 @@ function Header() {
                 className={navSelection === "women" ? "link-underline" : ""}
               ></span>
             </span>
+            {/* women desktop dropdown  */}
             {navSelection === "women" && (
               <Box
                 className="dorpDown-container"
@@ -2754,6 +2780,7 @@ function Header() {
                 </Box>
               </Box>
             )}
+            {/* kids desktop nav  */}
             <span className="link-container">
               <Link onMouseEnter={() => handleDropDown("kids")}>KIDS</Link>
 
@@ -2761,6 +2788,7 @@ function Header() {
                 className={navSelection === "kids" ? "link-underline" : ""}
               ></span>
             </span>
+            {/* kids desktop dropdown  */}
             {navSelection === "kids" && (
               <Box
                 className="dorpDown-container"
@@ -2892,6 +2920,7 @@ function Header() {
                 </Box>
               </Box>
             )}
+            {/* home & living desktop nav  */}
             <span className="link-container">
               <Link onMouseEnter={() => handleDropDown("home&living")}>
                 HOME & LIVING
@@ -2903,7 +2932,7 @@ function Header() {
                 }
               ></span>
             </span>
-
+            {/* home & living desktop drop down  */}
             {navSelection === "home&living" && (
               <Box
                 className="dorpDown-container"
@@ -3043,6 +3072,7 @@ function Header() {
                 </Box>
               </Box>
             )}
+            {/* beauty desktop nav  */}
             <span className="link-container">
               <Link onMouseEnter={() => handleDropDown("beauty")}>BEAUTY</Link>
 
@@ -3050,6 +3080,7 @@ function Header() {
                 className={navSelection === "beauty" ? "link-underline" : ""}
               ></span>
             </span>
+            {/* beauty desktop dropdown  */}
             {navSelection === "beauty" && (
               <Box
                 className="dorpDown-container"
@@ -3184,7 +3215,7 @@ function Header() {
                 </Box>
               </Box>
             )}
-
+            {/* online learning desktop nav  */}
             <Link
               onMouseEnter={() => handleDropDown(null)}
               to="/distancelearning"
@@ -3192,6 +3223,7 @@ function Header() {
               ONLINE LEARNING
             </Link>
           </Box>
+          {/* search bar for both desktop & mobile  */}
           <Box
             className="search-bar"
             sx={{
