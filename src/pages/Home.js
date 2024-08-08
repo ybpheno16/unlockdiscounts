@@ -67,29 +67,29 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className="container">
-                <h1 className="heading">Banking</h1>
+            <div className="banking-main container">
+                <h1 className="heading">BANKING</h1>
                 <div className="category">
                     <div className="category-item">
                         <Link to="/banking" className='no-underline'>
                             <img loading="lazy" src="https://res.cloudinary.com/dcmtxvsav/image/upload/v1722340426/cc_xm0l2a.avif" alt="Credit Card Image" />
-                            <div className="description">Credit Cards</div>
+                            <div className="description"><h2>Credit Cards</h2></div>
                         </Link>
-                        <p>Explore a wide range of credit cards tailored to suit your lifestyle and financial needs.</p>
+                        <p className='banking-desc'>Explore a wide range of credit cards tailored to suit your lifestyle and financial needs.</p>
                     </div>
                     <div className="category-item">
                         <Link to="/banking" className='no-underline'>
                             <img loading="lazy" src="https://res.cloudinary.com/dcmtxvsav/image/upload/v1722340425/ac_j5mhby.avif" alt="Account Saving" />
-                            <div className="description">Zero Savings Account</div>
+                            <div className="description"><h2>Savings Account</h2></div>
                         </Link>
-                        <p>Discover the benefits of a zero balance savings account with high interest rates and no minimum deposit requirements.</p>
+                        <p className='banking-desc'>Discover the benefits of a zero balance savings account with high interest rates and no minimum deposit requirements.</p>
                     </div>
                     <div className="category-item">
                         <Link to="/banking" className='no-underline'>
                             <img loading="lazy" src="https://res.cloudinary.com/dcmtxvsav/image/upload/v1722340428/nw_y3nve3.avif" alt="Saving Application Image" />
-                            <div className="description">Saving Applications</div>
+                            <div className="description"><h2>Savings Applications</h2></div>
                         </Link>
-                        <p>Find the perfect saving application to help you manage your finances, save money effortlessly, and achieve your financial goals.</p>
+                        <p className='banking-desc'>Find the perfect saving application to help you manage your finances, save money effortlessly, and achieve your financial goals.</p>
                     </div>
                 </div>
             </div>

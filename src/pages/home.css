@@ -44,16 +44,16 @@
   /* font-weight: bold; */
 }
 
-.category-item .description p{
+.category-item .description p {
   margin: 0;
   font-size: 1.2rem;
 }
-.category-item > p, .e-category-item > p {
-  margin: .2rem 0 0 0;
+.category-item > p,
+.e-category-item > p {
+  margin: 0.2rem 0 0 0;
   font-size: 16px;
   color: #5f5f5f;
- 
-} 
+}
 
 /* Electronics container styles */
 .electronics-container {
@@ -67,7 +67,8 @@
   padding: 0 5px;
 }
 
-.left-side .e-category-item, .right-side .e-category-item{
+.left-side .e-category-item,
+.right-side .e-category-item {
   max-width: 50rem;
   max-height: 65rem;
 }
@@ -88,11 +89,47 @@
   margin-bottom: 15px;
 }
 
-.description{
-  font-size: 1.2rem;
+/* BANKING */
+
+.description > h2 {
+  margin: 0.5rem 0 0.5rem 0;
+  font-weight: 600;
+  text-align: center;
 }
+
+.banking-main {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(207, 238, 255, 1) 27%,
+    rgba(207, 238, 255, 1) 100%
+  );
+}
+
+.banking-main > .category {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.banking-main > h1 {
+  padding-top: 1rem;
+  margin: 0 0 0.5rem 3%;
+  color: #3d3d3d;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+
+.banking-desc {
+  text-align: center;
+  font-size: 1rem;
+}
+
 /* Responsive styles */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 799px) {
   .heading {
     font-size: 20px;
   }
@@ -121,5 +158,34 @@
   .right-side {
     padding-top: 0;
     padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1150px) {
+  .banking-main{
+    height: 100%;
+  }
+  .banking-desc {
+    font-size: 0.89rem;
+  }
+  .description > h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 500px) {
+  .banking-main > h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5rem 0 0.5rem 0;
+  }
+  .banking-main > .category {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .category-item {
+    width: calc(100% - 10%);
   }
 }
