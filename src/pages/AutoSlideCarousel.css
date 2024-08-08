@@ -2,22 +2,28 @@
     width: 100%;
     margin: auto;
   }
+
+  .carousel-heading {
+    text-align:left;
+    font-size: 24px;
+    font-family: "YourFontFamily", sans-serif; /* Replace with your desired font family */
+    margin-bottom: 30px;
+  }
   
   .carousel-slide {
     text-align: center;
     box-sizing: border-box;
   }
   
-  .carousel-brand {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
   .carousel-image {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
+  }
+
+  .carousel-description {
+    font-size: 16px;
+    margin-top: 10px;
   }
   
   .carousel-promo {
@@ -26,22 +32,26 @@
     margin-top: 10px;
   }
 
-  .custom-dots {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    margin-top: 20px;
+  @media (max-width: 1440px) {
+    .carousel-image {
+        max-height: 200px;
+    }
   }
   
-  .custom-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ddd;
-    margin: 0 5px;
-    cursor: pointer;
+  @media (max-width: 1024px) {
+    .carousel-image {
+        max-height: 180px;
+    }
   }
   
-  .custom-dot.slick-active {
-    background-color: #000;
+  @media (max-width: 768px) {
+    .carousel-image {
+        max-height: 160px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .carousel-image {
+        height: 150px;
+    }
   }
