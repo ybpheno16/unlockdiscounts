@@ -1,0 +1,78 @@
+.main {
+  width: 100%;
+  overflow-x: hidden;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(207, 238, 255, 1) 27%,
+    rgba(207, 238, 255, 1) 100%
+  );
+}
+
+.banking > h1 {
+  color: #3d3d3d;
+  letter-spacing: 3px;
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(1.2rem, 3vw, 2.3rem);
+}
+
+.cards {
+  gap: 1rem;
+  width: 100%;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.card {
+  height: 70%;
+  width: calc((100% / 3) - 1.2rem);
+}
+
+.description > h2 {
+  color: #0a0a0a;
+  font-size: clamp(1rem, 3vw, 1.8rem);
+}
+.banking-desc {
+  width: 90%;
+  color: #3d3d3d;
+  text-align: center;
+  font-size: clamp(8px, 3vw, 1rem);
+}
+
+img {
+  width: 100%;
+  max-width: 90%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; /* Ensures the image fits within a square */
+  border-radius: 8px; /* Optional: for rounded corners */
+}
+
+@media (min-width: 280px) and (max-width: 520px) {
+  .main {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 249, 227, 0.685) 27%,
+      rgba(255, 246, 212, 1) 100%
+    );
+  }
+  .banking > h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .banking-desc {
+    margin: 0;
+    width: 100%;
+    display: -webkit-box; /* Display as a block-level flex container */
+    -webkit-box-orient: vertical; /* Set the box's orientation to vertical */
+    overflow: hidden; /* Hide the overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis (...) at the end of the truncated text */
+    -webkit-line-clamp: 2; /* Specify the number of lines to display before truncating */
+    line-clamp: 2;
+  }
+}

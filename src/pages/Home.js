@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
 import Carousel from '../components/Carousel';
+import Banking from '../components/Banking';
 
 function Home() {
     return (
@@ -67,6 +68,9 @@ function Home() {
                     </div>
                 </div>
             </div>
+
+            {/* BANKING SECTION START */}
+
             <div className="banking-main container">
                 <h1 className="heading">BANKING</h1>
                 <div className="category">
@@ -93,6 +97,8 @@ function Home() {
                     </div>
                 </div>
             </div>
+
+            <Banking/>
         </div>
     );
 }
