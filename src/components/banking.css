@@ -11,10 +11,11 @@
 }
 
 .banking > h1 {
-  color: #3d3d3d;
-  letter-spacing: 3px;
-  margin: 0 0 0.5rem 0;
-  font-size: clamp(1.2rem, 3vw, 2.3rem);
+  font-family: "inter";
+  font-size: 35px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
 }
 
 .cards {
@@ -31,14 +32,19 @@
 }
 
 .description > h2 {
-  color: #0a0a0a;
-  font-size: clamp(1rem, 3vw, 1.8rem);
+  font-family: "inter";
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  padding: 0;
 }
 .banking-desc {
-  width: 90%;
-  color: #3d3d3d;
+  font-family: "inter";
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0px;
   text-align: center;
-  font-size: clamp(8px, 3vw, 1rem);
 }
 
 img {
@@ -60,13 +66,14 @@ img {
     );
   }
   .banking > h1 {
-    text-align: center;
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width: 980px) {
   .banking-desc {
     margin: 0;
+        font-size: 12px;
     width: 100%;
     display: -webkit-box; /* Display as a block-level flex container */
     -webkit-box-orient: vertical; /* Set the box's orientation to vertical */
@@ -74,5 +81,10 @@ img {
     text-overflow: ellipsis; /* Add ellipsis (...) at the end of the truncated text */
     -webkit-line-clamp: 2; /* Specify the number of lines to display before truncating */
     line-clamp: 2;
+  }
+
+  .banking h2{
+    font-size: 13px;
+    width: 100%;
   }
 }

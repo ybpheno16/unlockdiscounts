@@ -36,18 +36,16 @@
 }
 
 .online-learning-component-container .cards {
-  display: flex;
-  gap: 80px;
-  justify-content: space-between;
-}
-.learning-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0px;
+  gap: 1rem;
   width: 100%;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.learning-card {
+  height: 70%;
+  width: calc((100% / 3) - 1.2rem);
 }
 
 .learning-card .card-title {
@@ -93,6 +91,9 @@
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
+  .online-learning-component-container {
+    background: linear-gradient(to top, #FF6E6E 0%, #ffffff 100%);
+  }
   .online-learning-component-container h1 {
     font-size: 20px;
   }
