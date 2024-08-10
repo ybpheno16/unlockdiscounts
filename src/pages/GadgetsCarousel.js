@@ -133,9 +133,7 @@ const Carousel = () => {
 
     return (
         <div className="carousel-container">
-            <h2 className="carousel-heading">
-                Hand Picked Items at Best Price
-            </h2>
+            <h2 className="carousel-heading">BEST SELLING GADGETS</h2>
             <Slider {...settings}>
                 {slides.map((slide) => (
                     <div key={slide.id} className="carousel-slide">
