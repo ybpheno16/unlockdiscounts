@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
 import Carousel from '../components/Carousel';
+import CategorySlider from '../components/CategorySlider';
 
 function Home() {
     return (
         <div>
+            <CategorySlider />
             <Carousel />
             <div className="container">
                 <h1 className="heading">Fashion</h1>
