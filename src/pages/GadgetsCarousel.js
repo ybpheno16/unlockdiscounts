@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./AutoSlideCarousel.css";
+import "./GadgetsCarousel.css";
 
 const Carousel = () => {
     const settings = {
@@ -133,9 +133,7 @@ const Carousel = () => {
 
     return (
         <div className="carousel-container">
-            <h2 className="carousel-heading">
-                Hand Picked Items at Best Price
-            </h2>
+            <h2 className="carousel-heading">BEST SELLING GADGETS</h2>
             <Slider {...settings}>
                 {slides.map((slide) => (
                     <div key={slide.id} className="carousel-slide">
