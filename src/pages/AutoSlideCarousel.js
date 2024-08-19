@@ -59,73 +59,73 @@ const Carousel = () => {
     const slides = [
         {
             id: 1,
-            image: "image1.jpg",
+            image: "./autoslidecarousel/image1.jpg",
             description: "Catchy description 1",
             promo: "Up to 50% off",
         },
         {
             id: 2,
-            image: "image2.jpg",
+            image: "./autoslidecarousel/image2.jpg",
             description: "Catchy description 2",
             promo: "Buy one get one free",
         },
         {
             id: 3,
-            image: "image3.jpg",
+            image: "./autoslidecarousel/image3.jpg",
             description: "Catchy description 3",
             promo: "30% off new arrivals",
         },
         {
             id: 4,
-            image: "image4.jpg",
+            image: "./autoslidecarousel/image4.jpg",
             description: "Catchy description 4",
             promo: "Exclusive deals",
         },
         {
             id: 5,
-            image: "image5.jpg",
+            image: "./autoslidecarousel/image5.jpg",
             description: "Catchy description 5",
             promo: "Limited time offer",
         },
         {
             id: 6,
-            image: "image6.jpg",
+            image: "./autoslidecarousel/image6.jpg",
             description: "Catchy description 6",
             promo: "Free shipping",
         },
         {
             id: 7,
-            image: "image7.jpg",
+            image: "./autoslidecarousel/image7.jpg",
             description: "Catchy description 7",
             promo: "Up to 70% off",
         },
         {
             id: 8,
-            image: "image8.jpg",
+            image: "./autoslidecarousel/image8.jpg",
             description: "Catchy description 8",
             promo: "Holiday specials",
         },
         {
             id: 9,
-            image: "image9.jpg",
+            image: "./autoslidecarousel/image9.jpg",
             description: "Catchy description 9",
             promo: "New collection",
         },
         {
             id: 10,
-            image: "image10.jpg",
+            image: "./autoslidecarousel/image10.jpg",
             description: "Catchy description 10",
             promo: "Flash sale",
         },
         {
             id: 11,
-            image: "image11.jpg",
+            image: "./autoslidecarousel/image11.jpg",
             description: "Catchy description 11",
             promo: "Discounted prices",
         },
         {
             id: 12,
-            image: "image12.jpg",
+            image: "./autoslidecarousel/image12.jpg",
             description: "Catchy description 12",
             promo: "Limited stock",
         },
@@ -133,9 +133,7 @@ const Carousel = () => {
 
     return (
         <div className="carousel-container">
-            <h2 className="carousel-heading">
-                Hand Picked Items at Best Price
-            </h2>
+            <h2 className="carousel-heading">HAND PICKED ITEMS AT BEST PRICE</h2>
             <Slider {...settings}>
                 {slides.map((slide) => (
                     <div key={slide.id} className="carousel-slide">
