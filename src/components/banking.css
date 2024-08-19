@@ -1,16 +1,12 @@
-.main {
-  width: 100%;
-  overflow-x: hidden;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(207, 238, 255, 1) 27%,
-    rgba(207, 238, 255, 1) 100%
-  );
+/* banking component css */
+
+.banking-component-container {
+  background: linear-gradient(to top, #aaecf8 0%, #ffffff 100%); /* Peach gradient */
+  padding: 15px 5%;
+  position: relative;
 }
 
-.banking > h1 {
+.banking-component-container h1 {
   font-family: "inter";
   font-size: 35px;
   font-weight: 700;
@@ -18,20 +14,19 @@
   justify-content: space-between;
 }
 
-.cards {
+.banking-component-container .cards {
   gap: 1rem;
   width: 100%;
-  /* align-items: center; */
   justify-content: space-evenly;
   display: flex;
 }
 
-.card {
+.banking-card {
   height: 70%;
   width: calc((100% / 3) - 1.2rem);
 }
 
-.description > h2 {
+.banking-card .card-title {
   font-family: "inter";
   font-size: 19px;
   font-weight: 600;
@@ -39,7 +34,8 @@
   text-align: center;
   padding: 0;
 }
-.banking-desc {
+
+.banking-card .card-description {
   font-family: "inter";
   font-size: 14px;
   font-weight: 400;
@@ -47,44 +43,51 @@
   text-align: center;
 }
 
-.banking-img {
-  width: 100%;
-  max-width: 90%;
-  object-fit: cover;
-  aspect-ratio: 1 / 1; /* Ensures the image fits within a square */
-  border-radius: 8px; /* Optional: for rounded corners */
+.banking-card img {
+  width: 100%; /* Adjust to fit the width of the card */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  border-radius: 10px;
+  display: block;
 }
 
-@media (min-width: 280px) and (max-width: 520px) {
-  .main {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 249, 227, 0.685) 27%,
-      rgba(255, 246, 212, 1) 100%
-    );
+.no-underline {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: black;
+  width: 100%;
+}
+
+.no-underline .card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .banking-component-container {
+    background: linear-gradient(to top, #fab37d 0%, #ffffff 100%);
   }
-  .banking > h1 {
+  .banking-component-container h1 {
     font-size: 20px;
   }
-}
-
-@media screen and (max-width: 980px) {
-  .banking-desc {
-    margin: 0;
-        font-size: 12px;
-    width: 100%;
-    display: -webkit-box; /* Display as a block-level flex container */
-    -webkit-box-orient: vertical; /* Set the box's orientation to vertical */
-    overflow: hidden; /* Hide the overflowing text */
-    text-overflow: ellipsis; /* Add ellipsis (...) at the end of the truncated text */
-    -webkit-line-clamp: 2; /* Specify the number of lines to display before truncating */
-    line-clamp: 2;
+  .banking-component-container .cards {
+    gap: 20px;
   }
-
-  .banking h2{
+  .banking-card .card-description {
+    font-size: 12px;
+  }
+  .banking-card .card-title h2 {
+    margin: 0; /* Ensure no space around h2 */
     font-size: 13px;
-    width: 100%;
+  }
+  .banking-card img {
+    height: 100px;
   }
 }

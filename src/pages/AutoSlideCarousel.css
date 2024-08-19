@@ -1,10 +1,10 @@
-.carousel-container {
+  .carousel-container {
     width: 100%;
     margin: auto;
   }
-
+  
   .carousel-heading {
-    text-align:left;
+    text-align: left;
     font-size: 24px;
     font-family: "YourFontFamily", sans-serif; /* Replace with your desired font family */
     margin-bottom: 30px;
@@ -15,6 +15,10 @@
   .carousel-slide {
     text-align: center;
     box-sizing: border-box;
+    /* Add gradient background in mobile view */
+    padding: 10px; /* Add padding around the slide */
+    width: 90%; /* Reduce width of the slide */
+    margin: 0 auto; /* Center the slide */
   }
   
   .carousel-image {
@@ -22,20 +26,18 @@
     height: 250px;
     object-fit: contain;
   }
-
+  
   .carousel-description {
     font-size: 16px;
     margin-top: 10px;
-    font-weight: bold;
   }
   
   .carousel-promo {
     font-size: 14px;
-    color: #ff0000;
     margin-top: 5px;
     font-weight: bold;
   }
-
+  
   @media (max-width: 1440px) {
     .carousel-image {
         max-height: 200px;
@@ -43,6 +45,10 @@
   }
   
   @media (max-width: 1024px) {
+    .carousel-container {
+      margin-bottom: 10px;
+    }
+
     .carousel-image {
         max-height: 180px;
     }
@@ -52,11 +58,16 @@
     .carousel-image {
         max-height: 160px;
     }
-
+  
     .carousel-heading {
-      font-size: 20px;
-      letter-spacing: 1px;
-      line-height: 20px;
+        display: none;
+    }
+  
+    .carousel-slide {
+        background: linear-gradient(to bottom, rgb(78, 235, 235), rgb(250, 250, 99)); /* Gradient background */
+        padding: 10px; /* Add padding around the slide */
+        width: 60%; /* Reduce width of the slide */
+        margin: 0 auto; /* Center the slide */
     }
   }
   
@@ -65,3 +76,4 @@
         height: 150px;
     }
   }
+  

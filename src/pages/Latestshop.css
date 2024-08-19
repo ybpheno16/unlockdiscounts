@@ -1,64 +1,63 @@
-.banner-wrapper {
-    width: 100%;
-    background-color: #f9f9f9;
+.latest-carousel-container {
+  width: 100%;
+  margin: auto;
+}
+
+.latest-carousel-heading {
+  text-align:left;
+  font-size: 24px;
+  font-family: "YourFontFamily", sans-serif; /* Replace with your desired font family */
+  margin-bottom: 30px;
+  margin-top: 40px;
+  letter-spacing: 10px;
+}
+
+.latest-carousel-slide {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.latest-carousel-image {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.latest-carousel-description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.latest-carousel-promo {
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+@media (max-width: 1440px) {
+  .latest-carousel-image {
+      max-height: 200px;
   }
-  
-  .slick-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .latest-carousel-image {
+      max-height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .latest-carousel-image {
+      max-height: 160px;
   }
 
-  .slider-heading {
-    text-align:left;
-    font-size: 24px;
-    font-family: "YourFontFamily", sans-serif; /* Replace with your desired font family */
-    margin-bottom: 30px;
-    margin-top: 40px;
-    letter-spacing: 10px;
+  .latest-carousel-heading {
+    display: none;
   }
-  
-  .carousel-slide-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0; /* Remove padding around slide content */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-    width: calc(100% / 6); /* Adjust width to show 6 slides */
-  }
-  
-  .carousel-image-2 {
-    width: 100%; /* Make image width adjust to the slide width */
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover; /* Ensure image covers the area */
-    border-radius: 8px;
-  }
-  
-  h4 {
-    font-size: 1.2rem;
-    margin: 10px 0 5px;
-  }
-  
-  p {
-    font-size: 1rem;
-    color: #666;
-    margin: 0;
-  }
-  
-  .slick-slide {
-    margin: 0; /* Remove margin between slides */
-  }
-  
-  .slick-dots {
-    bottom: -30px; /* Adjust position of dots if needed */
-  }
+}
 
-  @media (max-width: 768px) {
-    .slider-heading {
-      font-size: 20px;
-      letter-spacing: 1px;
-      line-height: 20px;
-    }
+@media (max-width: 600px) {
+  .latest-carousel-image {
+      height: 150px;
   }
+}

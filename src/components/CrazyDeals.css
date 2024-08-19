@@ -1,0 +1,29 @@
+.crazy-deals {
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif; /* Replace with desired font-family */
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .crazy {
+    color: red;
+    font-size: 36px; /* Adjust size as needed */
+    font-weight: bold;
+    margin-right: 10px; /* Adjust spacing if needed */
+  }
+  
+  .dealss {
+    color: black;
+    font-size: 36px; /* Adjust size as needed */
+    font-weight: bold;
+  }
+
+  @media only screen and (max-width: 799px) {
+    .crazy-deals {
+      display: flex;
+    }
+    
+  }
+  

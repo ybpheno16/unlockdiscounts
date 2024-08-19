@@ -1,0 +1,62 @@
+.festival-sale-wrapper {
+    position: relative;
+    padding-top: 60px; /* Adjust as needed to add space above the header */
+    display: none;
+  }
+  
+  .festival-sale-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .festival-sale-container {
+    background: linear-gradient(to bottom, rgb(246, 145, 184), white);
+    padding-top: 40px; /* Adjust this value as needed */
+    position: relative;
+  }
+
+  .festival-sale-container-slider {
+    width: 90%;
+    justify-items: center;
+    margin: 0 auto;
+  }
+  
+  .festival-sale-text {
+    background-color: rgb(244, 244, 97);
+    color: rgb(255, 102, 0);
+    padding: 5px 15px; /* Thinner padding */
+    border-radius: 20px;
+    font-size: 18px; /* Smaller font size */
+    font-weight: bold;
+    position: absolute;
+    top: -20px; /* Adjust this value to move it above the pink div */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  .festival-sale-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .festival-sale-image {
+    width: 100%; /* Ensure the image fits within the slide container */
+    height: 300px;
+    max-width: 300px; /* Adjust this value based on your design */
+    border-radius: 8px;
+  }
+
+  @media only screen and (max-width: 799px) {
+    .festival-sale-wrapper {
+        display: block;
+    }
+    
+  }
