@@ -6,11 +6,13 @@ import Banking from '../components/Banking';
 import OnlineLearningComponent from '../components/OnlineLearningComponent';
 import AutoSliderCarousel from './AutoSlideCarousel';
 import GadgetsCarousel from './GadgetsCarousel';
+import Latestshop from './Latestshop';
 
 function Home() {
     return (
         <div>
             <Carousel />
+            <Latestshop />
             <AutoSliderCarousel />
             <GadgetsCarousel />
             <OnlineLearningComponent />

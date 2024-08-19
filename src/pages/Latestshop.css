@@ -1,90 +1,64 @@
-body{
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.App{
-  text-align: center;
-  max-width: 100vw;
-  margin: 10rem auto;
-}
-
-img{
-  width: 300px;
-  height: 35vh;
-  object-fit: cover;
-}
-
-@media screen and (min-width: 480px) {
-  .img {
-  max-width: 150px;
-  height: 10vh;
+.banner-wrapper {
+    width: 100%;
+    background-color: #f9f9f9;
   }
-}
-
-.banner-wrapper{
-  width: 100vw;
-  overflow: hidden;
-}
-
-.banner-wrapper h1{
-width: 564px;
-height: 71px;
-left: 77px;
-top: 1005px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 38px;
-line-height: 110%;
-letter-spacing: 0.2em;
-color: #3C3A3A;
-margin-left: 35px;
-}
-
-.banner-wrapper .wrapper{
-  display: flex;
-}
-
-
-.banner-wrapper .wrapper .images{
-  display: flex;
-  animation: swipe 12000ms linear infinite;
-}
-
-.banner-wrapper .wrapper .images image{
-  column-gap: 0;
-}
-
-h4{
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 150%;
-text-align: center;
-color: #000000;
-margin-top: 5px;
-}
-
-p{
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 150%;
-display: flex;
-text-align: center;
-color: #828282;
-align-items: center;
-justify-content: center;
-margin-top: -25px;
-}
-
-@keyframes swipe{
-  0%{
-    transform: translateX(0);
+  
+  .slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  100%{
-    transform: translateX(-100%);
+
+  .slider-heading {
+    text-align:left;
+    font-size: 24px;
+    font-family: "YourFontFamily", sans-serif; /* Replace with your desired font family */
+    margin-bottom: 30px;
+    margin-top: 40px;
+    letter-spacing: 10px;
   }
-}
+  
+  .carousel-slide-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0; /* Remove padding around slide content */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    width: calc(100% / 6); /* Adjust width to show 6 slides */
+  }
+  
+  .carousel-image-2 {
+    width: 100%; /* Make image width adjust to the slide width */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure image covers the area */
+    border-radius: 8px;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  .slick-slide {
+    margin: 0; /* Remove margin between slides */
+  }
+  
+  .slick-dots {
+    bottom: -30px; /* Adjust position of dots if needed */
+  }
+
+  @media (max-width: 768px) {
+    .slider-heading {
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 20px;
+    }
+  }
