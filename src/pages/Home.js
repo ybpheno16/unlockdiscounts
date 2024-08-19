@@ -10,10 +10,12 @@ import Latestshop from './Latestshop';
 import NowOrNeverDeals from '../components/noworneverdeals';
 import FestivalSale from '../components/FestivalSale';
 import CrazyDeals from '../components/CrazyDeals';
+import CategorySlider from '../components/CategorySlider';
 
 function Home() {
     return (
         <div>
+            <CategorySlider />
             <Carousel />
             <NowOrNeverDeals />
             <Latestshop />
