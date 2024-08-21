@@ -11,6 +11,7 @@ import NowOrNeverDeals from '../components/noworneverdeals';
 import FestivalSale from '../components/FestivalSale';
 import CrazyDeals from '../components/CrazyDeals';
 import CategorySlider from '../components/CategorySlider';
+import AffiliateBrands from '../components/AffiliateBrands';
 
 function Home() {
     return (
@@ -20,6 +21,7 @@ function Home() {
             <NowOrNeverDeals />
             <Latestshop />
             <FestivalSale />
+            <AffiliateBrands />
             <CrazyDeals />
             <AutoSliderCarousel />
             <GadgetsCarousel />

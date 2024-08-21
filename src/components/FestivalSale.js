@@ -9,13 +9,12 @@ const FestivalSale = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1.5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
-    centerMode: true,        // Enable center mode to allow spacing
-    centerPadding: '20px',   // Adjust padding for space between slides
-    focusOnSelect: true,
+    autoplaySpeed: 2000, // Adjust the speed of the auto-scroll
+    pauseOnHover: false, // Auto-scrolling won't stop when hovering
+    arrows: false, // Remove navigation arrows
   };
 
   const images = [
