@@ -1,29 +1,14 @@
 import React from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import './FestivalSale.css';
 
+// Replace `images` with `festiveImg` array
+const festiveImg = [
+  { src: '/banners/independenceday.png', link: 'https://www.independenceday.com' },
+  { src: '/banners/rakshabandhan.png', link: 'https://www.rakshabandhan.com' },
+  { src: '/banners/friendshipday.png', link: 'https://www.friendshipday.com' },
+];
+
 const FestivalSale = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1.5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000, // Adjust the speed of the auto-scroll
-    pauseOnHover: false, // Auto-scrolling won't stop when hovering
-    arrows: false, // Remove navigation arrows
-  };
-
-  const images = [
-    { id: 1, src: './AutoSlideCarousel/image1.jpg', alt: 'Image 1' },
-    { id: 2, src: './AutoSlideCarousel/image2.jpg', alt: 'Image 2' },
-    { id: 3, src: './AutoSlideCarousel/image3.jpg', alt: 'Image 3' },
-    { id: 4, src: './AutoSlideCarousel/image4.jpg', alt: 'Image 4' },
-  ];
-
   return (
     <div className="festival-sale-wrapper">
       <div className="festival-sale-header">
@@ -31,13 +16,23 @@ const FestivalSale = () => {
       </div>
       <div className="festival-sale-container">
         <div className="festival-sale-container-slider">
-            <Slider {...settings}>
-            {images.map((image) => (
-                <div key={image.id} className="festival-sale-slide">
-                <img src={image.src} alt={image.alt} className="festival-sale-image" />
-                </div>
+          <div className="festival-sale-slide-container">
+            {festiveImg.map((festive, index) => (
+              <a
+                key={index}
+                href={festive.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="festival-sale-slide"
+              >
+                <img
+                  className="festival-sale-image"
+                  src={festive.src}
+                  alt={`Festive Image ${index + 1}`}
+                />
+              </a>
             ))}
-            </Slider>
+          </div>
         </div>
       </div>
     </div>

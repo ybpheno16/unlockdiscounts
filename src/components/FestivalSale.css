@@ -1,6 +1,7 @@
 .festival-sale-wrapper {
+  display: none;
   position: relative;
-  padding-top: 60px; /* Adjust as needed to add space above the header */
+  padding-top: 60px; /* Adjust as needed */
 }
 
 .festival-sale-header {
@@ -11,17 +12,6 @@
   position: relative;
 }
 
-.festival-sale-container {
-  background: linear-gradient(to bottom, rgb(246, 145, 184), white);
-  padding-top: 40px; /* Adjust this value as needed */
-  position: relative;
-}
-
-.festival-sale-container-slider {
-  width: 90%;
-  margin: 0 auto;
-}
-
 .festival-sale-text {
   background-color: rgb(244, 244, 97);
   color: rgb(255, 102, 0);
@@ -30,41 +20,58 @@
   font-size: 18px; /* Smaller font size */
   font-weight: bold;
   position: absolute;
-  top: -20px; /* Adjust this value to move it above the pink div */
+  top: -20px; /* Adjust this value as needed */
   left: 50%;
   transform: translateX(-50%);
   width: 75%;
   text-align: center;
   letter-spacing: 1px;
+  z-index: 1; /* Ensure it's above the content */
+}
+
+.festival-sale-container {
+  background: linear-gradient(to bottom, rgb(246, 145, 184), white);
+  padding-top: 40px; /* Adjust as needed */
+  position: relative;
+}
+
+.festival-sale-container-slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.festival-sale-slide-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.festival-sale-slide-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .festival-sale-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px; /* Add space between the slides */
+  display: inline-block;
+  padding: 0 10px; /* Space between slides */
 }
 
 .festival-sale-image {
-  width: 100%;
-  height: 300px;
-  max-width: 280px; /* Adjust this value based on your design */
+  width: 188px;
+  height: 284px;
   border-radius: 8px;
-  margin: 0 10px; /* Add margin to ensure space between images */
+  margin: 0 10px; /* Space between images */
 }
 
 /* Responsive adjustments */
 @media only screen and (max-width: 799px) {
   .festival-sale-wrapper {
-      display: block;
+    display: block;
   }
-
-  .festival-sale-slide {
-      padding: 0 5px; /* Ensure spacing in mobile view as well */
-  }
-
   .festival-sale-image {
-      max-width: 240px; /* Slightly smaller for mobile */
-      margin: 0 5px; /* Maintain margin for spacing between images */
+    max-width: 240px; /* Slightly smaller for mobile */
+    margin: 0 5px; /* Maintain margin for spacing between images */
   }
 }
