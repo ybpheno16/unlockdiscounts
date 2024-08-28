@@ -1,0 +1,206 @@
+[33mc2a0296[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmerged-feature-branch[m[33m)[m Merge remote-tracking branch 'Dilz10/main' into merged-feature-branch
+[33m69a6d8e[m Merged Header
+[33ma35a08d[m[33m ([m[1;31mDilz10/main[m[33m)[m Add files via upload
+[33m591f4b9[m[33m ([m[1;31morigin/merged-feature-branch[m[33m)[m removed unused file
+[33m9164b8e[m home banner updated
+[33m23c79f2[m npm install @mui/material @mui/icons-material @emotion/react @emotion/styled
+[33m93c0e2d[m added header slider
+[33m95257ec[m merged mudit's PR - top scroller
+[33m5f053ac[m added components - nowornever, crazydeals, festivalsale ; updated the css at rest of the places
+[33mfcd708b[m shop the latest
+[33m8a328fb[m herge branch '6296190782-main' into merged-feature-branch
+[33m40cbd18[m css Updates in gadgets carousel
+[33m92d1f72[m Merge branch 'MaheshChandra13-gadgets-carousel' into merged-feature-branch
+[33m0aff5bf[m Revert "carouselcode for shop the latest"
+[33m132e49c[m Merge branch '6296190782-carousel-code' into merged-feature-branch
+[33mb7bea35[m[33m ([m[1;31mMuditFauzdar/update-mobile-view[m[33m, [m[1;32mMuditFauzdar-update-mobile-view[m[33m)[m Added Category Slider for mobile view
+[33m94e3bf8[m first-commit
+[33m50b6d2d[m[33m ([m[1;31m6296190782/main[m[33m, [m[1;32m6296190782-main[m[33m)[m Add files via upload
+[33m84c470c[m Delete public/Latestshop/a.txt
+[33m109da4e[m Add files via upload
+[33m0e02eb0[m Create a.txt
+[33m28dd13b[m Add files via upload
+[33m7a03249[m css changes
+[33m239a940[m Merge branch 'updated-about-us-section' into merged-feature-branch About Section merged
+[33m8ca4c61[m classname updated to avoid css clashes
+[33m55a9765[m css updates
+[33me6a6890[m Banking section updated
+[33m3883b2d[m[33m ([m[1;31mMaheshChandra13/gadgets-carousel[m[33m, [m[1;32mMaheshChandra13-gadgets-carousel[m[33m)[m naming changes
+[33m797d575[m codebase for best seelling gadgets part
+[33m726ffa0[m[33m ([m[1;31mshubham/updated-banking-section[m[33m, [m[1;32mforeshubham-updated-banking-section[m[33m)[m Changes in Banking Section
+[33m38e45d3[m[33m ([m[1;31m6296190782/carousel-code[m[33m, [m[1;32mcarousel-code[m[33m, [m[1;32m6296190782-carousel-code[m[33m)[m carouselcode for shop the latest
+[33mda97541[m[33m ([m[1;31mvivekup3424/updated-about-us-section[m[33m, [m[1;32mupdated-about-us-section[m[33m)[m remove local ip from package.json
+[33m360c59f[m merged contact us with the about us page
+[33m7bbfaaf[m changed the routes
+[33me4f7d1b[m Updated Banking Section as per Figma Design
+[33m5d41140[m[33m ([m[1;31mMaheshChandra13/could-have-carousel[m[33m)[m changes has been made for carousel
+[33m11cf396[m Online learning component
+[33m5538bac[m Merge remote-tracking branch 'upstream/main'
+[33m7b9b47c[m deleted
+[33m1e2bed6[m deleted mobilenavlink.js file
+[33m06a0133[m kids and home and beauty sections added to mobile nav
+[33mb0d3e30[m[33m ([m[1;31mMrVineet-Raj/main[m[33m, [m[1;32mMrVineet-Raj-main[m[33m)[m Updated Footer section and also added comments on overall design made
+[33m37cd6b5[m Updated Footer section and also added comments on overall design made
+[33m587ff6e[m Updated Footer section and also added comments on overall design made
+[33m920e9ed[m Adding the Online Learning Components
+[33m606d572[m satoshi font removed, men&women mobile nav added
+[33mdc92df2[m updated the package.json with new dependencies
+[33m51bc054[m merge branch 'MaheshChandra13-could-have-carousel' into merged-feature-branch Mergeig The brand slider created by mahesh
+[33mb9bd308[m add carousel feature to code
+[33m62b2987[m shagun and anirudh carousel update
+[33m389a84e[m Vineet's branch merged regarding footer changes
+[33m7d0560d[m[33m ([m[1;31mvivekup3424/main[m[33m, [m[1;31morigin/main[m[33m, [m[1;31mMuditFauzdar/main[m[33m, [m[1;31mMaheshChandra13/main[m[33m, [m[1;31m0gopi0/main[m[33m, [m[1;32mmain[m[33m, [m[1;32m0gopi0-main[m[33m)[m Merge remote-tracking branch 'shubham/Updates/optimization-updates' into merged-feature-branch
+[33mc1b1aaf[m Update .gitignore file
+[33m342c9a7[m logo-work
+[33m4fa3293[m home-banner | Banner work done on home page
+[33ma22a1c6[m banner work
+[33m6ff60df[m drop down for men fashion added
+[33mf10be0f[m updated footer according to Figma
+[33ma5bde67[m[33m ([m[1;31mMrVineet-Raj/unlockdiscounts[m[33m)[m Updated footer.css according to figma design
+[33m64602d0[m Updated Footer according to the figma design
+[33m1cc787d[m logo and inter font added
+[33m1dbb730[m[33m ([m[1;31mshubham/Updates/optimization-updates[m[33m)[m Optimization Work is done
+[33m293d5e7[m removed mobile design from  js and css files
+[33m73196ea[m material ui & mui icons & roboto font installed
+[33mf6aca9d[m[33m ([m[1;31mshubham/main[m[33m, [m[1;31mshagun100/main[m[33m, [m[1;31mani-work/main[m[33m)[m Fixed the search view issues
+[33mc825d5a[m Merge pull request #10 from ankitkumar55/main
+[33m00eccab[m Add files via upload
+[33m4987686[m Add files via upload
+[33m68e0c67[m Merge pull request #9 from ankitkumar55/main
+[33m91709c7[m Add files via upload
+[33m1917339[m Add files via upload
+[33mad96db6[m Bug Fixed
+[33ma6e6345[m Merge pull request #8 from ankitkumar55/main
+[33m410f7dd[m Update index.html
+[33m5b86cec[m Update distancelearning.css
+[33m696a018[m Update DistanceLearning.js
+[33m9aff3b8[m Delete public/fashion/womenswearbanner.jpg
+[33m1b234f0[m Delete public/fashion/menswearbanner1.jpg
+[33me4714e4[m Delete public/fashion/menswearbanner.jpg
+[33m12cc4b2[m Delete public/fashion/kidswearbanner2.jpg
+[33md4ac613[m Delete public/fashion/kidswearbanner.jpg
+[33m44d5f74[m Delete public/fashion/electronincsbanner.jpg
+[33mc65804f[m Delete public/banners/slide 5.jpg
+[33m920f3d5[m Delete public/banners/slide 4.jpg
+[33m98735d2[m Delete public/banners/slide 3.jpg
+[33m414f873[m Delete public/banners/slide 2.jpg
+[33m3167ec7[m Delete public/banners/slide 1.jpg
+[33m10aff7f[m Delete public/banking/nw.jpg
+[33m773cd72[m Delete public/banking/cc.jpg
+[33m0050f94[m Delete public/banking/bankingbanner.jpg
+[33m21a0929[m Delete public/banking/ac.jpg
+[33m49fa790[m Delete public/appliances/technovo.jpeg
+[33m756e959[m Delete public/appliances/mobileandacc.jpg
+[33m5f90cf9[m Delete public/appliances/healthapp.jpg
+[33me304765[m Delete public/appliances/appliances.jpg
+[33m533d2ef[m Delete public/appliances/about.jpg
+[33mbe31f64[m Add files via upload
+[33md9234cc[m Merge pull request #7 from muskaanbestify/revert-6-main
+[33m5d451e1[m[33m ([m[1;31morigin/revert-6-main[m[33m)[m Revert "Updated optimization "
+[33mc39d7db[m Merge pull request #6 from ankitkumar55/main
+[33m3de0a31[m Delete public/fashion/womenswearbanner.jpg
+[33m96771dd[m Delete public/fashion/menswearbanner1.jpg
+[33m3d85815[m Delete public/fashion/menswearbanner.jpg
+[33m6999361[m Delete public/fashion/kidswearbanner2.jpg
+[33m9c09e93[m Delete public/fashion/kidswearbanner.jpg
+[33m0fb5981[m Delete public/fashion/electronincsbanner.jpg
+[33md9b3a93[m Delete public/banners/slide 5.jpg
+[33me326c8f[m Delete public/banners/slide 4.jpg
+[33m4c7c7f7[m Delete public/banners/slide 3.jpg
+[33m361bfa8[m Delete public/banners/slide 2.jpg
+[33m74f6806[m Delete public/banners/slide 1.jpg
+[33mcdad16b[m Delete public/banking/bankingbanner.jpg
+[33meeb5abe[m Delete public/banking/nw.jpg
+[33md8a8f9d[m Delete public/banking/cc.jpg
+[33m03400bb[m Delete public/banking/ac.jpg
+[33md26fc43[m Delete public/appliances/mobileandacc.jpg
+[33m00bab2b[m Delete public/appliances/healthapp.jpg
+[33md3a7961[m Delete public/appliances/appliances.jpg
+[33m63d9cfd[m Delete public/appliances/technovo.jpeg
+[33m16f4af4[m Delete public/appliances/about.jpg
+[33m13b2432[m Add files via upload
+[33m8c06afa[m Merge branch 'muskaanbestify:main' into main
+[33md46ef77[m distance learning
+[33m76b7a25[m Update README.md
+[33m98a1403[m updated distance learning to online learning
+[33m7bcbf3f[m Merge pull request #5 from ankitkumar55/main
+[33m524e80a[m Add files via upload
+[33m0015cef[m Merge pull request #4 from ankitkumar55/main
+[33m17e1758[m Add files via upload
+[33m19b5f71[m Merge pull request #3 from ankitkumar55/main
+[33m590d6bf[m Add files via upload
+[33mb5cd1a4[m Add files via upload
+[33m8e24889[m Update BankingCategoryLayout.js
+[33mdc19196[m Add files via upload
+[33m4119b15[m Update MensWear.js
+[33md647856[m Update WomensWear.js
+[33m212c1f4[m Delete public/logo.jpg
+[33m80ced16[m Delete public/womenswearbanner.png
+[33mfd03418[m Delete public/kidswearbanner2.png
+[33m0d442fa[m Delete public/kidswearbanner.png
+[33m695bc0e[m Delete public/electronincsbanner.png
+[33m84bcd72[m Delete public/bankingbanner.png
+[33m2fbef28[m Delete public/mobileandacc.jpg
+[33m9595fb4[m Delete public/slide 5.png
+[33m6b653f9[m Delete public/slide 3.png
+[33m1253a3f[m Delete public/menswearbanner1.png
+[33me4b60b9[m Delete public/slide 4.png
+[33mb81151a[m Delete public/slide 2.png
+[33m216f47b[m Delete public/slide 1.png
+[33m7de7cbb[m Delete public/nw.png
+[33m0cf945b[m Delete public/menswearbanner.png
+[33m99e5ace[m Delete public/about.png
+[33m53a9706[m Delete public/healthapp.jpg
+[33md8ee50f[m Delete public/cc.png
+[33m5271dc9[m Delete public/ac.png
+[33m7e187b1[m Delete public/appliances.jpg
+[33m3e81d9b[m Delete public/technovo.jpeg
+[33m87989c0[m Add files via upload
+[33m052db24[m Add files via upload
+[33m8202ed6[m[33m ([m[1;31morigin/V1[m[33m)[m Merge pull request #2 from muskaanbestify/revert-1-main
+[33ma2ade1e[m[33m ([m[1;31morigin/revert-1-main[m[33m)[m Revert "Optimized Home Page"
+[33mbfedcea[m Merge pull request #1 from ankitkumar55/main
+[33mf45e0f8[m Delete public/womenswearbanner.png
+[33m0cc2239[m Delete public/mobileandacc.jpg
+[33ma1027e0[m Delete public/slide 5.png
+[33mc335a07[m Delete public/technovo.jpeg
+[33m7573d58[m Delete public/slide 4.png
+[33me8ccfaa[m Delete public/slide 3.png
+[33m50cc042[m Delete public/slide 2.png
+[33mc661eff[m Delete public/slide 1.png
+[33mf1da4c7[m Delete public/menswearbanner1.png
+[33m36a7d40[m Delete public/nw.png
+[33m2d44c60[m Delete public/menswearbanner.png
+[33m296ccc0[m Delete public/kidswearbanner2.png
+[33mcf1fd19[m Delete public/logo.jpg
+[33m940ed16[m Delete public/kidswearbanner.png
+[33ma63eadf[m Delete public/healthapp.jpg
+[33m354e9a3[m Delete public/electronincsbanner.png
+[33m5323170[m Delete public/cc.png
+[33m77c0da6[m Delete public/bankingbanner.png
+[33me840d62[m Delete public/appliances.jpg
+[33m8a5ba4a[m Delete public/ac.png
+[33me5dfb0c[m Delete public/about.png
+[33m6cb923c[m Add files via upload
+[33mc4a888f[m Add files via upload
+[33m2554919[m Delete public/fashion/a.txt
+[33ma4b96d7[m Add files via upload
+[33m7c7bd98[m Delete public/banners/a.txt
+[33mf27f059[m Add files via upload
+[33m5b3f5d1[m Delete public/banking/a.txt
+[33m813afe0[m Add files via upload
+[33mc2638f2[m Delete public/appliances/a.txt
+[33m135c786[m Add files via upload
+[33m5849e45[m Delete public/logo/a.txt
+[33m530b4c5[m Add files via upload
+[33ma5ed868[m Create a.txt
+[33mcf72c87[m Create a.txt
+[33mdeb504b[m Create a.txt
+[33mc830708[m Create a.txt
+[33m1923fcb[m Create a.txt
+[33m902074a[m link redirecting fixed
+[33m10c91a8[m Search bar updated
+[33m66f8f8b[m Styles Updated
+[33meb136c0[m Resolved merge conflicts
+[33m7399eeb[m Initial commit
+[33m3f99402[m Initial commit

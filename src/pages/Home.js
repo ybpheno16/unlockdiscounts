@@ -12,6 +12,7 @@ import FestivalSale from '../components/FestivalSale';
 import CrazyDeals from '../components/CrazyDeals';
 import CategorySlider from '../components/CategorySlider';
 import AffiliateBrands from '../components/AffiliateBrands';
+import Customerreviewsection from '../components/ReviewSection'
 
 function Home() {
     return (
@@ -27,6 +28,7 @@ function Home() {
             <GadgetsCarousel />
             <OnlineLearningComponent />
             <Banking />
+            <Customerreviewsection />
         </div>
     );
 }

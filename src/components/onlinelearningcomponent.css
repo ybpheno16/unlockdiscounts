@@ -4,6 +4,7 @@
   background: linear-gradient(to top, #fff4cf 0%, #ffffff 100%);
   padding: 15px 5%;
   position: relative;
+  margin-top: 10px;
 }
 
 .online-learning-component-container h1 {
@@ -95,7 +96,11 @@
     background: linear-gradient(to top, #FF6E6E 0%, #ffffff 100%);
   }
   .online-learning-component-container h1 {
+    font-family: "inter";
     font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
   }
   .online-learning-component-container .cards {
     gap: 20px;
