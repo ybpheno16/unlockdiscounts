@@ -1,6 +1,7 @@
 .latest-carousel-container {
   width: 100%;
   margin: auto;
+  margin-top: 10px;
 }
 
 .latest-carousel-heading {
