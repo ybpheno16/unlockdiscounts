@@ -1,54 +1,96 @@
+import React from 'react';
+import './blog.css'; // Ensure CSS is imported
 
-import React, { useContext, useMemo } from 'react';
-import { ProductContext } from '../contexts/ProductContext';
-import './blog.css'; 
-const Blogs = () => {
-  const { state } = useContext(ProductContext);
-  const { products, loading, error } = state;
-
-  // Memoize the filtered blog products
-  const blogs = useMemo(() => {
-    return products.filter(product => product.category === 'blog');
-  }, [products]);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
+// Header Component
+function Header() {
   return (
-    <div className="blogs-container">
-      <h1 className="blogs-title">Blogs</h1>
-      <p className="blogs-description">
-        Explore our latest blogs and stay updated with the latest trends and insights.
-      </p>
-      {Array.isArray(blogs) && blogs.map((blog, index) => (
-        <div key={index} className={`blog-card ${index % 2 === 0 ? 'even' : 'odd'}`}>
-          <div className="blog-details">
-            <h2 className="blog-title">{blog.title}</h2>
-            <p className="blog-text">{blog.description}</p>
-            {blog.affiliateLink && (
-              <a href={blog.affiliateLink} target='_blank' rel="noopener noreferrer" className="read-more-button">Read More</a>
-            )}
-          </div>
-          {blog.image && (
-            <div className="blog-image">
-              <img
-                src={blog.image}
-                alt={blog.title}
-                loading="lazy"
-                className="lazy-load"
-              />
-            </div>
-          )}
-        </div>
-      ))}
+    <div className='header_container'>
+      <div className='header_text'>Blogs</div>
+      <div className='para'>
+        Unlock Insights: Explore Our Blog for Inspiration, Tips, and More!
+      </div>
     </div>
   );
 }
 
-export default Blogs;
+// BlogCard Component: Individual Blog Card
+function BlogCard({ title, description, imageSrc, imageAlt }) {
+  return (
+    <div className='blog_card'>
+      <img src={imageSrc} alt={imageAlt} className='blog_image' />
+      <div className='blog_content'>
+        <h2 className='blog_title'>{title}</h2>
+        <p className='blog_description'>{description}</p>
+      </div>
+    </div>
+  );
+}
 
+// Main Blog Component
+function Blog() {
+  const data = {
+    blogs: [
+      {
+        id: 0,
+        title: 'Nearwala',
+        description: 'Nearwala is a hyperlocal shopping app that helps you discover nearby stores and local deals.',
+        imageSrc: '/blog/NW.png',
+        imageAlt: 'Nearwala',
+      },
+      {
+        id: 1,
+        title: 'Asian Carnival Shoe',
+        description: "A description of the best Asian carnival shoes and why they're perfect for every occasion.",
+        imageSrc: '/blog/shoe.png',
+        imageAlt: 'Asian shoe',
+      },
+      {
+        id: 2,
+        title: 'Magicpin',
+        description: 'Save and explore with Magicpin: Your shopping and local deals buddy.',
+        imageSrc: '/blog/magicpin.png',
+        imageAlt: 'Magicpin',
+      },
+      {
+        id: 4,
+        title: 'Nearwala',
+        description: 'Nearwala is a hyperlocal shopping app that helps you discover nearby stores and local deals.',
+        imageSrc: '/blog/NW.png',
+        imageAlt: 'Nearwala',
+      },
+      {
+        id: 5,
+        title: 'Asian Carnival Shoe',
+        description: "A description of the best Asian carnival shoes and why they're perfect for every occasion.",
+        imageSrc: '/blog/shoe.png',
+        imageAlt: 'Asian shoe',
+      },
+      {
+        id: 6,
+        title: 'Magicpin',
+        description: 'Save and explore with Magicpin: Your shopping and local deals buddy.',
+        imageSrc: '/blog/magicpin.png',
+        imageAlt: 'Magicpin',
+      },
+    ],
+  };
+
+  return (
+    <div className='blog_page'>
+      <Header />
+      <div className='blog_container'>
+        {data.blogs.map((blog) => (
+          <BlogCard
+            key={blog.id}
+            title={blog.title}
+            description={blog.description}
+            imageSrc={blog.imageSrc}
+            imageAlt={blog.imageAlt}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Blog;

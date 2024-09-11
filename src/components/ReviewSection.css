@@ -20,8 +20,8 @@
     overflow-x: auto; /* Enables horizontal scrolling */
     gap: 20px; /* Adds space between the review boxes */
     scroll-behavior: smooth; /* Smooth scrolling when user interacts with the scroll bar */
-    margin-right: 10%;
     padding-bottom: 10px; /* Adds space for the scrollbar */
+    margin: 0 auto;
 }
 
 .review-item {
