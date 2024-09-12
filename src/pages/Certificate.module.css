@@ -1,0 +1,54 @@
+/* Certificate.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; /* Light gray background for the whole page */
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px; /* Maximum width of the card */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the card */
+    background-color: #fff; /* White background for the card */
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.textField {
+    margin-bottom: 16px; /* Space between text fields */
+}
+
+.button {
+    margin-top: 16px; /* Space above the button */
+}
+
+.buttonPrimary {
+    background-color: #3f51b5; /* Primary color */
+    color: #fff;
+}
+
+.buttonPrimary:hover {
+    background-color: #303f9f; /* Darker shade for hover effect */
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}
