@@ -58,7 +58,7 @@ const Verification = () => {
     useEffect(() => {
         const fetchCertificate = async () => {
             try {
-                const response = await fetch(`https://products2-tt3o.onrender.com/api/certificate-verification/${certificate?.certificate_code}`);
+                const response = await fetch(`https://products2-tt3o.onrender.com/api/certificate-verification}`);
                 const data = await response.json();
 
                 if (response.ok) {
