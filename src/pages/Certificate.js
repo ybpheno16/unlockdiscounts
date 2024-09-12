@@ -34,7 +34,7 @@ const Certificate = () => {
         setError(""); // Clear previous errors
 
         try {
-            const response = await fetch("http://localhost:8080/api/certificate-verification", {
+            const response = await fetch("https://products2-tt3o.onrender.com/api/certificate-verification", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
