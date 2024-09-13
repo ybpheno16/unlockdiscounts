@@ -1,0 +1,242 @@
+.Box{
+    margin-top: 60px;
+    margin-left: 14px;
+    border: 1px solid #B2BEB5;
+    border-radius: 15px;
+    width: 180px;
+    /* height: 990px; */
+    height: auto;
+    padding: 10px 10px;
+}
+
+.H1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -130px;
+}
+
+.icon1{
+    margin-left: 140px;
+    margin-top: -40px;
+    cursor: pointer;
+}
+.Img1{
+    width: 22px;
+    height: 20px;
+    text-decoration: none;
+    margin-left: -5px;
+}
+
+.line1{
+    margin-top: 15px;
+    width: 178px;
+}
+
+/* This is For Tshirt,Shorts...etc */
+.btn1{
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor:pointer;
+    margin-left: -10px;
+    width: 180px;
+    text-align: left;
+    background-color: transparent;
+    margin-top: 12px;
+    color: #666362;
+}
+/* This is used because on like when you keep the mouse on it , it will change the background colour */
+.btn1:hover{
+    background-color: #B2BEB5;
+}
+
+/* SLIDER */
+.H2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -137px;
+}
+
+.ar1{
+    background: transparent;
+    border: transparent;
+    /* margin-left: 160px; */
+    position: absolute;
+    top: 348px;
+    left: 169px;
+    cursor: pointer;
+}
+.ar1:hover{
+    background-color: lightgray;
+    border: 1px gray;
+    color: white;
+    cursor: pointer;
+}
+.slidebox{
+    margin-left: 15px;
+    margin-top: 10px;
+    padding: 5px 5px;
+}
+.dualslider{
+    width: 92%;
+    height: 4px;
+    background-color: #B2BEB5;
+    
+}
+.dualslider .thumb{
+    margin-top: -7px;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    background: black;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+/* colors part */
+.H3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -117px;
+}
+.ar23{
+    background: transparent;
+    border: transparent;
+    /* position: absolute;
+    top: 460px;
+    left: 171px; */
+    cursor: pointer;
+}
+.ar23:hover{
+    background-color: lightgray;
+    border: 1px gray;
+    color: white;
+    cursor: pointer;
+}
+
+.btn{
+    /* display: flex;
+    flex-direction: column; */
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    align-items: center;
+    padding: 0;
+    /* position: fixed; */
+    border: 2px solid rebeccapurple;
+}
+
+.clrBox{
+    /* display: flex; */
+    /* grid-template-columns: repeat(5, auto); */
+    /* margin-left: 2px; */
+    position: absolute;
+    left: 20px;
+    /* padding: 5px 5px; */
+    border: 2px solid transparent;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+/* .colorpart{
+    border: 2px solid transparent;
+} */
+/* .hidden{
+    display: none;
+} */
+/* .btn2{
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border: 2px solid red;
+} */
+.line2{
+    margin-top: 90px;
+    width: 178px;
+    /* border: 2px solid transparent; */
+}
+
+/* SIZE  */
+.H4{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -145px;
+}
+.ar24{
+    background: transparent;
+    border: transparent;
+    /* margin-left: 160px; */
+    /* position: absolute;
+    top: 590px;
+    left: 170px; */
+    cursor: pointer;
+}
+.ar24:hover{
+    background-color: lightgray;
+    border: 1px gray;
+    color: white;
+    cursor: pointer;
+}
+.btn3{
+    border: transparent;
+    border-radius: 15px;
+    padding: 6px;
+    color: lightslategray;
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    font-size: 10px;
+}
+.btn3:hover{
+    background-color: black;
+    color: white;
+}
+.t1{
+    margin-top: -8px;
+    margin-left: -43px;
+}
+.t2,.t3{
+    margin-top: 5px;
+}
+.t4,.t5{
+    margin-top: 5px;
+    margin-left: -13px;
+}
+.ar25{
+    background: transparent;
+    border: transparent;
+    /* margin-left: 160px; */
+    /* position: absolute;
+    top: 828px;
+    left: 171px; */
+    cursor: pointer;
+}
+.ar25:hover{
+    background-color: lightgray;
+    border: 1px gray;
+    color: white;
+    cursor: pointer;
+} 
+.lastbtn{
+    margin-left: 5px;
+    margin-top: -15px;
+    border: 2px solid transparent;
+}
+
+/* ApplyFilter button */
+.Apply{
+    background-color: lightslategray;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    margin-top: 20px;
+    width: 180px;
+    height: 40px;
+    padding: 10px 10px;
+}
+
+.Apply:hover{
+    background-color: black;
+}
