@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const LearningCard = ({ img, title, description }) => {
   return (
     <div className="learning-card">
-      <Link to="/banking" className="no-underline">
+      <Link to="/distancelearning" className="no-underline">
         <div className="card-image">
           <img loading="lazy" src={img} alt="online_learning" />
         </div>
