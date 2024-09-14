@@ -9,9 +9,9 @@ const lazyLoad = (Component) => (props) => (
 const FashionLayout = lazyLoad(lazy(() => import('./FashionLayout')));
 
 function KidsWear() {
+  const title = "KIDS";
   const category = "Kid's Wear";
-  const bannerImage = "https://res.cloudinary.com/dcmtxvsav/image/upload/v1722328190/kidswearbanner2_jypdsh.png"; 
-  return <FashionLayout category={category} bannerImage={bannerImage} />;
+  return <FashionLayout category={category} title={title}  />;
 }
 
 export default KidsWear;

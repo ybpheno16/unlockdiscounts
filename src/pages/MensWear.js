@@ -11,10 +11,10 @@ const FashionLayout = lazyLoad(lazy(() => import('./FashionLayout')));
 
 
 function MensWear() {
+  const title = "MENS";
   const category = "Men's Wear";
-  const bannerImage = "/fashion/menswearbanner1.avif"; 
 
-  return <FashionLayout category={category} bannerImage={bannerImage} />;
+  return <FashionLayout category={category} title={title}  />;
 }
 
 export default MensWear;

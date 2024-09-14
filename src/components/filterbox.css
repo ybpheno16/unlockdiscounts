@@ -1,0 +1,201 @@
+.Box {
+  margin-top: 60px;
+  margin-left: 14px;
+  margin-right: 20px;
+  border: 1px solid #B2BEB5;
+  border-radius: 15px;
+  width: 200px; /* Adjust width if needed */
+  height: 1300px;
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding is included in width/height */
+  overflow: hidden; /* Hides any overflow content */
+}
+
+.H1, .H2, .H3, .H4 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.HeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.icon1 {
+  width: 22px;
+  height: 20px;
+}
+
+.line1 {
+  margin: 15px 0;
+  width: calc(100% - 20px); /* Adjusted for padding */
+  border-top: 1px solid #B2BEB5;
+}
+
+/* This is For T-shirt, Shorts...etc */
+.btn1 {
+  background-color: transparent;
+  border: none;
+  margin: 5px 0;
+  cursor: pointer;
+  width: calc(100% - 20px); /* Adjusted for padding */
+  text-align: left;
+  color: #666362;
+}
+
+.btn1:hover {
+  background-color: #B2BEB5;
+}
+
+/* SLIDER */
+.ar1 {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.ar1:hover {
+  background-color: lightgray;
+  border: 1px gray;
+  color: white;
+}
+
+.slidebox {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.dualslider {
+  width: 100%; /* Adjusted to fit within the filter box */
+  height: 4px;
+  background-color: #B2BEB5;
+}
+
+.dualslider .thumb {
+  margin-top: -7px;
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+  background: black;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+/* COLORS PART */
+.colorpart {
+  margin: 10px 0;
+}
+
+.ar23 {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.ar23:hover {
+  background-color: lightgray;
+  border: 1px gray;
+  color: white;
+}
+
+.btn {
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  padding: 0;
+  margin: 5px;
+}
+
+.clrBox {
+  display: flex;
+  flex-wrap: wrap; /* Ensures buttons wrap within the box */
+  gap: 5px;
+  margin: 0;
+}
+
+.H3 {
+  margin: 0;
+}
+
+/* SIZE */
+.ar24 {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.ar24:hover {
+  background-color: lightgray;
+  border: 1px gray;
+  color: white;
+}
+
+.btn3 {
+  border: none;
+  border-radius: 15px;
+  padding: 6px;
+  color: lightslategray;
+  cursor: pointer;
+  height: 30px;
+  width: 60px;
+  text-align: center;
+  font-size: 10px;
+  margin: 5px;
+}
+
+.btn3:hover {
+  background-color: black;
+  color: white;
+}
+
+.Buttonss {
+  display: flex;
+  flex-wrap: wrap; /* Ensures buttons wrap within the box */
+  gap: 5px;
+  margin: 0;
+}
+
+.H4 {
+  margin: 0;
+}
+
+.ar25 {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.ar25:hover {
+  background-color: lightgray;
+  border: 1px gray;
+  color: white;
+}
+
+.lastbtn {
+  margin: 10px 0;
+  border: 2px solid transparent;
+}
+
+/* ApplyFilter button */
+.Apply {
+  background-color: lightslategray;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: calc(100% - 20px); /* Adjusted for padding */
+  height: 40px;
+  padding: 10px;
+}
+
+.Apply:hover {
+  background-color: black;
+}
