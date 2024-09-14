@@ -8,8 +8,8 @@ import About from "./pages/About";
 import WomensWear from "./pages/WomensWear";
 import MensWear from "./pages/MensWear";
 import KidsWear from "./pages/KidsWear";
-import PhonesAndAccessories from "./pages/PhonesAndAccessories";
-import Appliances from "./pages/Appliances";
+import Electronics from "./pages/Electronics";
+import Beauty from "./pages/Beauty";
 import Banking from "./pages/Banking";
 import SearchResults from "./pages/SearchResult";
 
@@ -23,11 +23,8 @@ const AppRoutes = () => (
     <Route path="/fashion/womens-wear" element={<WomensWear />} />
     <Route path="/fashion/mens-wear" element={<MensWear />} />
     <Route path="/fashion/kids-wear" element={<KidsWear />} />
-    <Route
-      path="/electronics/phones-accessories"
-      element={<PhonesAndAccessories />}
-    />
-    <Route path="/electronics/appliances" element={<Appliances />} />
+    <Route path="/electronics" element={<Electronics />} />
+    <Route path="/beauty" element={<Beauty />} />
     <Route path="/banking" element={<Banking />} />
   </Routes>
 );

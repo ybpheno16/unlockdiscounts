@@ -7,7 +7,7 @@ const lazyLoad = (Component) => (props) => (
   </Suspense>
 );
 
-const FashionLayout = lazyLoad(lazy(() => import('./FashionLayout')));
+const FashionLayout = lazyLoad(lazy(() => import('./LinkedPageLayout')));
 
 
 function MensWear() {

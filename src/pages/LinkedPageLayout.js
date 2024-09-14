@@ -3,7 +3,7 @@ import { ProductContext } from '../contexts/ProductContext';
 import FilterBox from '../components/FilterBox';  // Import the FilterBox component
 import './productgallery.css';
 
-const FashionLayout = ({ category, title }) => {
+const LinkedPageLayout = ({ category, title }) => {
   const { state, handleLoadMore, hasMore } = useContext(ProductContext);
   const { products, loading, error } = state;
 
@@ -64,4 +64,4 @@ const FashionLayout = ({ category, title }) => {
   );
 };
 
-export default FashionLayout;
+export default LinkedPageLayout;
