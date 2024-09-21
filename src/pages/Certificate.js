@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { makeStyles } from '@mui/styles'; // Comes from a different package in MUI v5
+import { makeStyles } from '@mui/styles';
 import Card from '@mui/material/Card';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import styles from "./Certificate.module.css"; // Import CSS module
+import styles from "./Certificate.module.css";
 import { UserState } from "../contexts/VerifyContext";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
     textField: {
@@ -21,17 +21,31 @@ const Certificate = () => {
         serialNumber: "",
         internName: "",
     });
-    const [error, setError] = useState(""); // State to handle errors
-    const [loading, setLoading] = useState(false); // State to handle loading
+    const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
 
-    const { setUser } = UserState(); 
+    const { setUser } = UserState();
     const classes = useStyles();
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        setError(""); // Clear previous errors
+        setError("");
+
+        // Check if fields are empty
+        if (!state.serialNumber || !state.internName) {
+            setError("Please fill in both the Serial Number and Intern Name.");
+            setLoading(false);
+            return;
+        }
+
+        // Log the request body for debugging
+        const requestBody = {
+            intern_name: state.internName,
+            certificate_code: state.serialNumber,
+        };
+        console.log("Submitting:", requestBody);
 
         try {
             const response = await fetch("https://products2-tt3o.onrender.com/api/certificate-verification", {
@@ -39,10 +53,7 @@ const Certificate = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({
-                    intern_name: state.internName,
-                    certificate_code: state.serialNumber,
-                }),
+                body: JSON.stringify(requestBody),
             });
 
             const data = await response.json();
@@ -57,11 +68,9 @@ const Certificate = () => {
                 // Redirect to the verification page
                 navigate("/verification");
             } else {
-                // Handle error from backend
                 setError(data.message || "An error occurred");
             }
         } catch (error) {
-            // Handle network or unexpected errors
             setError("Failed to verify certificate. Please try again.");
         } finally {
             setLoading(false);
@@ -70,9 +79,10 @@ const Certificate = () => {
 
     const handleChange = (e) => {
         const { id, value } = e.target;
+        setError(""); // Clear the error when user types again
         setState((prevState) => ({
             ...prevState,
-            [id]: value,
+            [id]: value.trim(),
         }));
     };
 
@@ -107,7 +117,7 @@ const Certificate = () => {
                         className={`${classes.button} ${styles.buttonPrimary}`}
                         variant="contained"
                         type="submit"
-                        disabled={loading} // Disable button while loading
+                        disabled={loading || !state.serialNumber || !state.internName}
                     >
                         {loading ? "Verifying..." : "Verify"}
                     </Button>

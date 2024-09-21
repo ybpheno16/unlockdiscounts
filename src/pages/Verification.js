@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from '@mui/styles'; // Comes from a different package in MUI v5
+import { makeStyles } from '@mui/styles';
 import Card from '@mui/material/Card';
 import { UserState } from "../contexts/VerifyContext";
 
@@ -12,17 +12,7 @@ const useStyles = makeStyles({
         border: "1px solid #ddd",
         boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
         fontFamily: "'Helvetica Neue', Arial, sans-serif",
-        position: "relative",  // For logo positioning
-    },
-    logo: {
-        textAlign: "left",
-        fontSize: "24px",
-        fontWeight: "bold",
-        position: "absolute",  // Position the logo
-        top: "20px",
-        left: "20px",
-        width: "100px",
-        height: "auto",
+        position: "relative",
     },
     title: {
         fontSize: "30px",
@@ -50,32 +40,39 @@ const useStyles = makeStyles({
 
 const Verification = () => {
     const classes = useStyles();
-    const { user } = UserState();  // Destructure user from context
-    const [certificate, setCertificate] = useState(null); // State for certificate data
+    const { user } = UserState();
+    const [certificate, setCertificate] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
     useEffect(() => {
         const fetchCertificate = async () => {
+            console.log('Fetching certificate for:', user.serialNumber);
+
             try {
-                const response = await fetch(`https://products2-tt3o.onrender.com/api/certificate-verification`);
+                const response = await fetch(`http://localhost:8080/api/certificate-verification/${user.serialNumber}`);
                 const data = await response.json();
 
                 if (response.ok) {
-                    // Extract the certificate from the response data
-                    const certData = data.certverify[0];
-                    setCertificate(certData);
+                    setCertificate(data);
+                    console.log("Certificate data:", data); // Log the fetched certificate data
                 } else {
                     setError(data.message || "Failed to fetch certificate");
                 }
             } catch (err) {
+                console.error("Fetch error:", err); // Log any errors
                 setError("Failed to fetch certificate. Please try again.");
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchCertificate();
+        if (user.serialNumber) {
+            fetchCertificate();
+        } else {
+            setError("No certificate code provided.");
+            setLoading(false);
+        }
     }, [user.serialNumber]);
 
     if (loading) return <p>Loading...</p>;
@@ -85,10 +82,11 @@ const Verification = () => {
         <div className="container">
             <Card className={classes.card}>
                 <h1 className={classes.title}>CERTIFICATE OF COMPLETION</h1>
-                <div className={classes.name}>{user.internName}</div>
+                <div className={classes.name}>{certificate?.intern_name || "Not available"}</div>
                 <div className={classes.date}>
-                    Serial number: {certificate?.certificate_code}
+                    Serial number: {certificate?.certificate_code || "Not available"}
                     <br /> Joining date: {certificate?.Joining_date || "Not available"}
+                    <br /> Last working Date: {certificate?.Last_date || "Not available"}
                 </div>
                 <div><h3 className={classes.verified}>VERIFIED</h3></div>
                 <p className={classes.info}>
