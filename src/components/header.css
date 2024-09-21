@@ -25,6 +25,7 @@
 .sign-up-text {
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  color: white;
 }
 .logo {
   width: 125px;
@@ -199,6 +200,9 @@ a {
   overflow-y: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
+  margin-left: 14vw;
+  width: 35%;
+  max-width: 100%; /* Ensure it never exceeds 100% of the screen */
 }
 
 .search-container::-webkit-scrollbar {
