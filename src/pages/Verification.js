@@ -50,7 +50,7 @@ const Verification = () => {
             console.log('Fetching certificate for:', user.serialNumber);
 
             try {
-                const response = await fetch(`http://localhost:8080/api/certificate-verification/${user.serialNumber}`);
+                const response = await fetch(`https://products2-tt3o.onrender.com/api/certificate-verification/${user.serialNumber}`);
                 const data = await response.json();
 
                 if (response.ok) {
