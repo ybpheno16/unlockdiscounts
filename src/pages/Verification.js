@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
+import { makeStyles } from '@mui/styles'; // Comes from a different package in MUI v5
+import Card from '@mui/material/Card';
 import { UserState } from "../contexts/VerifyContext";
 
 const useStyles = makeStyles({
@@ -88,11 +88,11 @@ const Verification = () => {
                 <div className={classes.name}>{user.internName}</div>
                 <div className={classes.date}>
                     Serial number: {certificate?.certificate_code}
-                    <br /> Joining date: {certificate?.joining_date || "Not available"}
+                    <br /> Joining date: {certificate?.Joining_date || "Not available"}
                 </div>
                 <div><h3 className={classes.verified}>VERIFIED</h3></div>
                 <p className={classes.info}>
-                    Certificate issued on: {certificate?.issue_date || "Not available"} <br />
+                    Certificate issued on: {certificate?.issued_date || "Not available"} <br />
                 </p>
             </Card>
         </div>
