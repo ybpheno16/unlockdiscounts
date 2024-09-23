@@ -1,32 +1,42 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { ProductContext } from '../contexts/ProductContext';
-import FilterBox from '../components/FilterBox';
-import './productgallery.css';
+import React, { useContext, useEffect, useState } from "react";
+import { ProductContext } from "../contexts/ProductContext";
+import FilterBox from "../components/FilterBox";
+import "./productgallery.css";
 
 const LinkedPageLayout = ({ category, title }) => {
   const { state, handleLoadMore, hasMore } = useContext(ProductContext);
   const { products, loading, error } = state;
   const [filterOpen, setFilterOpen] = useState(false);
 
-  const filteredProducts = products.filter(product => product.category === category);
+  // const products = products.filter(
+  //   (product) => product.category === category
+  // );
   const totalProducts = products.length;
 
   useEffect(() => {
+    console.log("Products: in trending => ", products);
+  }, [products]);
+
+  useEffect(() => {
     const handleScroll = () => {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 && hasMore) {
+      if (
+        window.innerHeight + window.scrollY >=
+          document.body.offsetHeight - 500 &&
+        hasMore
+      ) {
         handleLoadMore();
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [hasMore, handleLoadMore]);
 
   const toggleFilter = () => {
     setFilterOpen(!filterOpen);
   };
 
-  if (loading && filteredProducts.length === 0) {
+  if (loading && products.length === 0) {
     return <div>Loading...</div>;
   }
 
@@ -47,18 +57,18 @@ const LinkedPageLayout = ({ category, title }) => {
           <h2 className="category-title">{title}</h2>
           <div className="title-info">
             <p className="product-count">
-              {filteredProducts.length} out of {totalProducts} products
+              {products.length} out of {totalProducts} products
             </p>
             <img
               className="filter-icon"
-              src="/path-to-filter-icon.png"  // Ensure this path is correct
+              src="/path-to-filter-icon.png" // Ensure this path is correct
               alt="Filter Icon"
               onClick={toggleFilter}
             />
           </div>
         </div>
         <div className="product-cards">
-          {filteredProducts.map((product, index) => (
+          {products.map((product, index) => (
             <div key={index} className="product-card">
               <div className="product-image">
                 <img loading="lazy" src={product.image} alt={product.title} />
@@ -84,7 +94,9 @@ const LinkedPageLayout = ({ category, title }) => {
       {/* Fullscreen Filter Overlay */}
       {filterOpen && (
         <div className="filter-overlay open">
-          <button onClick={toggleFilter} className="close-button">Close</button>
+          <button onClick={toggleFilter} className="close-button">
+            Close
+          </button>
           <FilterBox />
         </div>
       )}

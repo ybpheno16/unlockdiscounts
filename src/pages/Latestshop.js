@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Latestshop.css";
+import { ProductContext } from "../contexts/ProductContext";
 
 const Latestshop = () => {
+  const { state, handleLoadMore, hasMore, dispatch } =
+    useContext(ProductContext);
   const settings = {
     dots: false,
     infinite: true,
@@ -64,6 +67,7 @@ const Latestshop = () => {
       description: "Kid's Wear",
       promo: "Description of first product",
       link: "/fashion/kids-wear", // Define the link for the specific page
+      query: "mainCategory=kidswear", // Define the query for the specific page
     },
     {
       id: 2,
@@ -71,6 +75,7 @@ const Latestshop = () => {
       description: "Women's Wear",
       promo: "Description of second product",
       link: "/fashion/womens-wear",
+      query: "mainCategory=womenswear",
     },
     {
       id: 3,
@@ -78,6 +83,7 @@ const Latestshop = () => {
       description: "Men's Wear",
       promo: "Description of third product",
       link: "/fashion/mens-wear",
+      query: "mainCategory=menswear",
     },
     {
       id: 4,
@@ -85,50 +91,91 @@ const Latestshop = () => {
       description: "Electronic Gadgets",
       promo: "Description of fourth product",
       link: "/electronics",
+      query: "category=Electronics",
     },
+
+    //page not found
     {
       id: 5,
       image: "/Latestshop/image 5.png",
       description: "Fitness",
       promo: "Description of fifth product",
       link: "/fitness",
+      query: "category=Fitness",
     },
+
     {
       id: 6,
       image: "/Latestshop/image 6.png",
       description: "Beauty Products",
       promo: "Description of sixth product",
       link: "/beauty",
+      query: "mainCategory=beauty",
     },
+
+
+    // both of them are same
+    //page not found
     {
       id: 7,
       image: "/Latestshop/image 7.png",
       description: "Jewellery & Accessories",
       promo: "Description of seventh product",
       link: "/jewellery",
+      query: "category=Jewellery",
     },
+
+    //page not found
+    // {
+    //   id: 8,
+    //   image: "/Latestshop/image 8.png",
+    //   description: "Jewellery & Accessories",
+    //   promo: "Description of eighth product",
+    //   link: "/jewellery",
+    //   query:"category=Jewellery",
+    // },
     {
       id: 8,
-      image: "/Latestshop/image 8.png",
-      description: "Jewellery & Accessories",
-      promo: "Description of eighth product",
-      link: "/jewellery",
-    },
-    {
-      id: 9,
       image: "/Latestshop/image 9.png",
       description: "Kitchen Utilities",
       promo: "Description of ninth product",
       link: "/electronics",
+      query: "category=Kitchen %26 Table",
     },
   ];
+
+  const handleFetchProducts = async (query) => {
+    try {
+      // const url = `http://localhost:8080/api/banner/latest?${query}`;
+      // // encoding the query string
+      // console.log("Encoded Query:", url);
+
+      const response = await fetch(
+        `http://localhost:8080/api/banner/latest?${query}`
+      );
+      const data = await response.json();
+      if (data.success === true) {
+        dispatch({ type: "SET_PRODUCTS", payload: data?.products });
+        console.log(state);
+      }
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="latest-carousel-container">
       <h2 className="latest-carousel-heading">SHOP THE LATEST</h2>
       <Slider {...settings}>
         {slides.map((slide) => (
-          <div key={slide.id} className="latest-carousel-slide">
+          <div
+            key={slide.id}
+            className="latest-carousel-slide"
+            onClick={() => {
+              handleFetchProducts(slide.query);
+            }}
+          >
             {/* Wrap each slide with Link */}
             <Link to={slide.link}>
               <img
