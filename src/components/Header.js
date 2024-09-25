@@ -45,8 +45,8 @@ function Header() {
     setSubFashionDropdown(null);
   }
 
-  // CONNECTION OF BACKEND TO FRONTEND, SHOULD WE NEED TO INSTALL CORS OR DO ANYTHING ? 
-  const connectwomensdata = async(category,sub_category) => { 
+  // CONNECTION OF BACKEND TO FRONTEND, SHOULD WE NEED TO INSTALL CORS OR DO ANYTHING ?
+  const connectwomensdata = async(category,sub_category) => {
     console.log("Connected Womenswear data", category,sub_category);
     try{
       const response = await axios.get(`http://localhost:8080/api/womenswear?pageNo=1&limit=25&category=${category}&sub_category=${sub_category}`);
@@ -61,6 +61,7 @@ function Header() {
   // console.log(connectwomensdata);
 
   // styles for the drop down container
+
   const dropDownContainerStyles = {
     position: "absolute",
     top: "90px",
@@ -224,7 +225,10 @@ function Header() {
   // kids fashion links object
   const kids = {
     boysClothing: [
-      ["/", "T-Shirts"],
+      [
+        "/fashion/kids-wear?page=1&limit=21&category=Boys Clothing&sub_category=T-Shirts",
+        "T-Shirts",
+      ],
       ["/", "Shirts"],
       ["/", "Shorts"],
       ["/", "Jeans"],
@@ -1112,7 +1116,10 @@ function Header() {
                                 className="mobile-sub-link-child "
                                 key={index}
                                 to={link[0]}
-                                onClick={() => {connectwomensdata("Western Wear",link[1])}} >
+                                onClick={() => {
+                                  connectwomensdata("Western Wear", link[1]);
+                                }}
+                              >
                                 {link[1]}
                               </Link>
                             );
@@ -1300,7 +1307,13 @@ function Header() {
                                 className="mobile-sub-link-child "
                                 key={index}
                                 to={link[0]}
-                                onClick={() => {connectwomensdata("Beauty & Personal Care",link[1])}}>
+                                onClick={() => {
+                                  connectwomensdata(
+                                    "Beauty & Personal Care",
+                                    link[1]
+                                  );
+                                }}
+                              >
                                 {link[1]}
                               </Link>
                             );
@@ -2698,7 +2711,13 @@ function Header() {
                   <Link className="pink-heading">Indian & Fusion Wear</Link>
                   {women.indianFusionWear.map((link, index) => {
                     return (
-                      <Link key={index} to={link[0]} onClick={() => {connectwomensdata("Indian & Fusion Wear",link[1])}}>
+                      <Link
+                        key={index}
+                        to={link[0]}
+                        onClick={() => {
+                          connectwomensdata("Indian & Fusion Wear", link[1]);
+                        }}
+                      >
                         {link[1]}
                       </Link>
                     );
@@ -2719,7 +2738,13 @@ function Header() {
                   <Link className="pink-heading">Western Wear</Link>
                   {women.westernWear.map((link, index) => {
                     return (
-                      <Link key={index} to={link[0]} onClick={() => {connectwomensdata("Western Wear",link[1])}}>
+                      <Link
+                        key={index}
+                        to={link[0]}
+                        onClick={() => {
+                          connectwomensdata("Western Wear", link[1]);
+                        }}
+                      >
                         {link[1]}
                       </Link>
                     );
@@ -2743,7 +2768,13 @@ function Header() {
 
                   {women.Footwear.map((link, index) => {
                     return (
-                      <Link key={index} to={link[0]} onClick={() => {connectwomensdata("Footwear",link[1])}}>
+                      <Link
+                        key={index}
+                        to={link[0]}
+                        onClick={() => {
+                          connectwomensdata("Footwear", link[1]);
+                        }}
+                      >
                         {link[1]}
                       </Link>
                     );
@@ -2752,7 +2783,13 @@ function Header() {
                   <Link className="pink-heading">Sports & Active Wear</Link>
                   {women.sports.map((link, index) => {
                     return (
-                      <Link key={index} to={link[0]} onClick={() => {connectwomensdata("Sports & Active Wear",link[1])}} >
+                      <Link
+                        key={index}
+                        to={link[0]}
+                        onClick={() => {
+                          connectwomensdata("Sports & Active Wear", link[1]);
+                        }}
+                      >
                         {link[1]}
                       </Link>
                     );
@@ -2769,7 +2806,13 @@ function Header() {
                   <Link className="pink-heading">Lingerie & Sleepwear</Link>
                   {women.lingerieAndSleepWear.map((link, index) => {
                     return (
-                      <Link key={index} to={link[0]} onClick={() => {connectwomensdata("Lingerie & Sleepwear",link[1])}}>
+                      <Link
+                        key={index}
+                        to={link[0]}
+                        onClick={() => {
+                          connectwomensdata("Lingerie & Sleepwear", link[1]);
+                        }}
+                      >
                         {link[1]}
                       </Link>
                     );
@@ -2779,7 +2822,13 @@ function Header() {
                   <Link className="pink-heading">Beauty & Personal Care</Link>
                   {women.beautyAndPersonalCare.map((link, index) => {
                     return (
-                      <Link key={index} to={link[0]} onClick={() => {connectwomensdata("Beauty & Personal Care",link[1])}}>
+                      <Link
+                        key={index}
+                        to={link[0]}
+                        onClick={() => {
+                          connectwomensdata("Beauty & Personal Care", link[1]);
+                        }}
+                      >
                         {link[1]}
                       </Link>
                     );
@@ -2796,7 +2845,13 @@ function Header() {
                   <Link className="pink-heading">Gadgets</Link>
                   {women.gadgets.map((link, index) => {
                     return (
-                      <Link key={index} to={link[0]} onClick={() => {connectwomensdata("Gadgets",link[1])}}>
+                      <Link
+                        key={index}
+                        to={link[0]}
+                        onClick={() => {
+                          connectwomensdata("Gadgets", link[1]);
+                        }}
+                      >
                         {link[1]}
                       </Link>
                     );
@@ -2806,7 +2861,13 @@ function Header() {
                   <Link className="pink-heading">Jewellery</Link>
                   {women.jewellery.map((link, index) => {
                     return (
-                      <Link key={index} to={link[0]} onClick={() => {connectwomensdata("Jewellery",link[1])}}>
+                      <Link
+                        key={index}
+                        to={link[0]}
+                        onClick={() => {
+                          connectwomensdata("Jewellery", link[1]);
+                        }}
+                      >
                         {link[1]}
                       </Link>
                     );

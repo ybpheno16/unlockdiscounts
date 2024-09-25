@@ -33,11 +33,11 @@ const ProductProvider = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    if (hasMore) {
-      fetchProducts();
-    }
-  }, [page]);
+  // useEffect(() => {
+  //   if (hasMore) {
+  //     fetchProducts();
+  //   }
+  // }, [page]);
 
   useEffect(() => {
     // Fetch first page of products on initial render
