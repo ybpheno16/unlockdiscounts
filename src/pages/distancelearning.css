@@ -22,7 +22,7 @@
   
   .dls-header {
     text-align: center;
-    background-color: #004d4d;
+    background-color: #3e3e3e;
     color: #ffffff;
     padding: 20px;
     border-radius: 10px;
@@ -49,7 +49,7 @@
     flex-wrap: wrap; /* Allow courses to wrap on smaller screens */
     justify-content: space-around;
     padding: 20px 0;
-    background-color: #007d7d;
+    background-color: #3b3c3c;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
@@ -75,7 +75,7 @@
   }
   
   .dls-course h3 {
-    color: #004d4d;
+    color: #404040;
     font-size: 18px;
     margin: 10px 0;
   }
@@ -87,7 +87,7 @@
   }
   
   .dls-course button {
-    background-color: #004d4d;
+    background-color: #3e3e3e;
     color: #ffffff;
     border: none;
     padding: 5px 10px;
@@ -96,7 +96,7 @@
   }
   
   .dls-course button:hover {
-    background-color: #003333;
+    background-color: #212121;
   }
   
   @keyframes blink {
@@ -127,7 +127,7 @@
   
   .dls-fee-calculator h2 {
     font-size: 22px;
-    color: #004d4d;
+    color: #343434;
     margin-bottom: 20px;
   }
   
@@ -201,11 +201,11 @@
   .dls-form-group select:focus,
   .dls-form-group input:focus,
   .dls-form-group button:focus {
-    border-color: #007d7d;
+    border-color: #2c2d2d;
   }
   
   .dls-form-group button {
-    background-color: #004d4d;
+    background-color: #454545;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -216,13 +216,13 @@
   }
   
   .dls-form-group button:hover {
-    background-color: #003333;
+    background-color: #373737;
   }
   
   .dls-result {
     margin-top: 20px;
     font-size: 18px;
-    color: #004d4d;
+    color: #373838;
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s;
@@ -239,7 +239,7 @@
   
   .dls-more-courses h3 {
     font-size: 22px;
-    color: #004d4d;
+    color: #3b3b3b;
     margin-bottom: 20px;
   }
   
@@ -290,7 +290,7 @@
   }
   
   .dls-popup-content .dls-form-group button {
-    background-color: #004d4d;
+    background-color: #414141;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -303,7 +303,7 @@
   }
   
   .dls-popup-content .dls-form-group button:hover {
-    background-color: #003333;
+    background-color: #222222;
   }
   
   .dls-popup {
@@ -386,7 +386,7 @@
     }
   
     .dls-course button {
-      background-color: #004d4d;
+      background-color: #3e3e3e;
       color: #fff;
       border: none;
       padding: 8px 15px; /* Reduced padding */
@@ -395,7 +395,7 @@
     }
   
     .dls-course button:hover {
-      background-color: #004d4d;
+      background-color: #353535;
     }
   
     .dls-fee-calculator {
@@ -426,7 +426,7 @@
     }
   
     .dls-form-group button[type="button"] {
-      background-color: #004d4d;
+      background-color: #414242;
       color: #fff;
       border: none;
       padding: 10px 20px;
@@ -435,7 +435,7 @@
     }
   
     .dls-form-group button[type="button"]:hover {
-      background-color: #004d4d;
+      background-color: #363636;
     }
   
     .dls-result {
