@@ -18,7 +18,7 @@ const ProductProvider = ({ children }) => {
   const fetchProducts = async () => {
     try {
       const response = await axios.get(
-        `https://products2-tt3o.onrender.com/api/products?page=${page}&limit=20`
+        `https://products2-tt3o.onrender.com/api/products?page=${page}&limit=21`
       );
       if (response.data.length === 0) {
         setHasMore(false);

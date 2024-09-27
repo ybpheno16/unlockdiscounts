@@ -3,7 +3,15 @@ import { ProductContext } from "../contexts/ProductContext";
 import FilterBox from "../components/FilterBox";
 import "./productgallery.css";
 
-const LinkedPageLayout = ({ category, title }) => {
+const LinkedPageLayout = ({
+  category,
+  title,
+
+  //for pagination
+  page = 1,
+  extraPage,
+  handleLoadMoreProducts,
+}) => {
   const { state, handleLoadMore, hasMore } = useContext(ProductContext);
   const { products, loading, error } = state;
   const [filterOpen, setFilterOpen] = useState(false);
@@ -36,6 +44,32 @@ const LinkedPageLayout = ({ category, title }) => {
     setFilterOpen(!filterOpen);
   };
 
+  // function to load more products
+  const handleNextPage = (page) => {
+    const url = window.location.href;
+    let queryString = url ? url.split("?")[1] : "";
+    console.log("queryString", queryString);
+
+    if (!queryString) {
+      queryString += `page=${page}`;
+    }
+    if (queryString && !queryString.includes("page")) {
+      queryString += `&page=${page}`;
+    }
+    let updatedQuery = queryString.split("&").map((item) => {
+      if (item.includes("page")) {
+        return `page=${page}`;
+      }
+      return item;
+    });
+
+    updatedQuery = updatedQuery.join("&");
+    let updatedQueryString = url.split("?")[0] + "?" + updatedQuery;
+
+    console.log("updatedQuery", updatedQuery);
+    window.open(updatedQueryString, "_self");
+    handleLoadMoreProducts(updatedQuery);
+  };
   if (loading && products.length === 0) {
     return <div>Loading...</div>;
   }
@@ -88,6 +122,85 @@ const LinkedPageLayout = ({ category, title }) => {
             </div>
           ))}
         </div>
+
+        {products && products.length >= 3 && (
+          <div
+            className="pagination-buttons"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: "10px",
+              margin: "20px 0",
+              // backgroundColor: "red",
+              marginTop: "20px",
+            }}
+          >
+            {page > 1 && (
+              <button
+                // onClick={() => setPage((prevPage) => prevPage - 1)}
+                style={{
+                  backgroundColor: "white",
+                  border: "1px solid gray",
+                  borderRadius: "5px",
+                  padding: "5px 10px",
+                  cursor: "pointer",
+                }}
+                onClick={() => handleNextPage(page - 1)}
+              >
+                Prev
+              </button>
+            )}
+
+            <button
+              // onClick={() => setPage((prevPage) => prevPage + 1)}
+              style={{
+                backgroundColor: "black",
+                color: "white",
+                border: "1px solid gray",
+                borderRadius: "5px",
+                padding: "5px 10px",
+                cursor: "pointer",
+              }}
+              onClick={() => handleNextPage(page)}
+            >
+              {page}
+            </button>
+
+            {extraPage > 0 && (
+              <button
+                // onClick={() => setPage((prevPage) => prevPage + 1)}
+                style={{
+                  backgroundColor: "white",
+                  border: "1px solid gray",
+                  borderRadius: "5px",
+                  padding: "5px 10px",
+                  cursor: "pointer",
+                }}
+                onClick={() => handleNextPage(page + 1)}
+              >
+                {page + 1}
+              </button>
+            )}
+
+            {extraPage > 1 && (
+              <button
+                // onClick={() => setPage((prevPage) => prevPage + 1)}
+                style={{
+                  backgroundColor: "white",
+                  border: "1px solid gray",
+                  borderRadius: "5px",
+                  padding: "5px 10px",
+                  cursor: "pointer",
+                }}
+                onClick={() => handleNextPage(page + 2)}
+              >
+                More
+              </button>
+            )}
+          </div>
+        )}
+
         {loading && <div>Loading more products...</div>}
       </div>
 

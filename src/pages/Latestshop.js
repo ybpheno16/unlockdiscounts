@@ -66,7 +66,7 @@ const Latestshop = () => {
       image: "/Latestshop/image 1.png",
       description: "Kid's Wear",
       promo: "Description of first product",
-      link: "/fashion/kids-wear", // Define the link for the specific page
+      link: "/fashion/kids-wear/latest?page=1", // Define the link for the specific page
       query: "mainCategory=kidswear", // Define the query for the specific page
     },
     {
@@ -74,7 +74,7 @@ const Latestshop = () => {
       image: "/Latestshop/image 2.png",
       description: "Women's Wear",
       promo: "Description of second product",
-      link: "/fashion/womens-wear",
+      link: "/fashion/womens-wear/latest?page=1",
       query: "mainCategory=womenswear",
     },
     {
@@ -82,7 +82,7 @@ const Latestshop = () => {
       image: "/Latestshop/image 3.png",
       description: "Men's Wear",
       promo: "Description of third product",
-      link: "/fashion/mens-wear",
+      link: "/fashion/mens-wear/latest?page=1",
       query: "mainCategory=menswear",
     },
     {
@@ -90,7 +90,7 @@ const Latestshop = () => {
       image: "/Latestshop/image 4.png",
       description: "Electronic Gadgets",
       promo: "Description of fourth product",
-      link: "/electronics",
+      link: "/electronics/latest?page=1",
       query: "category=Electronics",
     },
 
@@ -100,7 +100,7 @@ const Latestshop = () => {
       image: "/Latestshop/image 5.png",
       description: "Fitness",
       promo: "Description of fifth product",
-      link: "/fitness",
+      link: "/fitness/latest?page=1",
       query: "category=Fitness",
     },
 
@@ -109,7 +109,7 @@ const Latestshop = () => {
       image: "/Latestshop/image 6.png",
       description: "Beauty Products",
       promo: "Description of sixth product",
-      link: "/beauty",
+      link: "/beauty/latest?page=1",
       query: "mainCategory=beauty",
     },
 
@@ -121,7 +121,7 @@ const Latestshop = () => {
       image: "/Latestshop/image 7.png",
       description: "Jewellery & Accessories",
       promo: "Description of seventh product",
-      link: "/jewellery",
+      link: "/jewellery/latest?page=1",
       query: "category=Jewellery",
     },
 
@@ -139,7 +139,7 @@ const Latestshop = () => {
       image: "/Latestshop/image 9.png",
       description: "Kitchen Utilities",
       promo: "Description of ninth product",
-      link: "/electronics",
+      link: "/electronics?page=1",
       query: "category=Kitchen %26 Table",
     },
   ];
@@ -154,6 +154,7 @@ const Latestshop = () => {
         `http://localhost:8080/api/banner/latest?${query}`
       );
       const data = await response.json();
+      console.log(data);
       if (data.success === true) {
         dispatch({ type: "SET_PRODUCTS", payload: data?.products });
         console.log(state);
